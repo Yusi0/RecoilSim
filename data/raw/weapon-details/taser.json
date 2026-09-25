@@ -1,0 +1,3369 @@
+{
+  "name": "TASER",
+  "displayname": "STUN GUN",
+  "category": "ONE HAND BLUNT",
+  "type": "KNIFE",
+  "description": "Uniquely designed stun gun that delivers shocks by mashing the button! Especially effective against lawyers.\nModel by Poodros.",
+  "unlockrank": 61,
+  "damage0": 28,
+  "damage1": 34,
+  "range0": 1,
+  "range1": 5,
+  "multhead": 1.13,
+  "multtorso": 1.26,
+  "sparerounds": null,
+  "hipfirespread": 0.1,
+  "hipfirespreadrecover": 15,
+  "walkspeed": 16.75,
+  "sprintspeed": 20,
+  "crossexpansion": 400,
+  "animations": {
+    "spot": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "knife",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "Trigger",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.001
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.125,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  1.25,
+                  0.4000000059604645,
+                  1.1749999523162842,
+                  0.16317595541477203,
+                  0.05939118564128876,
+                  0.9848077297210693,
+                  0.17612706124782562,
+                  -0.9839054346084595,
+                  0.03015371784567833,
+                  0.9707485437393188,
+                  0.1685309112071991,
+                  -0.1710101068019867
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.1,
+              "eq": "linear",
+              "c1": {
+                "v": [
+                  -0.20000000298023224,
+                  -0.550000011920929,
+                  0.30000001192092896,
+                  1,
+                  0,
+                  0,
+                  0,
+                  -0.258819043636322,
+                  0.9659258127212524,
+                  0,
+                  -0.9659258127212524,
+                  -0.258819043636322
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.15
+          }
+        },
+        {
+          "a": [
+            {
+              "soundid": "rbxassetid://2331617843",
+              "p": 2.875,
+              "tp": 0,
+              "part": "Part2",
+              "sound": true,
+              "v": 0.02
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.025
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.1,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  1.0049999952316284,
+                  -0.125,
+                  0.699999988079071,
+                  0.11161892861127853,
+                  0.1330222487449646,
+                  0.9848077297210693,
+                  0.9799250960350037,
+                  -0.17946714162826538,
+                  -0.08682411909103394,
+                  0.16519102454185486,
+                  0.9747290015220642,
+                  -0.15038377046585083
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.05,
+              "eq": "linear",
+              "c1": {
+                "v": [
+                  -0.20000000298023224,
+                  -0.699999988079071,
+                  0.32499998807907104,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0.017452383413910866,
+                  0.9998477101325989,
+                  0,
+                  -0.9998477101325989,
+                  0.017452383413910866
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.225
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0.3,
+        "timescale": 1
+      }
+    },
+    "parkour": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "knife",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "Trigger",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.001
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.125,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  0.949999988079071,
+                  -0.75,
+                  0.9750000238418579,
+                  0.3830221891403198,
+                  0.321393758058548,
+                  0.866025447845459,
+                  0.8432515263557434,
+                  0.26109644770622253,
+                  -0.46984627842903137,
+                  -0.37712180614471436,
+                  0.9102388024330139,
+                  -0.17101004719734192
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.15
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.15,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  0.949999988079071,
+                  -0.75,
+                  1.7000000476837158,
+                  0.06676521897315979,
+                  0.05602266639471054,
+                  0.9961947202682495,
+                  0.9369533658027649,
+                  0.3397216498851776,
+                  -0.08189966529607773,
+                  -0.3430171012878418,
+                  0.9388560056686401,
+                  -0.02980903908610344
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.2
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0.3,
+        "timescale": 1
+      }
+    },
+    "stab2": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.001
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.024,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  1.149999976158142,
+                  -0.10000000149011612,
+                  0.800000011920929,
+                  0.48296287655830383,
+                  0.12940950691699982,
+                  0.866025447845459,
+                  0.8538539409637451,
+                  -0.2888486981391907,
+                  -0.4330126643180847,
+                  0.19411435723304749,
+                  0.9485881924629211,
+                  -0.25
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Trigger",
+              "t": 0.049,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.9875,
+              "tp": 2.5,
+              "part": "Flame",
+              "sound": true,
+              "v": 1.4
+            },
+            {
+              "soundid": "rbxassetid://9125915249",
+              "p": 0.75,
+              "tp": 0.2,
+              "part": "Part1",
+              "sound": true,
+              "v": 0.75
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": true
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.009
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.25,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.3
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.375,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.025
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.025,
+              "eq": "decelerate",
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.025
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0,
+        "timescale": 1
+      }
+    },
+    "quickstab": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.1,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  1.75,
+                  -0.25,
+                  1.350000023841858,
+                  0.49809733033180237,
+                  0.04357786476612091,
+                  0.866025447845459,
+                  0.8635092973709106,
+                  -0.11599061638116837,
+                  -0.49081355333328247,
+                  0.07906223833560944,
+                  0.9922938942909241,
+                  -0.09540450572967529
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.5,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.25
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.75,
+              "tp": 0.6,
+              "part": "Part1",
+              "sound": true,
+              "v": 0.125
+            },
+            {
+              "soundid": "rbxassetid://9114481260",
+              "p": 1.625,
+              "tp": 0,
+              "part": "Part1",
+              "sound": true,
+              "v": 2
+            },
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.65,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.95,
+              "tp": 2.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.1
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.7,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.7,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.4,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.4,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.2,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.175,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": true
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.5,
+              "part": "Flame",
+              "sound": true,
+              "v": 2
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.75,
+              "tp": 0.6,
+              "part": "Part1",
+              "sound": true,
+              "v": 1
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://2331617843",
+              "p": 3,
+              "tp": 0,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.025
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.025,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  1.149999976158142,
+                  -0.10000000149011612,
+                  0.4000000059604645,
+                  0.48296287655830383,
+                  0.12940950691699982,
+                  0.866025447845459,
+                  0.8538539409637451,
+                  -0.2888486981391907,
+                  -0.4330126643180847,
+                  0.19411435723304749,
+                  0.9485881924629211,
+                  -0.25
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.05,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  1.149999976158142,
+                  -0.10000000149011612,
+                  0.8999999761581421,
+                  0.48296287655830383,
+                  0.12940950691699982,
+                  0.866025447845459,
+                  0.8538539409637451,
+                  -0.2888486981391907,
+                  -0.4330126643180847,
+                  0.19411435723304749,
+                  0.9485881924629211,
+                  -0.25
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.75,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.75,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.775,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.825,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0.1,
+        "timescale": 1
+      }
+    },
+    "inspect": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "knife",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "Trigger",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.001
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.249,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  0.949999988079071,
+                  -0.8999999761581421,
+                  0.9750000238418579,
+                  0.5868240594863892,
+                  0.4924038350582123,
+                  0.6427875757217407,
+                  0.6825545430183411,
+                  0.12625569105148315,
+                  -0.7198463082313538,
+                  -0.43561071157455444,
+                  0.8611607551574707,
+                  -0.2620026171207428
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.249,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.15000000596046448,
+                  -0.42500001192092896,
+                  0.30000001192092896,
+                  0.6560590267181396,
+                  0,
+                  -0.7547095417976379,
+                  0.6724510788917542,
+                  -0.4539906084537506,
+                  0.5845528244972229,
+                  -0.3426310420036316,
+                  -0.8910064697265625,
+                  -0.29784464836120605
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://16075119726",
+              "p": 1,
+              "part": "Part2",
+              "sound": true,
+              "v": 0.025
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.224
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.3,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  0.6000000238418579,
+                  0.05000000074505806,
+                  1.0499999523162842,
+                  0.4330126643180847,
+                  0.75,
+                  -0.5,
+                  -0.08016130328178406,
+                  -0.5204615592956543,
+                  -0.8501140475273132,
+                  -0.8978163599967957,
+                  0.4081908166408539,
+                  -0.16524545848369598
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.3,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.30000001192092896,
+                  -0.32499998807907104,
+                  0.30000001192092896,
+                  0.19080893695354462,
+                  0,
+                  -0.9816271662712097,
+                  0.874636173248291,
+                  -0.4539906084537506,
+                  0.1700119972229004,
+                  -0.44564950466156006,
+                  -0.8910064697265625,
+                  -0.08662546426057816
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://16075119726",
+              "p": 3,
+              "part": "Part2",
+              "sound": true,
+              "v": 0.1
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 1.8
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.4,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  0.8999999761581421,
+                  -0.10000000149011612,
+                  1.350000023841858,
+                  0.011936331167817116,
+                  0.03279479965567589,
+                  0.9993908405303955,
+                  0.9847715497016907,
+                  -0.1737474650144577,
+                  -0.006060237996280193,
+                  0.17344287037849426,
+                  0.9842439889907837,
+                  -0.034369293600320816
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.35,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.10999999940395355,
+                  -0.625,
+                  0.28700000047683716,
+                  0.016399875283241272,
+                  0.005969066172838211,
+                  -0.9998477101325989,
+                  0.9960650205612183,
+                  -0.08720305562019348,
+                  0.015817230567336082,
+                  -0.08709532022476196,
+                  -0.9961726665496826,
+                  -0.007375697139650583
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Trigger",
+              "t": 0.45,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  0,
+                  0,
+                  0,
+                  0.9848077297210693,
+                  0,
+                  0.1736481785774231,
+                  0,
+                  1,
+                  0,
+                  -0.1736481785774231,
+                  0,
+                  0.9848077297210693
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://16075119726",
+              "p": 2,
+              "part": "Part2",
+              "sound": true,
+              "v": 0.1
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.4
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.675,
+              "tp": 2.75,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.25
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.75,
+              "tp": 0.8,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.75
+            },
+            {
+              "soundid": "rbxassetid://9114481260",
+              "p": 1.625,
+              "tp": 0,
+              "part": "Part1",
+              "sound": true,
+              "v": 1.675
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.65,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.65,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.3,
+              "eq": "linear",
+              "c1": {
+                "v": [
+                  0.949999988079071,
+                  0.25,
+                  1.1749999523162842,
+                  0.03371032327413559,
+                  0.009032653644680977,
+                  0.9993908405303955,
+                  0.4225161671638489,
+                  -0.9063351154327393,
+                  -0.006060237996280193,
+                  0.9057282209396362,
+                  0.4224630892276764,
+                  -0.034369293600320816
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "knife",
+              "t": 0.3,
+              "eq": "linear",
+              "c1": {
+                "v": [
+                  -0.009999999776482582,
+                  -0.625,
+                  0.28700000047683716,
+                  -0.4555719792842865,
+                  -0.16581466794013977,
+                  -0.874619722366333,
+                  0.8894145488739014,
+                  -0.12602046132087708,
+                  -0.4393866956233978,
+                  -0.03736323118209839,
+                  -0.9780718088150024,
+                  0.20488937199115753
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Trigger",
+              "t": 0.3,
+              "eq": "linear",
+              "c1": {
+                "v": [
+                  0,
+                  0,
+                  0,
+                  0.9659258127212524,
+                  0,
+                  0.258819043636322,
+                  0,
+                  1,
+                  0,
+                  -0.258819043636322,
+                  0,
+                  0.9659258127212524
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.75,
+              "tp": 2.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.5
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.8,
+              "tp": 0.7,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.75
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.65,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.65,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.5,
+              "part": "Flame",
+              "sound": true,
+              "v": 1
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.75,
+              "tp": 0.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.75
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.9,
+              "tp": 2.65,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.2
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.975,
+              "tp": 2.55,
+              "part": "Flame",
+              "sound": true,
+              "v": 1.25
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "part": "Trigger",
+              "t": 0.28,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  0.05000000074505806,
+                  0,
+                  0,
+                  0.9622501730918884,
+                  0.08418597280979156,
+                  0.258819043636322,
+                  -0.08715573698282242,
+                  0.9961947202682495,
+                  0,
+                  -0.25783416628837585,
+                  -0.022557564079761505,
+                  0.9659258127212524
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.9,
+              "tp": 2.65,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.2
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 1.5
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.25,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.9,
+              "tp": 2.7,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.3
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.25,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.25,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.4,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.6,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "part": "Trigger",
+              "t": 0.1,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  0.10000000149011612,
+                  0,
+                  0,
+                  0.9540336728096008,
+                  0.15110409259796143,
+                  0.258819043636322,
+                  -0.15643447637557983,
+                  0.9876883625984192,
+                  0,
+                  -0.25563254952430725,
+                  -0.04048822075128555,
+                  0.9659258127212524
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.95,
+              "tp": 2.7,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.5
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.7,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.7,
+              "tp": 2.7,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.1
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0.9,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.8,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.5,
+              "tp": 2.775,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.025
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.02
+          }
+        },
+        {
+          "delay": 0.9
+        },
+        {
+          "a": [
+            {
+              "part": "knife",
+              "t": 0.1,
+              "eq": "smooth",
+              "c1": "base"
+            },
+            {
+              "part": "rarm",
+              "t": 0.2,
+              "eq": "smooth",
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.1
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0.1,
+        "timescale": 1
+      }
+    },
+    "stab1": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.001,
+              "eq": "linear",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.001
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.049,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  1.149999976158142,
+                  -0.10000000149011612,
+                  0.800000011920929,
+                  0.48296287655830383,
+                  0.12940950691699982,
+                  0.866025447845459,
+                  0.8538539409637451,
+                  -0.2888486981391907,
+                  -0.4330126643180847,
+                  0.19411435723304749,
+                  0.9485881924629211,
+                  -0.25
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Trigger",
+              "t": 0.049,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 1,
+              "tp": 2.5,
+              "part": "Flame",
+              "sound": true,
+              "v": 1.5
+            },
+            {
+              "soundid": "rbxassetid://9125916061",
+              "p": 0.75,
+              "tp": 0.6,
+              "part": "Part1",
+              "sound": true,
+              "v": 0.75
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0,
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": true
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.009
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.75,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "soundid": "rbxassetid://7405488042",
+              "p": 0.95,
+              "tp": 2.6,
+              "part": "Flame",
+              "sound": true,
+              "v": 0.25
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 0,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 0.5,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.01
+          }
+        },
+        {
+          "a": [
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap1",
+              "t": 0.005,
+              "c1": "base"
+            },
+            {
+              "transparency": 1,
+              "eq": "linear",
+              "part": "Zap2",
+              "t": 0.005,
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.025
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "rarm",
+              "t": 0.025,
+              "eq": "decelerate",
+              "c1": "base"
+            },
+            {
+              "part": "MeshPart",
+              "hitboxactive": false
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.025
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "resettime": 0,
+        "timescale": 1
+      }
+    },
+    "reload": {
+      "a": [
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 1.1,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.10000000149011612,
+                  0.20000000298023224,
+                  -0.12999999523162842,
+                  0.9622501730918884,
+                  -0.25783416628837585,
+                  -0.08715573698282242,
+                  0.24246296286582947,
+                  0.9575624465942383,
+                  -0.155839204788208,
+                  0.12363772839307785,
+                  0.12882424890995026,
+                  0.9839299321174622
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "larm",
+              "t": 1,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.27000001072883606,
+                  -0.5400000214576721,
+                  0.3499999940395355,
+                  0.9657787084579468,
+                  -0.2587796151638031,
+                  -0.017452405765652657,
+                  -0.01685773953795433,
+                  0.004516972694545984,
+                  -0.9998477101325989,
+                  0.258819043636322,
+                  0.9659258127212524,
+                  -4.370473050130386e-08
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 1
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "larm",
+              "t": 0.4,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.5400000214576721,
+                  -1.399999976158142,
+                  0.10999999940395355,
+                  0.943600594997406,
+                  -0.27057310938835144,
+                  -0.1908089965581894,
+                  -0.06113651394844055,
+                  0.4240078926086426,
+                  -0.903592586517334,
+                  0.32539239525794983,
+                  0.8642959594726562,
+                  0.383552223443985
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Mag",
+              "t": 0.4,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.2199999988079071,
+                  -1.7599999904632568,
+                  -0.8500000238418579,
+                  -0.9458464980125427,
+                  0.30732420086860657,
+                  0.10452846437692642,
+                  0.3223083019256592,
+                  0.9274195432662964,
+                  0.18976373970508575,
+                  -0.03862274810671806,
+                  0.21317775547504425,
+                  -0.9762497544288635
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.1
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 0.8,
+              "eq": [
+                0,
+                1.5,
+                0.4,
+                -0.4
+              ],
+              "c1": {
+                "v": [
+                  -0.18000000715255737,
+                  0.25,
+                  -0.05000000074505806,
+                  0.9635729193687439,
+                  -0.2581885755062103,
+                  0.06975647062063217,
+                  0.2630455493927002,
+                  0.867796003818512,
+                  -0.42158880829811096,
+                  0.04831502214074135,
+                  0.4245806634426117,
+                  0.9041000604629517
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.3
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Mag",
+              "transparency": 1,
+              "clone": "dropmag"
+            },
+            {
+              "part": "dropmag",
+              "transparency": 0,
+              "drop": true
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.1
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 1.5,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  0.019999999552965164,
+                  0.15000000596046448,
+                  0.009999999776482582,
+                  0.9752236604690552,
+                  0.17195823788642883,
+                  -0.13917310535907745,
+                  -0.18702346086502075,
+                  0.9768866896629333,
+                  -0.10351119935512543,
+                  0.11815674602985382,
+                  0.12697520852088928,
+                  0.9848432540893555
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "larm",
+              "t": 0.8,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.5,
+                  -1.2000000476837158,
+                  0.800000011920929,
+                  0.9170020818710327,
+                  -0.08022727817296982,
+                  -0.3907311260700226,
+                  -0.28391239047050476,
+                  0.556782603263855,
+                  -0.7806323766708374,
+                  0.28018030524253845,
+                  0.8267748951911926,
+                  0.4877932667732239
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Mag",
+              "t": 0.8,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.4000000059604645,
+                  -1.2300000190734863,
+                  -0.30000001192092896,
+                  -1,
+                  -8.742277657347586e-08,
+                  0,
+                  -6.597881707648412e-08,
+                  0.7547096610069275,
+                  0.6560589671134949,
+                  -5.735449803978554e-08,
+                  0.6560589671134949,
+                  -0.7547096610069275
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.8
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "larm",
+              "t": 0.8,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.25,
+                  -1.440000057220459,
+                  -0.3499999940395355,
+                  0.972074031829834,
+                  -0.13661609590053558,
+                  -0.1908089965581894,
+                  -0.22515684366226196,
+                  -0.3137376010417938,
+                  -0.922427773475647,
+                  0.06615453213453293,
+                  0.9396300911903381,
+                  -0.3357362449169159
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "transparency": 0,
+              "eq": "accelerate",
+              "part": "Mag",
+              "t": 0.8,
+              "c1": {
+                "v": [
+                  0,
+                  -0.6000000238418579,
+                  -1,
+                  -1,
+                  -8.742277657347586e-08,
+                  0,
+                  -6.69697328703478e-08,
+                  0.7660444378852844,
+                  0.6427876353263855,
+                  -5.61942812282723e-08,
+                  0.6427876353263855,
+                  -0.7660444378852844
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.7
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 0.6,
+              "eq": [
+                0,
+                1.2,
+                0.4,
+                -0.2
+              ],
+              "c1": {
+                "v": [
+                  0.10000000149011612,
+                  0.20000000298023224,
+                  0.029999999329447746,
+                  0.9623739719390869,
+                  0.2221815437078476,
+                  -0.15643447637557983,
+                  -0.26829251646995544,
+                  0.8682072162628174,
+                  -0.41741514205932617,
+                  0.04307560622692108,
+                  0.44367966055870056,
+                  0.8951496481895447
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.4
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "larm",
+              "t": 0.2,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.25,
+                  -0.8500000238418579,
+                  0.25,
+                  0.956525444984436,
+                  -0.1344309002161026,
+                  -0.258819043636322,
+                  -0.2563002407550812,
+                  0.03602060675621033,
+                  -0.9659258127212524,
+                  0.13917309045791626,
+                  0.9902680516242981,
+                  -4.222195926217864e-08
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Mag",
+              "t": 0.2,
+              "eq": "accelerate",
+              "c1": "base"
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.15
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 0.8,
+              "eq": [
+                0,
+                2,
+                0.3,
+                -0.4
+              ],
+              "c1": {
+                "v": [
+                  0.1599999964237213,
+                  0.33000001311302185,
+                  0.15000000596046448,
+                  0.963287353515625,
+                  0.2047530561685562,
+                  -0.1736481785774231,
+                  -0.2633165419101715,
+                  0.8467035293579102,
+                  -0.46233922243118286,
+                  0.05236314982175827,
+                  0.49108999967575073,
+                  0.8695335984230042
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.5
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 1.2,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  0.029999999329447746,
+                  -0.10000000149011612,
+                  0.10000000149011612,
+                  0.981060266494751,
+                  0.17298740148544312,
+                  -0.08715573698282242,
+                  -0.1765378713607788,
+                  0.9836796522140503,
+                  -0.03476669266819954,
+                  0.07971911877393723,
+                  0.049494508653879166,
+                  0.9955878853797913
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "larm",
+              "t": 1,
+              "eq": "smooth",
+              "c1": {
+                "v": [
+                  -0.5,
+                  -0.3799999952316284,
+                  -1.149999976158142,
+                  0.966105043888092,
+                  -0.20535196363925934,
+                  0.15643447637557983,
+                  -0.020919688045978546,
+                  -0.6662691235542297,
+                  -0.7454178929328918,
+                  0.2573004961013794,
+                  0.7168793678283691,
+                  -0.6479818224906921
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 1
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "larm",
+              "t": 0.25,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  -0.5,
+                  -0.3799999952316284,
+                  -0.550000011920929,
+                  0.966105043888092,
+                  -0.20535196363925934,
+                  0.15643447637557983,
+                  -0.020919688045978546,
+                  -0.6662691235542297,
+                  -0.7454178929328918,
+                  0.2573004961013794,
+                  0.7168793678283691,
+                  -0.6479818224906921
+                ],
+                "t": "CFrame"
+              }
+            },
+            {
+              "part": "Bolt",
+              "t": 0.25,
+              "eq": "accelerate",
+              "c1": {
+                "v": [
+                  0,
+                  0.39500001072883606,
+                  -0.3700000047683716,
+                  0.9659258127212524,
+                  0.258819043636322,
+                  0,
+                  -0.258819043636322,
+                  0.9659258127212524,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.1
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Trigger",
+              "t": 0.6,
+              "eq": [
+                0,
+                1.2,
+                0.4,
+                -0.2
+              ],
+              "c1": {
+                "v": [
+                  0.15000000596046448,
+                  0.3199999928474426,
+                  0.46000000834465027,
+                  0.9330126643180847,
+                  0.25,
+                  -0.258819043636322,
+                  -0.32871538400650024,
+                  0.8847623467445374,
+                  -0.3303660750389099,
+                  0.14640182256698608,
+                  0.39331352710723877,
+                  0.9076733589172363
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.15
+          }
+        },
+        {
+          "a": [
+            {
+              "part": "Bolt",
+              "t": 0.25,
+              "eq": "accelerate",
+              "c1": "base"
+            },
+            {
+              "part": "larm",
+              "t": 0.5,
+              "eq": "decelerate",
+              "c1": {
+                "v": [
+                  -0.5,
+                  -0.44999998807907104,
+                  -0.3499999940395355,
+                  0.966105043888092,
+                  -0.20535196363925934,
+                  0.15643447637557983,
+                  -0.020919688045978546,
+                  -0.6662691235542297,
+                  -0.7454178929328918,
+                  0.2573004961013794,
+                  0.7168793678283691,
+                  -0.6479818224906921
+                ],
+                "t": "CFrame"
+              }
+            }
+          ],
+          "t": "mixed",
+          "d": {
+            "delay": 0.5
+          }
+        }
+      ],
+      "t": "mixed",
+      "d": {
+        "stdtimescale": 0.5,
+        "timescale": 0.5
+      }
+    }
+  },
+  "equipoffset": {
+    "v": [
+      0.8999999761581421,
+      -2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0.2588190734386444,
+      0.9659258127212524,
+      0,
+      -0.9659258127212524,
+      0.2588190734386444
+    ],
+    "t": "CFrame"
+  },
+  "sprintoffset": {
+    "v": [
+      0,
+      -0.20000000298023224,
+      0.20000000298023224,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "t": "CFrame"
+  }
+}
