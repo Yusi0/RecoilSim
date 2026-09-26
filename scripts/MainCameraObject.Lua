@@ -1,4 +1,3 @@
-```lua
 -- ClientModules.Camera.Types.MainCamera.MainCameraObject.Lua
 
 local t1 = {}
@@ -712,4 +711,3 @@ function t1._init() -- line: 811
 end
 
 return t1
-```
