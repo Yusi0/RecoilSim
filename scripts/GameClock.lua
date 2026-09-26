@@ -1,4 +1,4 @@
-ClientModules.Network.GameClock
+-- ClientModules.Network.GameClock
 
 local t1 = {}
 local v2 = shared.require("NetworkClient")
