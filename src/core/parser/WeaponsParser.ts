@@ -1,4 +1,3 @@
-import crypto from 'crypto';
 import { NormalizedWeapon, RawAttachment, RawAttachmentModifiers, RawModifierItem } from '../data/WeaponData';
 import { NormalizedAttachment, NormalizedModifier } from '../data/AttachmentData';
 
@@ -240,7 +239,12 @@ export class WeaponsParser {
             }))
         });
 
-        return crypto.createHash('sha256').update(payload).digest('hex');
+        let hash = 0x811c9dc5;
+        for (let i = 0; i < payload.length; i++) {
+            hash ^= payload.charCodeAt(i);
+            hash = (hash * 0x01000193) >>> 0;
+        }
+        return hash.toString(16);
     }
 
     private sanitizeId(name: string): string {

@@ -1,4 +1,4 @@
-local t1 = {}
+-- ClientModules.Menu.Pages.LoadoutMenu.PageLoadoutMenuDisplayWeaponStats
 local TweenService = game:GetService("TweenService")
 local v3 = shared.require("MenuWeaponDisplayInterface")
 local v4 = shared.require("PlayerDataClientInterface")

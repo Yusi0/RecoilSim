@@ -1,4 +1,4 @@
--- ClientModules.Camera.Types.MainCamera.MainCameraObject.Lua
+-- ClientModules.Camera.Types.MainCamera.MainCameraObject
 
 local t1 = {}
 

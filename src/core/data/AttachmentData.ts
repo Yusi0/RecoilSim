@@ -1,9 +1,9 @@
-import { RawAttachment, RawAttachmentModifiers, RawModifierItem } from './WeaponData';
+import type { RawAttachment, RawAttachmentModifiers, RawModifierItem } from './WeaponData';
 
 export interface NormalizedModifier {
     type: string; // e.g. 'setters', 'relativeMultipliers', 'trueMultipliers', 'adders', etc.
     indexPath: (string | number)[];
-    value: any;
+    value?: any;
     priority?: number;
     insertIndex?: string | number;
     extra?: Record<string, any>;
