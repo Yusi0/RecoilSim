@@ -4,10 +4,11 @@ import {
     DeviceType,
     PhysicalShotSnapshot,
     PlayerViewSnapshot,
+    WeaponPose,
     Vector3,
     CFrame
 } from '../core';
-import { loadCompiledC25Data, CompiledWeaponData } from './c25DataLoader';
+import { loadCompiledC25Data, loadCompiledWeaponData, CompiledWeaponData } from './c25DataLoader';
 
 export interface ControllerState {
     currentTime: number;
@@ -19,6 +20,7 @@ export interface ControllerState {
     isContinuousFiring: boolean;
     seed: number;
     targetDistance: number; // 50, 100, 200 meters/studs
+    dotSize: number; // Impact point screen size multiplier (default 1.0)
 }
 
 export class SimulatorController {
@@ -26,6 +28,7 @@ export class SimulatorController {
     private _compiledWeaponData: CompiledWeaponData;
     private _state: ControllerState;
     private _listeners: Set<() => void> = new Set();
+    private _burstShotsRemaining: number = 0;
 
     constructor() {
         this._compiledWeaponData = loadCompiledC25Data();
@@ -38,10 +41,21 @@ export class SimulatorController {
             device: 'mouse',
             isContinuousFiring: false,
             seed: 2026,
-            targetDistance: 50
+            targetDistance: 50,
+            dotSize: 1.0
         };
 
         this.initEngine();
+    }
+
+    public selectWeapon(weaponId: string): void {
+        this._compiledWeaponData = loadCompiledWeaponData(weaponId);
+        this.initEngine(this._state.seed);
+    }
+
+    public setDotSize(size: number): void {
+        this._state.dotSize = Math.max(0.2, Math.min(3.0, size));
+        this.notify();
     }
 
     public setTargetDistance(distance: number): void {
@@ -53,12 +67,15 @@ export class SimulatorController {
         this._state.seed = seed;
         this._state.currentTime = 0;
         this._state.isContinuousFiring = false;
+        this._burstShotsRemaining = 0;
 
         this._engine = new SimulationEngine({
             weaponData: this._compiledWeaponData,
             seed: this._state.seed,
             baseCameraOrientation: CFrame.IDENTITY,
-            positionOffset: new Vector3(0, 1.5, 0)
+            positionOffset: new Vector3(0, 1.5, 0),
+            hipOffset: CFrame.newPos(new Vector3(0.18, -0.15, -0.42)),
+            aimOffset: CFrame.newPos(new Vector3(0, -0.08, -0.32))
         });
 
         this._engine.setStance(this._state.stance);
@@ -136,9 +153,18 @@ export class SimulatorController {
     }
 
     public setContinuousFiring(firing: boolean): void {
-        this._state.isContinuousFiring = firing;
         if (firing) {
-            this.fireSingleShot();
+            // Trigger pulled: begin burst matching weapon magazine size
+            const magsize = Math.round(this._compiledWeaponData.magsize || 30);
+            this._burstShotsRemaining = magsize;
+            this._state.isContinuousFiring = true;
+            if (this.fireSingleShot()) {
+                this._burstShotsRemaining--;
+            }
+        } else {
+            // Trigger released: stop firing and reset burst count
+            this._state.isContinuousFiring = false;
+            this._burstShotsRemaining = 0;
         }
         this.notify();
     }
@@ -155,9 +181,26 @@ export class SimulatorController {
         const simDt = realDeltaTimeSec * this._state.timeSpeed;
         const targetTime = this._state.currentTime + simDt;
 
-        if (this._state.isContinuousFiring) {
-            if (this._engine.canFire(targetTime)) {
-                this._engine.pushFireInput(targetTime);
+        // Auto-burst handling: fire up to 30 shots, then stop even if trigger is held
+        while (this._state.isContinuousFiring && this._burstShotsRemaining > 0) {
+            const nextShotTime = this._engine.firearmState.nextShotTime;
+            const fireT = Math.max(this._state.currentTime, nextShotTime);
+            if (fireT <= targetTime && this._engine.canFire(fireT)) {
+                if (this._engine.pushFireInput(fireT)) {
+                    this._burstShotsRemaining--;
+                    this._engine.advanceTo(fireT);
+                    this._state.currentTime = this._engine.currentTime;
+                    if (this._burstShotsRemaining <= 0) {
+                        // 30th shot reached: auto-stop continuous firing
+                        this._state.isContinuousFiring = false;
+                        this.notify();
+                        break;
+                    }
+                } else {
+                    break;
+                }
+            } else {
+                break;
             }
         }
 
@@ -167,6 +210,10 @@ export class SimulatorController {
 
     public getPlayerViewSnapshot(): PlayerViewSnapshot {
         return this._engine.getPlayerViewSnapshot(this._state.currentTime);
+    }
+
+    public getWeaponPose(): WeaponPose {
+        return this._engine.getWeaponPose(this._state.currentTime);
     }
 
     public getPhysicalShots(): readonly PhysicalShotSnapshot[] {

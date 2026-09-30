@@ -29,9 +29,23 @@ export const App: React.FC = () => {
             setTick((t) => (t + 1) % 1000);
         });
 
+        // 'C' key shortcut to reset simulation
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+                return;
+            }
+            if (e.key === 'c' || e.key === 'C') {
+                controller.resetSimulation();
+                setSelectedShotIndex(null);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
         return () => {
             clearInterval(interval);
             unsubscribe();
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, [controller]);
 
@@ -90,6 +104,7 @@ export const App: React.FC = () => {
                             selectedShotIndex={selectedShotIndex}
                             onSelectShot={setSelectedShotIndex}
                             targetDistance={controller.state.targetDistance}
+                            magsize={controller.compiledWeaponData.magsize || 30}
                             onClose={() => setActiveDrawer(null)}
                         />
                     </div>
@@ -100,6 +115,7 @@ export const App: React.FC = () => {
                         <ShotLogPanel
                             shots={shots}
                             targetDistance={controller.state.targetDistance}
+                            weaponName={controller.compiledWeaponData.displayname}
                             onClose={() => setActiveDrawer(null)}
                         />
                     </div>

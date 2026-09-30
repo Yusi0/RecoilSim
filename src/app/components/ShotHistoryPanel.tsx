@@ -7,14 +7,26 @@ interface ShotHistoryPanelProps {
     selectedShotIndex: number | null;
     onSelectShot: (index: number | null) => void;
     targetDistance?: number;
+    magsize?: number;
     onClose?: () => void;
 }
+
+const SHOT_GROUP_COLORS = [
+    '#00f2fe', // Group 0 (1-30)
+    '#ff9f43', // Group 1 (31-60)
+    '#10b981', // Group 2 (61-90)
+    '#a855f7', // Group 3 (91-120)
+    '#f43f5e', // Group 4 (121-150)
+    '#38bdf8', // Group 5 (151-180)
+    '#facc15'  // Group 6 (181-210)
+];
 
 export const ShotHistoryPanel: React.FC<ShotHistoryPanelProps> = ({
     shots,
     selectedShotIndex,
     onSelectShot,
     targetDistance = 50,
+    magsize = 30,
     onClose
 }) => {
     // Calculate Shot Grouping Statistics (탄착군 분석 통계)
@@ -159,6 +171,8 @@ export const ShotHistoryPanel: React.FC<ShotHistoryPanelProps> = ({
                     {shots.map((shot, idx) => {
                         const isSelected = selectedShotIndex === idx;
                         const mag = shot.rotationRecoilVec.magnitude;
+                        const colorMagsize = Math.max(1, Math.round(magsize));
+                        const colorGroup = Math.floor((shot.fireCount ?? idx) / colorMagsize);
                         return (
                             <button
                                 key={idx}
@@ -170,7 +184,12 @@ export const ShotHistoryPanel: React.FC<ShotHistoryPanelProps> = ({
                                 }`}
                             >
                                 <div className="flex flex-col gap-0.5">
+
                                     <div className="flex items-center gap-2">
+                                        <span
+                                            className="w-2 h-2 rounded-full inline-block shrink-0 shadow-sm"
+                                            style={{ backgroundColor: SHOT_GROUP_COLORS[colorGroup % SHOT_GROUP_COLORS.length] }}
+                                        />
                                         <span className="font-bold text-slate-100">#{idx + 1}</span>
                                         <span className="text-[11px] text-slate-400">t = {shot.timestamp.toFixed(3)}s</span>
                                     </div>

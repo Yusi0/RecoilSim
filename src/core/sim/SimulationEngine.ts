@@ -13,6 +13,7 @@ import {
     SimEvent,
     PhysicalShotSnapshot,
     PlayerViewSnapshot,
+    WeaponPose,
     FirearmState,
     SimulationEngineConfig,
     StanceMode,
@@ -42,6 +43,8 @@ export class SimulationEngine {
     private _baseCameraOrientation: CFrame;
     private _positionOffset: Vector3;
     private _mainOffset: CFrame;
+    private _hipOffset?: CFrame;
+    private _aimOffset?: CFrame;
     private _barrelOffset: CFrame;
     private _sightOffset: CFrame;
 
@@ -68,7 +71,14 @@ export class SimulationEngine {
         this._aimSpeed = config.aimSpeed ?? (config.weaponData.aimspeed ?? 15);
         this._aimSpring = new Spring(0, 1, this._aimSpeed);
 
-        this._spreadSpring = new Vector3Spring();
+        const spreadRecover = this._firearmRecoil.getWeaponStat<number>('hipfirespreadrecover') ?? 1.0;
+        const spreadStability = this._firearmRecoil.getWeaponStat<number>('hipfirestability') ?? 0.7;
+
+        this._spreadSpring = new Vector3Spring(
+            Vector3.ZERO,
+            new Vector3(spreadStability, spreadStability, spreadStability),
+            new Vector3(spreadRecover, spreadRecover, spreadRecover)
+        );
         this._chokeSpring = new Vector3Spring();
 
         this._firearmState = {
@@ -82,6 +92,8 @@ export class SimulationEngine {
         this._baseCameraOrientation = config.baseCameraOrientation || CFrame.IDENTITY;
         this._positionOffset = config.positionOffset || Vector3.ZERO;
         this._mainOffset = config.mainOffset || CFrame.IDENTITY;
+        this._hipOffset = config.hipOffset;
+        this._aimOffset = config.aimOffset;
         this._barrelOffset = config.barrelOffset || CFrame.IDENTITY;
         this._sightOffset = config.sightOffset || CFrame.IDENTITY;
 
@@ -296,7 +308,7 @@ export class SimulationEngine {
                 this._firearmRecoil.setFiremodeStability(this._firearmState.firemodeStability);
 
                 const weightMult = this._firearmRecoil.computeWeightRecoilMult();
-                const cameraRecoilMult = (1 - event.aimProgressAtFire) * this._firearmRecoil.computeCameraRecoilMultiplier();
+                const cameraRecoilMult = this._firearmRecoil.computeCameraRecoilMultiplier();
 
                 // 2. Apply impulses to firearm recoil & camera recoil
                 this._firearmRecoil.fire(event.timestamp);
@@ -315,34 +327,15 @@ export class SimulationEngine {
             }
 
             case 'SHOT_GENERATE': {
-                // Compute Physical Shot Snapshot at t_shot
+                // Compute authoritative WeaponPose at t_shot
                 // IMPORTANT: CameraHead is strictly 0% in Physical Shot CFrame chain!
-                const cameraCFs = this._cameraRecoil.computeCFrames(this._baseCameraOrientation, this._positionOffset, event.timestamp);
-                const bodyRecoilVec = cameraCFs.bodyRecoilVec;
-
-                const v186 = cameraCFs.v186; // v185 * bodyRecoilCF (Excludes CameraHead)
-                const shakeCFrame = cameraCFs.shakeCFrame; // v186 + positionOffset
-
-                const firearmPV = this._firearmRecoil.getPositionsAndVelocities(event.timestamp);
-                const translationRecoilVec = firearmPV.translation;
-                const rotationRecoilVec = firearmPV.rotation;
-                const rotationRecoilVelVec = firearmPV.rotationVel;
-                const spreadSpringVec = this._spreadSpring.p;
-
-                const mainC0 = shakeCFrame
-                    .mul(this._mainOffset)
-                    .mul(CFrame.fromAxisAngle(spreadSpringVec))
-                    .mul(CFrame.newPos(translationRecoilVec))
-                    .mul(CFrame.fromAxisAngle(rotationRecoilVec));
-
-                const isAim = this._aimSpring.p > 0.5;
-                const activeOffset = isAim ? this._sightOffset : this._barrelOffset;
-                const v474 = this._rootCFrame.mul(mainC0).mul(activeOffset);
+                const pose = this.getWeaponPose(event.timestamp);
+                const v474 = pose.v474;
                 const origin = v474.p;
 
                 // Compute shot direction (with spread)
                 const spreadStat = this._firearmRecoil.getWeaponStat<number>('spread') ?? 0;
-                let dir = v474.zVector.neg(); // default lookVector (-Z)
+                let dir = pose.barrelForward; // default lookVector (-Z of v474)
 
                 if (spreadStat > 0) {
                     const r1 = this._prng.nextFloat();
@@ -361,11 +354,12 @@ export class SimulationEngine {
                     origin,
                     direction: dir,
                     v474,
-                    cameraBodyRecoilVec: bodyRecoilVec,
-                    translationRecoilVec,
-                    rotationRecoilVec,
-                    rotationRecoilVelVec,
-                    spreadSpringVec
+                    cameraBodyRecoilVec: pose.cameraBodyRecoilVec,
+                    translationRecoilVec: pose.translationRecoilVec,
+                    rotationRecoilVec: pose.rotationRecoilVec,
+                    rotationRecoilVelVec: pose.rotationRecoilVelVec,
+                    spreadSpringVec: pose.spreadSpringVec,
+                    weaponPose: pose
                 };
 
                 this._physicalShots.push(snapshot);
@@ -379,6 +373,70 @@ export class SimulationEngine {
             case 'STEP':
                 break;
         }
+    }
+
+    /**
+     * Gets the authoritative WeaponPose snapshot at virtual timestamp t.
+     * Conforms 100% to PF _mainC0 / _mainWeld.C0 semantics.
+     * Note: CameraHead has strictly 0% presence in WeaponPose.
+     */
+    public getWeaponPose(currentTime?: number): WeaponPose {
+        const t = currentTime ?? this._currentTime;
+        const cameraCFs = this._cameraRecoil.computeCFrames(this._baseCameraOrientation, this._positionOffset, t);
+        const bodyRecoilVec = cameraCFs.bodyRecoilVec;
+        const shakeCFrame = cameraCFs.shakeCFrame; // v186 + positionOffset (ZERO CameraHead influence)
+
+        const firearmPV = this._firearmRecoil.getPositionsAndVelocities(t);
+        const translationRecoilVec = firearmPV.translation;
+        const rotationRecoilVec = firearmPV.rotation;
+        const rotationRecoilVelVec = firearmPV.rotationVel;
+        const spreadSpringVec = this._spreadSpring.p;
+
+        const aimProgress = this._aimSpring.p;
+        const isAim = aimProgress > 0.5;
+
+        const mainOffset = this._computeMainOffset(aimProgress);
+
+        const mainC0 = shakeCFrame
+            .mul(mainOffset)
+            .mul(CFrame.fromAxisAngle(spreadSpringVec))
+            .mul(CFrame.newPos(translationRecoilVec))
+            .mul(CFrame.fromAxisAngle(rotationRecoilVec));
+
+        const activeOffset = isAim ? this._sightOffset : this._barrelOffset;
+        const weaponCFrame = this._rootCFrame.mul(mainC0);
+        const v474 = weaponCFrame.mul(activeOffset);
+        const forward = weaponCFrame.zVector.neg();
+        const barrelForward = v474.zVector.neg();
+
+        return {
+            timestamp: t,
+            mainC0,
+            weaponCFrame,
+            activeOffset,
+            v474,
+            forward,
+            barrelForward,
+            isAiming: isAim,
+            aimProgress,
+            cameraBodyRecoilVec: bodyRecoilVec,
+            translationRecoilVec,
+            rotationRecoilVec,
+            rotationRecoilVelVec,
+            spreadSpringVec
+        };
+    }
+
+    private _computeMainOffset(aimProgress: number): CFrame {
+        if (this._hipOffset && this._aimOffset) {
+            const hp = this._hipOffset.p;
+            const ap = this._aimOffset.p;
+            const x = hp.x + (ap.x - hp.x) * aimProgress;
+            const y = hp.y + (ap.y - hp.y) * aimProgress;
+            const z = hp.z + (ap.z - hp.z) * aimProgress;
+            return new CFrame(this._mainOffset.r, new Vector3(x, y, z));
+        }
+        return this._mainOffset;
     }
 
     /**

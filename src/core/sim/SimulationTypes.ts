@@ -21,6 +21,44 @@ export type SimEvent =
     | { type: 'STEP'; timestamp: number };
 
 /**
+ * Authoritative WeaponPose snapshot at virtual timestamp t.
+ * Conforms 100% to PF _mainC0 / _mainWeld.C0 semantics.
+ * Note: CameraHead has strictly 0% presence in WeaponPose.
+ */
+export interface WeaponPose {
+    readonly timestamp: number;
+
+    /** Authoritative weapon root CFrame (_mainC0 in PF) */
+    readonly mainC0: CFrame;
+
+    /** Full weapon CFrame in world space (rootCFrame * mainC0) */
+    readonly weaponCFrame: CFrame;
+
+    /** Active offset (sightOffset when aiming, barrelOffset when in hipfire) */
+    readonly activeOffset: CFrame;
+
+    /** Barrel / Sight CFrame in world space (weaponCFrame * activeOffset) */
+    readonly v474: CFrame;
+
+    /** Weapon root forward direction in world space (-Z of weaponCFrame) */
+    readonly forward: Vector3;
+
+    /** Barrel forward direction in world space (-Z of v474) */
+    readonly barrelForward: Vector3;
+
+    /** Aiming state and progress [0, 1] */
+    readonly isAiming: boolean;
+    readonly aimProgress: number;
+
+    /** Physical recoil spring states contributing to this pose */
+    readonly cameraBodyRecoilVec: Vector3;
+    readonly translationRecoilVec: Vector3;
+    readonly rotationRecoilVec: Vector3;
+    readonly rotationRecoilVelVec?: Vector3;
+    readonly spreadSpringVec: Vector3;
+}
+
+/**
  * Snapshot representing a Physical Shot generated at t_shot (t_fire + firedelay).
  * Note: CameraHead has ZERO presence in PhysicalShotSnapshot (0% influence on origin/direction).
  */
@@ -44,6 +82,9 @@ export interface PhysicalShotSnapshot {
     readonly rotationRecoilVec: Vector3;
     readonly rotationRecoilVelVec?: Vector3;
     readonly spreadSpringVec: Vector3;
+
+    /** Associated authoritative weapon pose at fire moment */
+    readonly weaponPose?: WeaponPose;
 }
 
 /**
@@ -89,6 +130,8 @@ export interface SimulationEngineConfig {
     positionOffset?: Vector3;
 
     mainOffset?: CFrame;
+    hipOffset?: CFrame;
+    aimOffset?: CFrame;
     barrelOffset?: CFrame;
     sightOffset?: CFrame;
 

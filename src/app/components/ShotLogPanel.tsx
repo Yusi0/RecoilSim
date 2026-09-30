@@ -5,12 +5,14 @@ import { Terminal, Copy, Check } from 'lucide-react';
 interface ShotLogPanelProps {
     shots: readonly PhysicalShotSnapshot[];
     targetDistance?: number;
+    weaponName?: string;
     onClose?: () => void;
 }
 
 export const ShotLogPanel: React.FC<ShotLogPanelProps> = ({
     shots,
     targetDistance = 50,
+    weaponName,
     onClose
 }) => {
     const [copied, setCopied] = React.useState(false);
@@ -84,10 +86,11 @@ export const ShotLogPanel: React.FC<ShotLogPanelProps> = ({
             prevDir = dir;
         });
 
-        // Add C25 Rotation Recoil Spring State Trace (#N RotP & RotV)
+        // Add Rotation Recoil Spring State Trace (#N RotP & RotV)
+        const weaponTitle = weaponName || 'WEAPON';
         lines.push('');
         lines.push('--------------------------------------------------------------------------------');
-        lines.push(`--- C25 ROTATION RECOIL SPRING STATE TRACE (RotP & RotV) (${shots.length} Shots) ---`);
+        lines.push(`--- ${weaponTitle} ROTATION RECOIL SPRING STATE TRACE (RotP & RotV) (${shots.length} Shots) ---`);
         lines.push('--------------------------------------------------------------------------------');
 
         shots.forEach((shot, idx) => {

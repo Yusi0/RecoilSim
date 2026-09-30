@@ -1,7 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SimulatorController } from './SimulatorController';
-import { PhysicalShotSnapshot, Vector3 } from '../core';
+import { PhysicalShotSnapshot, Vector3, CFrame, WeaponPose } from '../core';
+
+const _cframeMatrix = new THREE.Matrix4();
+export function applyCFrameToObject(object: THREE.Object3D, cf: CFrame): void {
+    const r = cf.r;
+    const p = cf.p;
+    _cframeMatrix.set(
+        r[0], r[1], r[2], p.x,
+        r[3], r[4], r[5], p.y,
+        r[6], r[7], r[8], p.z,
+        0,    0,    0,    1
+    );
+    _cframeMatrix.decompose(object.position, object.quaternion, object.scale);
+}
 
 interface FPSCanvasProps {
     controller: SimulatorController;
@@ -11,8 +24,8 @@ interface FPSCanvasProps {
     onSelectShot?: (index: number) => void;
 }
 
-const MAX_IMPACT_DOTS = 300;
-const MAX_TRACERS = 100;
+const MAX_IMPACT_DOTS = 600;
+const MAX_TRACERS = 600;
 
 export const FPSCanvas: React.FC<FPSCanvasProps> = ({
     controller,
@@ -26,7 +39,6 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
     const sceneRef = useRef<THREE.Scene | null>(null);
     const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
     const weaponGroupRef = useRef<THREE.Group | null>(null);
-    const targetWallGroupRef = useRef<THREE.Group | null>(null);
     const debugGroupRef = useRef<THREE.Group | null>(null);
     const muzzleFlashLightRef = useRef<THREE.PointLight | null>(null);
 
@@ -59,7 +71,7 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         renderer.setSize(width, height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
         renderer.shadowMap.enabled = true;
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.shadowMap.type = THREE.PCFShadowMap;
         containerRef.current.appendChild(renderer.domElement);
         rendererRef.current = renderer;
 
@@ -76,40 +88,39 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         fillLight.position.set(-10, 5, -10);
         scene.add(fillLight);
 
-        // Muzzle Flash Light (attached to camera)
-        const muzzleFlashLight = new THREE.PointLight(0xffaa22, 0, 8);
-        muzzleFlashLight.position.set(0, -0.05, -0.65);
-        camera.add(muzzleFlashLight);
-        muzzleFlashLightRef.current = muzzleFlashLight;
-
-        // 4. Ground Grid & Firing Range Environment
-        const gridHelper = new THREE.GridHelper(300, 150, 0x1e293b, 0x0f172a);
-        gridHelper.position.y = 0;
+        // 4. Ground Grid & Firing Range Environment (Lowered far below impact points)
+        const gridHelper = new THREE.GridHelper(500, 100, 0x1e293b, 0x090d16);
+        gridHelper.position.y = -10.0;
         scene.add(gridHelper);
 
-        // 5. Target Board Group
-        const targetGroup = new THREE.Group();
-        targetWallGroupRef.current = targetGroup;
-        scene.add(targetGroup);
-        buildTargetBoard(targetGroup, controller.state.targetDistance);
-
-        // 6. Viewmodel Mesh Group (PARENTED TO CAMERA for true FPS ADS recoil)
+        // 5. Viewmodel Mesh Group (PARENTED TO SCENE, NOT CAMERA)
+        // Eliminates CameraHead recoil contamination from viewmodel
         const weaponGroup = new THREE.Group();
         weaponGroupRef.current = weaponGroup;
-        camera.add(weaponGroup); // PARENTED TO CAMERA!
+        scene.add(weaponGroup);
         buildLowPolyWeapon(weaponGroup);
 
-        // 7. Object Pools Allocation (Created ONCE to prevent GC lag)
+        // Muzzle Flash Light (attached to weaponGroup at barrel tip)
+        const muzzleFlashLight = new THREE.PointLight(0xffaa22, 0, 8);
+        muzzleFlashLight.position.set(0, 0, -0.65);
+        weaponGroup.add(muzzleFlashLight);
+        muzzleFlashLightRef.current = muzzleFlashLight;
+
+        // 6. Object Pools Allocation (Created ONCE to prevent GC lag)
         const impactGroup = new THREE.Group();
         scene.add(impactGroup);
         const impactPool: THREE.Mesh[] = [];
-        const dotGeo = new THREE.SphereGeometry(0.08, 12, 12);
-        const normalDotMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe });
-        const latestDotMat = new THREE.MeshBasicMaterial({ color: 0xff0055 });
-        const selectedDotMat = new THREE.MeshBasicMaterial({ color: 0xffea00 });
+        // Unit sphere geometry: scaled dynamically in render loop for screen-space constant size
+        const dotGeo = new THREE.SphereGeometry(1.0, 16, 16);
 
         for (let i = 0; i < MAX_IMPACT_DOTS; i++) {
-            const mesh = new THREE.Mesh(dotGeo, normalDotMat);
+            const mat = new THREE.MeshBasicMaterial({
+                color: 0x00f2fe,
+                transparent: true,
+                opacity: 1.0,
+                depthWrite: false
+            });
+            const mesh = new THREE.Mesh(dotGeo, mat);
             mesh.visible = false;
             impactGroup.add(mesh);
             impactPool.push(mesh);
@@ -119,8 +130,8 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         const tracerGroup = new THREE.Group();
         scene.add(tracerGroup);
         const tracerPool: THREE.Line[] = [];
-        const lineMat = new THREE.LineBasicMaterial({ color: 0x00f2fe, transparent: true, opacity: 0.5 });
         for (let i = 0; i < MAX_TRACERS; i++) {
+            const lineMat = new THREE.LineBasicMaterial({ color: 0x00f2fe, transparent: true, opacity: 0.5 });
             const lineGeo = new THREE.BufferGeometry().setFromPoints([
                 new THREE.Vector3(0, 0, 0),
                 new THREE.Vector3(0, 0, -1)
@@ -165,17 +176,10 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                 }
             }
 
-            // Target Distance Position Check
-            if (targetWallGroupRef.current) {
-                const targetZ = -controller.state.targetDistance;
-                if (Math.abs(targetWallGroupRef.current.position.z - targetZ) > 0.01) {
-                    buildTargetBoard(targetWallGroupRef.current, controller.state.targetDistance);
-                }
-            }
 
-            // Fetch Recoil & Camera States
+            // Fetch Recoil, Camera & WeaponPose States
             const view = controller.getPlayerViewSnapshot();
-            const firearmPos = controller.getFirearmPositions();
+            const weaponPose = controller.getWeaponPose();
             const isAiming = controller.state.aiming;
 
             // FOV Transition (Zoom in ADS)
@@ -183,47 +187,26 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
             camera.fov += (targetFov - camera.fov) * 0.15;
             camera.updateProjectionMatrix();
 
-            // Camera Body & Head Recoil (Camera Rotation)
-            const bodyRecoil = view.cameraBodyRecoilVec;
-            const headRecoil = view.cameraHeadRecoilVec;
+            // Camera receives v187: baseCamera * bodyRecoil * headRecoil + positionOffset
+            applyCFrameToObject(camera, view.v187);
 
-            camera.rotation.set(
-                bodyRecoil.x + headRecoil.x,
-                bodyRecoil.y + headRecoil.y,
-                bodyRecoil.z + headRecoil.z,
-                'YXZ'
-            );
-
-            // Viewmodel Recoil Position & Rotation (Relative to Camera)
-            const rotRecoil = firearmPos.rotation;
-            const transRecoil = firearmPos.translation;
-
-            const targetPosX = isAiming ? 0 : 0.18;
-            const targetPosY = isAiming ? -0.08 : -0.15;
-            const targetPosZ = isAiming ? -0.32 : -0.42;
-
-            weaponGroup.position.set(
-                targetPosX + transRecoil.x,
-                targetPosY + transRecoil.y,
-                targetPosZ + transRecoil.z
-            );
-
-            weaponGroup.rotation.set(rotRecoil.x, rotRecoil.y, rotRecoil.z, 'YXZ');
+            // Viewmodel receives authoritative WeaponPose: weaponCFrame (rootCFrame * _mainC0)
+            // CameraHead has strictly 0% presence in WeaponPose!
+            applyCFrameToObject(weaponGroup, weaponPose.weaponCFrame);
 
             // Render Impact Dots (탄착점) & Tracers using pre-allocated object pools
             updateImpactsAndTracers(
+                camera,
                 shots,
                 selectedShotIndex,
                 controller.state.targetDistance,
-                showTracers,
-                normalDotMat,
-                latestDotMat,
-                selectedDotMat
+                showTracers
             );
 
             // Render Debug Vectors if enabled
             if (showDebugVectors) {
-                updateDebugVectors(bodyRecoil, rotRecoil);
+                const latestShot = shots.length > 0 ? shots[shots.length - 1] : null;
+                updateDebugVectors(weaponPose.cameraBodyRecoilVec, weaponPose.rotationRecoilVec, latestShot, controller.state.targetDistance);
             } else {
                 debugGroup.clear();
             }
@@ -252,10 +235,11 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
             window.removeEventListener('resize', handleResize);
 
             dotGeo.dispose();
-            normalDotMat.dispose();
-            latestDotMat.dispose();
-            selectedDotMat.dispose();
-            lineMat.dispose();
+            impactPool.forEach((m) => (m.material as THREE.Material).dispose());
+            tracerPool.forEach((l) => {
+                l.geometry.dispose();
+                (l.material as THREE.Material).dispose();
+            });
 
             if (rendererRef.current && rendererRef.current.domElement) {
                 rendererRef.current.domElement.remove();
@@ -264,50 +248,13 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         };
     }, [controller, showDebugVectors, showTracers, selectedShotIndex]);
 
-    // Build Target Board Mesh
-    const buildTargetBoard = (group: THREE.Group, distance: number) => {
-        group.clear();
-        const targetZ = -distance;
-        group.position.set(0, 0, targetZ);
-
-        const boardSize = Math.max(10, distance * 0.35);
-        const boardGeo = new THREE.PlaneGeometry(boardSize, boardSize);
-        const boardMat = new THREE.MeshStandardMaterial({
-            color: 0x0f172a,
-            roughness: 0.85,
-            metalness: 0.2
-        });
-        const board = new THREE.Mesh(boardGeo, boardMat);
-        board.position.set(0, 1.5, 0);
-        board.receiveShadow = true;
-        group.add(board);
-
-        // Bullseye Rings
-        const scaleFactor = distance / 50;
-        const ringColors = [0xffffff, 0x000000, 0x00f2fe, 0xff0055, 0xffcc00];
-        const ringRadii = [3.0 * scaleFactor, 2.25 * scaleFactor, 1.5 * scaleFactor, 0.75 * scaleFactor, 0.25 * scaleFactor];
-
-        ringRadii.forEach((r, idx) => {
-            const innerR = idx === ringRadii.length - 1 ? 0 : ringRadii[idx + 1];
-            const ringGeo = new THREE.RingGeometry(innerR, r, 64);
-            const ringMat = new THREE.MeshBasicMaterial({
-                color: ringColors[idx],
-                side: THREE.DoubleSide
-            });
-            const ringMesh = new THREE.Mesh(ringGeo, ringMat);
-            ringMesh.position.set(0, 1.5, 0.05);
-            group.add(ringMesh);
-        });
-    };
-
-    // Build Simple FPS Viewmodel (Receiver, Barrel, Grip, Muzzle, Optic Sight)
+    // Build Simple FPS Viewmodel (Receiver, Barrel, Grip, Muzzle) - SIGHT MODEL REMOVED
     const buildLowPolyWeapon = (group: THREE.Group) => {
         group.clear();
 
         const metalMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.8, roughness: 0.3 });
         const darkMetal = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.9, roughness: 0.2 });
         const polymerMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.1, roughness: 0.8 });
-        const reticleLensMat = new THREE.MeshBasicMaterial({ color: 0x00f2fe });
 
         // Receiver Body
         const receiver = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.1, 0.38), metalMat);
@@ -326,15 +273,6 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         muzzle.position.set(0, 0, -0.65);
         group.add(muzzle);
 
-        // Optic Sight (RDS)
-        const opticBase = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.04, 0.1), metalMat);
-        opticBase.position.set(0, 0.07, -0.05);
-        group.add(opticBase);
-
-        const opticLens = new THREE.Mesh(new THREE.RingGeometry(0.004, 0.015, 32), reticleLensMat);
-        opticLens.position.set(0, 0.07, -0.1);
-        group.add(opticLens);
-
         // Grip & Magazine
         const grip = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.14, 0.06), polymerMat);
         grip.rotation.x = 0.3;
@@ -347,22 +285,41 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         group.add(mag);
     };
 
-    // Update Impact Dots (탄착점) & Tracers without allocations
+    // Color palette cycling per magazine: Math.floor(shot.fireCount / magsize)
+    const IMPACT_COLOR_PALETTE = [
+        0x00f2fe, // Group 0 (Mag 1): Cyan
+        0xff9f43, // Group 1 (Mag 2): Vibrant Amber / Orange
+        0x10b981, // Group 2 (Mag 3): Emerald Mint
+        0xa855f7, // Group 3 (Mag 4): Electric Purple
+        0xf43f5e, // Group 4 (Mag 5): Rose Pink
+        0x38bdf8, // Group 5 (Mag 6): Sky Blue
+        0xfacc15  // Group 6 (Mag 7): Bright Gold
+    ];
+
+    // Update Impact Dots (탄착점) & Tracers with Magazine-based Coloring
     const updateImpactsAndTracers = (
+        camera: THREE.PerspectiveCamera,
         shots: readonly PhysicalShotSnapshot[],
         selectedIdx: number | null,
         targetDistance: number,
-        enableTracers: boolean,
-        normalMat: THREE.Material,
-        latestMat: THREE.Material,
-        selectedMat: THREE.Material
+        enableTracers: boolean
     ) => {
         const impactPool = impactMeshPoolRef.current;
         const tracerPool = tracerLinePoolRef.current;
         const targetZ = -targetDistance;
         const totalShots = shots.length;
 
-        // Update Impact Dots
+        // Dynamic Magazine Size from Weapon Data (no hardcoded values)
+        const magsize = Math.max(1, Math.round(controller.compiledWeaponData.magsize || 30));
+
+        // Half vertical FOV in radians for screen-space constant size projection
+        const halfFovRad = THREE.MathUtils.degToRad(camera.fov / 2);
+        const tanHalfFov = Math.tan(halfFovRad);
+        // Screen-space scale factor multiplied by user settings (controller.state.dotSize)
+        const dotScale = controller.state.dotSize ?? 1.0;
+        const screenFraction = 0.0035 * dotScale;
+
+        // 1. Update 3D Floating Impact Dots
         for (let i = 0; i < MAX_IMPACT_DOTS; i++) {
             if (i < totalShots) {
                 const shot = shots[i];
@@ -374,20 +331,44 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                 const endPointY = origin.y + dir.y * distToTarget;
 
                 const mesh = impactPool[i];
-                mesh.position.set(endPointX, endPointY, targetZ + 0.02);
+                mesh.position.set(endPointX, endPointY, targetZ);
+
+                // Constant screen-space size formula:
+                // worldRadius = 2.0 * distanceToCamera * tan(fov / 2) * screenFraction
+                const distToCamera = camera.position.distanceTo(mesh.position);
+                const baseScale = 2.0 * distToCamera * tanHalfFov * screenFraction;
 
                 const isSelected = selectedIdx === i;
                 const isLatest = i === totalShots - 1;
 
+                // Color index strictly determined by magazine index = Math.floor(fireCount / magsize)
+                // Retains same color if firing is paused & resumed within same magazine!
+                const colorGroup = Math.floor(shot.fireCount / magsize);
+                const groupColorHex = IMPACT_COLOR_PALETTE[colorGroup % IMPACT_COLOR_PALETTE.length];
+
+                // Opacity calculation (independent of color):
+                const ageInShots = (totalShots - 1) - i;
+                const minOpacity = 0.20;
+                const ageSpan = Math.max(magsize, totalShots - 1);
+                const ageFactor = Math.min(1.0, ageInShots / ageSpan);
+                const computedOpacity = isSelected ? 1.0 : (1.0 - ageFactor * (1.0 - minOpacity));
+
+                const mat = mesh.material as THREE.MeshBasicMaterial;
                 if (isSelected) {
-                    mesh.material = selectedMat;
-                    mesh.scale.set(1.5, 1.5, 1.5);
+                    mat.color.setHex(0xffea00);
+                    mat.opacity = 1.0;
+                    const s = baseScale * 1.5;
+                    mesh.scale.set(s, s, s);
                 } else if (isLatest) {
-                    mesh.material = latestMat;
-                    mesh.scale.set(1.2, 1.2, 1.2);
+                    mat.color.setHex(groupColorHex);
+                    mat.opacity = 1.0;
+                    const s = baseScale * 1.25;
+                    mesh.scale.set(s, s, s);
                 } else {
-                    mesh.material = normalMat;
-                    mesh.scale.set(1.0, 1.0, 1.0);
+                    mat.color.setHex(groupColorHex);
+                    mat.opacity = computedOpacity;
+                    const s = baseScale * 1.0;
+                    mesh.scale.set(s, s, s);
                 }
                 mesh.visible = true;
             } else {
@@ -395,7 +376,7 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
             }
         }
 
-        // Update Tracers (Only if enabled)
+        // 2. Update Bullet Tracers (Only if enabled)
         for (let i = 0; i < MAX_TRACERS; i++) {
             if (enableTracers && i < totalShots) {
                 const shot = shots[i];
@@ -415,6 +396,10 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                 positions[4] = endPointY;
                 positions[5] = targetZ;
                 line.geometry.attributes.position.needsUpdate = true;
+
+                const colorGroup = Math.floor(shot.fireCount / magsize);
+                const colorHex = IMPACT_COLOR_PALETTE[colorGroup % IMPACT_COLOR_PALETTE.length];
+                (line.material as THREE.LineBasicMaterial).color.setHex(colorHex);
                 line.visible = true;
             } else {
                 tracerPool[i].visible = false;
@@ -422,7 +407,12 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         }
     };
 
-    const updateDebugVectors = (bodyRecoil: Vector3, rotRecoil: Vector3) => {
+    const updateDebugVectors = (
+        bodyRecoil: Vector3,
+        rotRecoil: Vector3,
+        latestShot?: PhysicalShotSnapshot | null,
+        targetDistance: number = 50
+    ) => {
         if (!debugGroupRef.current) return;
         const group = debugGroupRef.current;
         group.clear();
@@ -434,6 +424,29 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         const dirRot = new THREE.Vector3(rotRecoil.x, rotRecoil.y, rotRecoil.z).multiplyScalar(40);
         const arrowRot = new THREE.ArrowHelper(dirRot.clone().normalize(), new THREE.Vector3(-0.2, 1.4, -2), dirRot.length(), 0x00f2fe);
         group.add(arrowRot);
+
+        // Visual Diagnostic Lines: CORE DIRECTION (Yellow) vs RENDERED DIRECTION (Cyan)
+        if (latestShot) {
+            const origin = new THREE.Vector3(latestShot.origin.x, latestShot.origin.y, latestShot.origin.z);
+            const coreDir = new THREE.Vector3(latestShot.direction.x, latestShot.direction.y, latestShot.direction.z).normalize();
+
+            const targetZ = -targetDistance;
+            const distToTarget = Math.abs((targetZ - latestShot.origin.z) / (latestShot.direction.z === 0 ? -1 : latestShot.direction.z));
+            const endPoint = new THREE.Vector3(
+                latestShot.origin.x + latestShot.direction.x * distToTarget,
+                latestShot.origin.y + latestShot.direction.y * distToTarget,
+                targetZ
+            );
+            const renderedDir = endPoint.clone().sub(origin).normalize();
+
+            // 1. CORE DIRECTION (Yellow arrow)
+            const arrowCore = new THREE.ArrowHelper(coreDir, origin, 15, 0xffea00, 0.4, 0.15);
+            group.add(arrowCore);
+
+            // 2. RENDERED DIRECTION (Cyan arrow)
+            const arrowRendered = new THREE.ArrowHelper(renderedDir, origin, 15, 0x00f2fe, 0.4, 0.15);
+            group.add(arrowRendered);
+        }
     };
 
     // Canvas Click Input Handlers
@@ -472,22 +485,29 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                 }
             }}
         >
-            {/* FPS Center Crosshair / Reticle */}
+            {/* FPS Center Crosshair: Classic Hollow-Center Cross (+) */}
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
                 <div
-                    className="w-4 h-4 border border-cyan-400/80 rounded-full transition-transform duration-75 flex items-center justify-center"
+                    className="relative w-5 h-5 flex items-center justify-center transition-transform duration-75"
                     style={{
-                        transform: `scale(${controller.state.aiming ? 0.5 : 1.2})`
+                        transform: `scale(${controller.state.aiming ? 0.75 : 1.0})`
                     }}
                 >
-                    <div className="w-1 h-1 bg-cyan-400 rounded-full" />
+                    {/* Top tick */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    {/* Bottom tick */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    {/* Left tick */}
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    {/* Right tick */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
                 </div>
             </div>
 
             {/* Subtle Guide Hint */}
             {isCanvasFocused && (
                 <div className="absolute bottom-12 left-1/2 -translate-x-1/2 pointer-events-none text-[11px] font-mono text-slate-400/80 bg-slate-950/80 px-3 py-1 rounded-full border border-slate-800 shadow-md">
-                    Left Click: Fire | Right Click: ADS Aim
+                    Left Click: Fire | Right Click: ADS | C: Reset
                 </div>
             )}
         </div>
