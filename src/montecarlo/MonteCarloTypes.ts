@@ -17,6 +17,7 @@ export interface MonteCarloConfig {
     masterSeed: number;    // Master seed for deterministic trial seeds
     targetDistance?: number; // Distance in studs/meters to target plane, default 50
     settleTime?: number;   // Time for aim spring to settle before firing (default 0.3s for ADS)
+    initialAimProgress?: number; // Explicit initial aim progress (e.g. 1.0 for instant ADS 100%)
     maxStoredImpacts?: number; // Maximum number of raw impact points to store in result (default 1000, 0 for all)
 
     // Optional geometry overrides (passed to SimulationEngine)

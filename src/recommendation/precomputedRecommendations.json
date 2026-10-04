@@ -1,0 +1,653 @@
+{
+  "c25": {
+    "overall": {
+      "role": "overall",
+      "title": "1. Overall 제어",
+      "description": "탄착군 반경(R95) 및 전방위 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": 0.246110188902381,
+        "meanY": 3.027866179601164,
+        "meanRadius": 3.050629970119037,
+        "stdX": 0.2790410562578038,
+        "stdY": 0.5911663500507707,
+        "radialStd": 0.6537136716558872,
+        "medianRadius": 3.1901861876125426,
+        "p90Radius": 3.6887342491686117,
+        "p95Radius": 3.7618271117706903,
+        "maxRadius": 4.040780504129909,
+        "centeredMeanRadius": 0.5707613383139996,
+        "centeredMedianRadius": 0.5321987355126732,
+        "centeredP90Radius": 0.8964929324514894,
+        "centeredP95Radius": 1.2336186107031522,
+        "centeredMaxRadius": 1.6335210190084763,
+        "covarianceXY": 0.01639128443451539,
+        "estimatedDispersionArea": 0.5182361274415167,
+        "drift": {
+          "meanX": 0.246110188902381,
+          "meanY": 3.027866179601164,
+          "meanRadius": 3.050629970119037
+        },
+        "dispersion": {
+          "stdX": 0.2790410562578038,
+          "stdY": 0.5911663500507707,
+          "radialStd": 0.6537136716558872,
+          "centeredMeanRadius": 0.5707613383139996,
+          "centeredMedianRadius": 0.5321987355126732,
+          "centeredP90Radius": 0.8964929324514894,
+          "centeredP95Radius": 1.2336186107031522,
+          "centeredMaxRadius": 1.6335210190084763
+        }
+      }
+    },
+    "vertical": {
+      "role": "vertical",
+      "title": "2. 수직 반동 억제",
+      "description": "상탄 치솟음 및 수직 분산 극대 제어 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake",
+        "Underbarrel": "Angled Grip"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": 0.246110188902381,
+        "meanY": 3.027866179601164,
+        "meanRadius": 3.050629970119037,
+        "stdX": 0.2790410562578038,
+        "stdY": 0.5911663500507707,
+        "radialStd": 0.6537136716558872,
+        "medianRadius": 3.1901861876125426,
+        "p90Radius": 3.6887342491686117,
+        "p95Radius": 3.7618271117706903,
+        "maxRadius": 4.040780504129909,
+        "centeredMeanRadius": 0.5707613383139996,
+        "centeredMedianRadius": 0.5321987355126732,
+        "centeredP90Radius": 0.8964929324514894,
+        "centeredP95Radius": 1.2336186107031522,
+        "centeredMaxRadius": 1.6335210190084763,
+        "covarianceXY": 0.01639128443451539,
+        "estimatedDispersionArea": 0.5182361274415167,
+        "drift": {
+          "meanX": 0.246110188902381,
+          "meanY": 3.027866179601164,
+          "meanRadius": 3.050629970119037
+        },
+        "dispersion": {
+          "stdX": 0.2790410562578038,
+          "stdY": 0.5911663500507707,
+          "radialStd": 0.6537136716558872,
+          "centeredMeanRadius": 0.5707613383139996,
+          "centeredMedianRadius": 0.5321987355126732,
+          "centeredP90Radius": 0.8964929324514894,
+          "centeredP95Radius": 1.2336186107031522,
+          "centeredMaxRadius": 1.6335210190084763
+        }
+      }
+    },
+    "horizontal": {
+      "role": "horizontal",
+      "title": "3. 수평 분산 제어",
+      "description": "좌우 지그재그 편류 및 수평 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Muffler"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": 0.21112915224739953,
+        "meanY": 3.3465545848353617,
+        "meanRadius": 3.360733768742762,
+        "stdX": 0.22425281003059105,
+        "stdY": 0.6665350391332522,
+        "radialStd": 0.7032483780279783,
+        "medianRadius": 3.5290789266812754,
+        "p90Radius": 4.058337102250316,
+        "p95Radius": 4.132547436878152,
+        "maxRadius": 4.40676360056753,
+        "centeredMeanRadius": 0.5969986103359017,
+        "centeredMedianRadius": 0.5421859155681537,
+        "centeredP90Radius": 0.9487568156712392,
+        "centeredP95Radius": 1.3390198228724102,
+        "centeredMaxRadius": 1.947366938528969,
+        "covarianceXY": 0.01572037190635286,
+        "estimatedDispersionArea": 0.46958125398334977,
+        "drift": {
+          "meanX": 0.21112915224739953,
+          "meanY": 3.3465545848353617,
+          "meanRadius": 3.360733768742762
+        },
+        "dispersion": {
+          "stdX": 0.22425281003059105,
+          "stdY": 0.6665350391332522,
+          "radialStd": 0.7032483780279783,
+          "centeredMeanRadius": 0.5969986103359017,
+          "centeredMedianRadius": 0.5421859155681537,
+          "centeredP90Radius": 0.9487568156712392,
+          "centeredP95Radius": 1.3390198228724102,
+          "centeredMaxRadius": 1.947366938528969
+        }
+      }
+    },
+    "current": {
+      "role": "current",
+      "title": "4. 내 세팅",
+      "description": "현재 장착된 부착물 설정",
+      "attachments": {},
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": 0.24707207226794034,
+        "meanY": 3.48791647992493,
+        "meanRadius": 3.5051748546959445,
+        "stdX": 0.24379522997807618,
+        "stdY": 0.723885178939465,
+        "radialStd": 0.7638362824900924,
+        "medianRadius": 3.677455137187602,
+        "p90Radius": 4.276390159935742,
+        "p95Radius": 4.360682153718892,
+        "maxRadius": 4.676289537648077,
+        "centeredMeanRadius": 0.6483511255781319,
+        "centeredMedianRadius": 0.5885088902186832,
+        "centeredP90Radius": 1.0314284189321172,
+        "centeredP95Radius": 1.4838448169284044,
+        "centeredMaxRadius": 2.090471263733494,
+        "covarianceXY": 0.021032378218975138,
+        "estimatedDispersionArea": 0.5544274976598406,
+        "drift": {
+          "meanX": 0.24707207226794034,
+          "meanY": 3.48791647992493,
+          "meanRadius": 3.5051748546959445
+        },
+        "dispersion": {
+          "stdX": 0.24379522997807618,
+          "stdY": 0.723885178939465,
+          "radialStd": 0.7638362824900924,
+          "centeredMeanRadius": 0.6483511255781319,
+          "centeredMedianRadius": 0.5885088902186832,
+          "centeredP90Radius": 1.0314284189321172,
+          "centeredP95Radius": 1.4838448169284044,
+          "centeredMaxRadius": 2.090471263733494
+        }
+      }
+    }
+  },
+  "ak105": {
+    "overall": {
+      "role": "overall",
+      "title": "1. Overall 제어",
+      "description": "탄착군 반경(R95) 및 전방위 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.17820235628152753,
+        "meanY": 3.4283368335197846,
+        "meanRadius": 3.4352696973543235,
+        "stdX": 0.12611489233756573,
+        "stdY": 0.49651761567963665,
+        "radialStd": 0.5122838165992628,
+        "medianRadius": 3.59685664949676,
+        "p90Radius": 3.7371852644406998,
+        "p95Radius": 3.7588651410375715,
+        "maxRadius": 3.8186213314882105,
+        "centeredMeanRadius": 0.3451632065093881,
+        "centeredMedianRadius": 0.24875708241493205,
+        "centeredP90Radius": 0.5713747544281611,
+        "centeredP95Radius": 1.213410804607084,
+        "centeredMaxRadius": 2.0271075801768252,
+        "covarianceXY": -0.012602916118842193,
+        "estimatedDispersionArea": 0.1967210833313129,
+        "drift": {
+          "meanX": -0.17820235628152753,
+          "meanY": 3.4283368335197846,
+          "meanRadius": 3.4352696973543235
+        },
+        "dispersion": {
+          "stdX": 0.12611489233756573,
+          "stdY": 0.49651761567963665,
+          "radialStd": 0.5122838165992628,
+          "centeredMeanRadius": 0.3451632065093881,
+          "centeredMedianRadius": 0.24875708241493205,
+          "centeredP90Radius": 0.5713747544281611,
+          "centeredP95Radius": 1.213410804607084,
+          "centeredMaxRadius": 2.0271075801768252
+        }
+      }
+    },
+    "vertical": {
+      "role": "vertical",
+      "title": "2. 수직 반동 억제",
+      "description": "상탄 치솟음 및 수직 분산 극대 제어 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake",
+        "Underbarrel": "Angled Grip"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.17820235628152753,
+        "meanY": 3.4283368335197846,
+        "meanRadius": 3.4352696973543235,
+        "stdX": 0.12611489233756573,
+        "stdY": 0.49651761567963665,
+        "radialStd": 0.5122838165992628,
+        "medianRadius": 3.59685664949676,
+        "p90Radius": 3.7371852644406998,
+        "p95Radius": 3.7588651410375715,
+        "maxRadius": 3.8186213314882105,
+        "centeredMeanRadius": 0.3451632065093881,
+        "centeredMedianRadius": 0.24875708241493205,
+        "centeredP90Radius": 0.5713747544281611,
+        "centeredP95Radius": 1.213410804607084,
+        "centeredMaxRadius": 2.0271075801768252,
+        "covarianceXY": -0.012602916118842193,
+        "estimatedDispersionArea": 0.1967210833313129,
+        "drift": {
+          "meanX": -0.17820235628152753,
+          "meanY": 3.4283368335197846,
+          "meanRadius": 3.4352696973543235
+        },
+        "dispersion": {
+          "stdX": 0.12611489233756573,
+          "stdY": 0.49651761567963665,
+          "radialStd": 0.5122838165992628,
+          "centeredMeanRadius": 0.3451632065093881,
+          "centeredMedianRadius": 0.24875708241493205,
+          "centeredP90Radius": 0.5713747544281611,
+          "centeredP95Radius": 1.213410804607084,
+          "centeredMaxRadius": 2.0271075801768252
+        }
+      }
+    },
+    "horizontal": {
+      "role": "horizontal",
+      "title": "3. 수평 분산 제어",
+      "description": "좌우 지그재그 편류 및 수평 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Compensator"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.1661475729346264,
+        "meanY": 4.475740084447168,
+        "meanRadius": 4.479992400612861,
+        "stdX": 0.10145460041372042,
+        "stdY": 0.7491044137239661,
+        "radialStd": 0.7559434228868154,
+        "medianRadius": 4.731449244027944,
+        "p90Radius": 4.919689332256337,
+        "p95Radius": 4.94884810491547,
+        "maxRadius": 5.0231125667613785,
+        "centeredMeanRadius": 0.48646227264711644,
+        "centeredMedianRadius": 0.3325298454055401,
+        "centeredP90Radius": 0.8392787582263121,
+        "centeredP95Radius": 1.8144635752997598,
+        "centeredMaxRadius": 3.070346862533926,
+        "covarianceXY": -0.017875790681056946,
+        "estimatedDispersionArea": 0.23876132115682133,
+        "drift": {
+          "meanX": -0.1661475729346264,
+          "meanY": 4.475740084447168,
+          "meanRadius": 4.479992400612861
+        },
+        "dispersion": {
+          "stdX": 0.10145460041372042,
+          "stdY": 0.7491044137239661,
+          "radialStd": 0.7559434228868154,
+          "centeredMeanRadius": 0.48646227264711644,
+          "centeredMedianRadius": 0.3325298454055401,
+          "centeredP90Radius": 0.8392787582263121,
+          "centeredP95Radius": 1.8144635752997598,
+          "centeredMaxRadius": 3.070346862533926
+        }
+      }
+    },
+    "current": {
+      "role": "current",
+      "title": "4. 내 세팅",
+      "description": "현재 장착된 부착물 설정",
+      "attachments": {},
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.1778305820684789,
+        "meanY": 3.8931546864220636,
+        "meanRadius": 3.898877440643792,
+        "stdX": 0.11386621028637516,
+        "stdY": 0.6049730638659514,
+        "radialStd": 0.6155955830318615,
+        "medianRadius": 4.097512865004152,
+        "p90Radius": 4.259775320305362,
+        "p95Radius": 4.284573470905718,
+        "maxRadius": 4.349430111339821,
+        "centeredMeanRadius": 0.40233997006571476,
+        "centeredMedianRadius": 0.28057246937717617,
+        "centeredP90Radius": 0.6789429818215176,
+        "centeredP95Radius": 1.458454681101903,
+        "centeredMaxRadius": 2.4900346139260505,
+        "covarianceXY": -0.015456521588912529,
+        "estimatedDispersionArea": 0.21641172045777626,
+        "drift": {
+          "meanX": -0.1778305820684789,
+          "meanY": 3.8931546864220636,
+          "meanRadius": 3.898877440643792
+        },
+        "dispersion": {
+          "stdX": 0.11386621028637516,
+          "stdY": 0.6049730638659514,
+          "radialStd": 0.6155955830318615,
+          "centeredMeanRadius": 0.40233997006571476,
+          "centeredMedianRadius": 0.28057246937717617,
+          "centeredP90Radius": 0.6789429818215176,
+          "centeredP95Radius": 1.458454681101903,
+          "centeredMaxRadius": 2.4900346139260505
+        }
+      }
+    }
+  },
+  "m231": {
+    "overall": {
+      "role": "overall",
+      "title": "1. Overall 제어",
+      "description": "탄착군 반경(R95) 및 전방위 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake",
+        "Underbarrel": "Romanian Grip"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.17159566205158522,
+        "meanY": 6.3636364143786635,
+        "meanRadius": 6.414549488590407,
+        "stdX": 0.7770034258944493,
+        "stdY": 1.831594663996787,
+        "radialStd": 1.9895912487325667,
+        "medianRadius": 6.495276507545824,
+        "p90Radius": 8.664645812927672,
+        "p95Radius": 9.169091930555881,
+        "maxRadius": 11.955268306783848,
+        "centeredMeanRadius": 1.7170794206029372,
+        "centeredMedianRadius": 1.5275311830428775,
+        "centeredP90Radius": 2.947664771150651,
+        "centeredP95Radius": 3.598818789196471,
+        "centeredMaxRadius": 5.6044683611383235,
+        "covarianceXY": -0.06204274611351445,
+        "estimatedDispersionArea": 4.470974325798266,
+        "drift": {
+          "meanX": -0.17159566205158522,
+          "meanY": 6.3636364143786635,
+          "meanRadius": 6.414549488590407
+        },
+        "dispersion": {
+          "stdX": 0.7770034258944493,
+          "stdY": 1.831594663996787,
+          "radialStd": 1.9895912487325667,
+          "centeredMeanRadius": 1.7170794206029372,
+          "centeredMedianRadius": 1.5275311830428775,
+          "centeredP90Radius": 2.947664771150651,
+          "centeredP95Radius": 3.598818789196471,
+          "centeredMaxRadius": 5.6044683611383235
+        }
+      }
+    },
+    "vertical": null,
+    "horizontal": {
+      "role": "horizontal",
+      "title": "3. 수평 분산 제어",
+      "description": "좌우 지그재그 편류 및 수평 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Oil Filter",
+        "Underbarrel": "Romanian Grip"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.16675188414270692,
+        "meanY": 7.218712002985515,
+        "meanRadius": 7.253746493633946,
+        "stdX": 0.6814042716503357,
+        "stdY": 2.1141831273835043,
+        "radialStd": 2.2212793785421097,
+        "medianRadius": 7.387653191326361,
+        "p90Radius": 9.832684338531923,
+        "p95Radius": 10.402233912257941,
+        "maxRadius": 13.497071668757082,
+        "centeredMeanRadius": 1.8760623622400578,
+        "centeredMedianRadius": 1.6265824681863046,
+        "centeredP90Radius": 3.3299679364162627,
+        "centeredP95Radius": 4.080600427885854,
+        "centeredMaxRadius": 6.284303909119178,
+        "covarianceXY": -0.0808345770817141,
+        "estimatedDispersionArea": 4.525820518242974,
+        "drift": {
+          "meanX": -0.16675188414270692,
+          "meanY": 7.218712002985515,
+          "meanRadius": 7.253746493633946
+        },
+        "dispersion": {
+          "stdX": 0.6814042716503357,
+          "stdY": 2.1141831273835043,
+          "radialStd": 2.2212793785421097,
+          "centeredMeanRadius": 1.8760623622400578,
+          "centeredMedianRadius": 1.6265824681863046,
+          "centeredP90Radius": 3.3299679364162627,
+          "centeredP95Radius": 4.080600427885854,
+          "centeredMaxRadius": 6.284303909119178
+        }
+      }
+    },
+    "current": {
+      "role": "current",
+      "title": "4. 내 세팅",
+      "description": "현재 장착된 부착물 설정",
+      "attachments": {},
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.18021020310087313,
+        "meanY": 7.624628668939155,
+        "meanRadius": 7.659608740073513,
+        "stdX": 0.6987023975529121,
+        "stdY": 2.204345467463014,
+        "radialStd": 2.3124281567804266,
+        "medianRadius": 7.796181424525491,
+        "p90Radius": 10.33235610308402,
+        "p95Radius": 10.93687517704688,
+        "maxRadius": 14.164627769875565,
+        "centeredMeanRadius": 1.9451145650829305,
+        "centeredMedianRadius": 1.6831564602709803,
+        "centeredP90Radius": 3.4484002314794573,
+        "centeredP95Radius": 4.207447135784843,
+        "centeredMaxRadius": 6.5495402400615905,
+        "covarianceXY": -0.08139238899437548,
+        "estimatedDispersionArea": 4.838622769831311,
+        "drift": {
+          "meanX": -0.18021020310087313,
+          "meanY": 7.624628668939155,
+          "meanRadius": 7.659608740073513
+        },
+        "dispersion": {
+          "stdX": 0.6987023975529121,
+          "stdY": 2.204345467463014,
+          "radialStd": 2.3124281567804266,
+          "centeredMeanRadius": 1.9451145650829305,
+          "centeredMedianRadius": 1.6831564602709803,
+          "centeredP90Radius": 3.4484002314794573,
+          "centeredP95Radius": 4.207447135784843,
+          "centeredMaxRadius": 6.5495402400615905
+        }
+      }
+    }
+  },
+  "m16a3": {
+    "overall": {
+      "role": "overall",
+      "title": "1. Overall 제어",
+      "description": "탄착군 반경(R95) 및 전방위 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.19711530253965012,
+        "meanY": 4.608094637165156,
+        "meanRadius": 4.639161932031814,
+        "stdX": 0.505512729108287,
+        "stdY": 0.7753325576918719,
+        "radialStd": 0.9255720902812099,
+        "medianRadius": 4.826544554739121,
+        "p90Radius": 5.221640503646154,
+        "p95Radius": 5.319173753694953,
+        "maxRadius": 5.84916165615517,
+        "centeredMeanRadius": 0.7168191326291378,
+        "centeredMedianRadius": 0.5904218693192723,
+        "centeredP90Radius": 1.1607213979023208,
+        "centeredP95Radius": 1.821097390974699,
+        "centeredMaxRadius": 3.2104983312985027,
+        "covarianceXY": -0.04104066483674567,
+        "estimatedDispersionArea": 1.231317323832732,
+        "drift": {
+          "meanX": -0.19711530253965012,
+          "meanY": 4.608094637165156,
+          "meanRadius": 4.639161932031814
+        },
+        "dispersion": {
+          "stdX": 0.505512729108287,
+          "stdY": 0.7753325576918719,
+          "radialStd": 0.9255720902812099,
+          "centeredMeanRadius": 0.7168191326291378,
+          "centeredMedianRadius": 0.5904218693192723,
+          "centeredP90Radius": 1.1607213979023208,
+          "centeredP95Radius": 1.821097390974699,
+          "centeredMaxRadius": 3.2104983312985027
+        }
+      }
+    },
+    "vertical": {
+      "role": "vertical",
+      "title": "2. 수직 반동 억제",
+      "description": "상탄 치솟음 및 수직 분산 극대 제어 세팅",
+      "attachments": {
+        "Barrel": "Muzzle Brake",
+        "Underbarrel": "Angled Grip"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.19711530253965012,
+        "meanY": 4.608094637165156,
+        "meanRadius": 4.639161932031814,
+        "stdX": 0.505512729108287,
+        "stdY": 0.7753325576918719,
+        "radialStd": 0.9255720902812099,
+        "medianRadius": 4.826544554739121,
+        "p90Radius": 5.221640503646154,
+        "p95Radius": 5.319173753694953,
+        "maxRadius": 5.84916165615517,
+        "centeredMeanRadius": 0.7168191326291378,
+        "centeredMedianRadius": 0.5904218693192723,
+        "centeredP90Radius": 1.1607213979023208,
+        "centeredP95Radius": 1.821097390974699,
+        "centeredMaxRadius": 3.2104983312985027,
+        "covarianceXY": -0.04104066483674567,
+        "estimatedDispersionArea": 1.231317323832732,
+        "drift": {
+          "meanX": -0.19711530253965012,
+          "meanY": 4.608094637165156,
+          "meanRadius": 4.639161932031814
+        },
+        "dispersion": {
+          "stdX": 0.505512729108287,
+          "stdY": 0.7753325576918719,
+          "radialStd": 0.9255720902812099,
+          "centeredMeanRadius": 0.7168191326291378,
+          "centeredMedianRadius": 0.5904218693192723,
+          "centeredP90Radius": 1.1607213979023208,
+          "centeredP95Radius": 1.821097390974699,
+          "centeredMaxRadius": 3.2104983312985027
+        }
+      }
+    },
+    "horizontal": {
+      "role": "horizontal",
+      "title": "3. 수평 분산 제어",
+      "description": "좌우 지그재그 편류 및 수평 분산 최소화 세팅",
+      "attachments": {
+        "Barrel": "T-Brake"
+      },
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.16849057799020206,
+        "meanY": 5.3650397286729135,
+        "meanRadius": 5.38138584131471,
+        "stdX": 0.3888683299849984,
+        "stdY": 0.9470234922754152,
+        "radialStd": 1.0237539123182118,
+        "medianRadius": 5.62210194990166,
+        "p90Radius": 6.049679716603708,
+        "p95Radius": 6.156025805628003,
+        "maxRadius": 6.74087319925344,
+        "centeredMeanRadius": 0.7243693942512839,
+        "centeredMedianRadius": 0.5576260229588079,
+        "centeredP90Radius": 1.0815262992349444,
+        "centeredP95Radius": 2.2209400034880478,
+        "centeredMaxRadius": 3.965314580080699,
+        "covarianceXY": -0.04408548652418943,
+        "estimatedDispersionArea": 1.156946296305311,
+        "drift": {
+          "meanX": -0.16849057799020206,
+          "meanY": 5.3650397286729135,
+          "meanRadius": 5.38138584131471
+        },
+        "dispersion": {
+          "stdX": 0.3888683299849984,
+          "stdY": 0.9470234922754152,
+          "radialStd": 1.0237539123182118,
+          "centeredMeanRadius": 0.7243693942512839,
+          "centeredMedianRadius": 0.5576260229588079,
+          "centeredP90Radius": 1.0815262992349444,
+          "centeredP95Radius": 2.2209400034880478,
+          "centeredMaxRadius": 3.965314580080699
+        }
+      }
+    },
+    "current": {
+      "role": "current",
+      "title": "4. 내 세팅",
+      "description": "현재 장착된 부착물 설정",
+      "attachments": {},
+      "statistics": {
+        "sampleCount": 15000,
+        "meanX": -0.1942742059806288,
+        "meanY": 5.780915820675385,
+        "meanRadius": 5.800587803620447,
+        "stdX": 0.44211621949650837,
+        "stdY": 1.0466039965585183,
+        "radialStd": 1.136154336854878,
+        "medianRadius": 6.070562488085427,
+        "p90Radius": 6.534748126379007,
+        "p95Radius": 6.647774520534708,
+        "maxRadius": 7.282863659826848,
+        "centeredMeanRadius": 0.807746884512839,
+        "centeredMedianRadius": 0.6253615784387814,
+        "centeredP90Radius": 1.205867170951231,
+        "centeredP95Radius": 2.4668136660465723,
+        "centeredMaxRadius": 4.380904289698595,
+        "covarianceXY": -0.054658551136737434,
+        "estimatedDispersionArea": 1.4536796447510147,
+        "drift": {
+          "meanX": -0.1942742059806288,
+          "meanY": 5.780915820675385,
+          "meanRadius": 5.800587803620447
+        },
+        "dispersion": {
+          "stdX": 0.44211621949650837,
+          "stdY": 1.0466039965585183,
+          "radialStd": 1.136154336854878,
+          "centeredMeanRadius": 0.807746884512839,
+          "centeredMedianRadius": 0.6253615784387814,
+          "centeredP90Radius": 1.205867170951231,
+          "centeredP95Radius": 2.4668136660465723,
+          "centeredMaxRadius": 4.380904289698595
+        }
+      }
+    }
+  }
+}

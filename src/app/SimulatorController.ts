@@ -23,12 +23,16 @@ export interface ControllerState {
     dotSize: number; // Impact point screen size multiplier (default 1.0)
 }
 
+import { SelectedAttachments } from '../core/compiler/WeaponCompiler';
+
 export class SimulatorController {
     private _engine!: SimulationEngine;
     private _compiledWeaponData: CompiledWeaponData;
     private _state: ControllerState;
     private _listeners: Set<() => void> = new Set();
     private _burstShotsRemaining: number = 0;
+    private _weaponId: string = 'c25';
+    private _selectedAttachments: SelectedAttachments = {};
 
     constructor() {
         this._compiledWeaponData = loadCompiledC25Data();
@@ -48,8 +52,26 @@ export class SimulatorController {
         this.initEngine();
     }
 
-    public selectWeapon(weaponId: string): void {
-        this._compiledWeaponData = loadCompiledWeaponData(weaponId);
+    public get weaponId(): string {
+        return this._weaponId;
+    }
+
+    public get selectedAttachments(): SelectedAttachments {
+        return this._selectedAttachments;
+    }
+
+    public selectWeapon(weaponId: string, attachments?: SelectedAttachments): void {
+        this._weaponId = weaponId;
+        if (attachments !== undefined) {
+            this._selectedAttachments = attachments;
+        }
+        this._compiledWeaponData = loadCompiledWeaponData(this._weaponId, this._selectedAttachments);
+        this.initEngine(this._state.seed);
+    }
+
+    public setAttachments(attachments: SelectedAttachments): void {
+        this._selectedAttachments = { ...attachments };
+        this._compiledWeaponData = loadCompiledWeaponData(this._weaponId, this._selectedAttachments);
         this.initEngine(this._state.seed);
     }
 
@@ -144,12 +166,29 @@ export class SimulatorController {
         this.notify();
     }
 
+    public toggleAim(): void {
+        this.setAim(!this._state.aiming);
+    }
+
     public fireSingleShot(): boolean {
         const fired = this._engine.pushFireInput(this._state.currentTime);
         if (fired) {
             this.notify();
         }
         return fired;
+    }
+
+    public fireBurst(count: number = 3): void {
+        this._burstShotsRemaining = count;
+        this._state.isContinuousFiring = true;
+        if (this.fireSingleShot()) {
+            this._burstShotsRemaining--;
+        }
+        this.notify();
+    }
+
+    public toggleContinuousFiring(): void {
+        this.setContinuousFiring(!this._state.isContinuousFiring);
     }
 
     public setContinuousFiring(firing: boolean): void {

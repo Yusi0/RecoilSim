@@ -1,95 +1,115 @@
 import React from 'react';
-import { Sliders } from 'lucide-react';
 import { CompiledWeaponData } from '../c25DataLoader';
 
 interface HeaderProps {
     weaponData: CompiledWeaponData;
+    activeTab: 'simulation' | 'recommendation';
+    onSelectTab: (tab: 'simulation' | 'recommendation') => void;
     targetDistance: number;
     onSetTargetDistance: (dist: number) => void;
-    activeDrawer: 'telemetry' | 'history' | 'log' | 'settings' | null;
-    onToggleDrawer: (drawer: 'telemetry' | 'history' | 'log' | 'settings') => void;
+    isAiming: boolean;
+    onToggleAim: () => void;
+    onReset: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
     weaponData,
+    activeTab,
+    onSelectTab,
     targetDistance,
     onSetTargetDistance,
-    activeDrawer,
-    onToggleDrawer
+    isAiming,
+    onToggleAim,
+    onReset
 }) => {
     return (
-        <header className="h-12 px-4 bg-slate-950/70 backdrop-blur-md border-b border-slate-900 flex items-center justify-between z-30 select-none text-slate-300">
-            {/* Left Brand & Settings Gear Button */}
+        <header className="h-14 px-6 bg-[#121214] border-b border-[#1c1c20] flex items-center justify-between z-30 select-none font-sans">
+            {/* 1. Left Brand & Current Weapon */}
             <div className="flex items-center gap-3">
+                <span className="font-bold text-base text-[#ffffff] tracking-tight">
+                    PF RecoilSim
+                </span>
+                <span className="text-[#3a3a40]">/</span>
+                <span className="text-xs font-mono text-[#8e8e93]">
+                    {weaponData.displayname || 'C25'}
+                </span>
+            </div>
+
+            {/* 2. Center Tabs (Clean Apple-style minimal tabs) */}
+            <div className="flex items-center gap-8">
                 <button
-                    onClick={() => onToggleDrawer('settings')}
-                    className={`p-1.5 rounded-md transition-colors ${
-                        activeDrawer === 'settings'
-                            ? 'text-cyan-400 bg-slate-800'
-                            : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                    onClick={() => onSelectTab('simulation')}
+                    className={`text-sm py-1 font-medium transition-all relative ${
+                        activeTab === 'simulation'
+                            ? 'text-[#ffffff] font-semibold'
+                            : 'text-[#7c7c82] hover:text-[#c0c0c5]'
                     }`}
-                    title="Toggle Settings Sidebar"
                 >
-                    <Sliders className="w-4 h-4" />
+                    시뮬레이션
+                    {activeTab === 'simulation' && (
+                        <div className="absolute -bottom-3 left-0 right-0 h-[2px] bg-[#3b82f6] rounded-full" />
+                    )}
                 </button>
-                <div className="flex items-center gap-2 font-mono text-xs">
-                    <span className="font-bold text-slate-100 tracking-tight">RecoilSim</span>
-                    <span className="text-[11px] text-slate-500">/</span>
-                    <span className="text-[11px] text-slate-400">{weaponData.displayname || 'C25'}</span>
-                </div>
+
+                <button
+                    onClick={() => onSelectTab('recommendation')}
+                    className={`text-sm py-1 font-medium transition-all relative flex items-center gap-2 ${
+                        activeTab === 'recommendation'
+                            ? 'text-[#ffffff] font-semibold'
+                            : 'text-[#7c7c82] hover:text-[#c0c0c5]'
+                    }`}
+                >
+                    부착물 추천
+                    <span className="text-[10px] px-1.5 py-0.5 rounded font-mono bg-[#202024] text-[#8e8e93]">
+                        2x2
+                    </span>
+                    {activeTab === 'recommendation' && (
+                        <div className="absolute -bottom-3 left-0 right-0 h-[2px] bg-[#3b82f6] rounded-full" />
+                    )}
+                </button>
             </div>
 
-            {/* Center Target Distance Presets */}
-            <div className="flex items-center gap-1 text-[11px] font-mono bg-slate-900/60 p-1 rounded-md border border-slate-800/60">
-                <span className="text-slate-500 px-1.5">Target:</span>
-                {[50, 100, 200].map((dist) => (
-                    <button
-                        key={dist}
-                        onClick={() => onSetTargetDistance(dist)}
-                        className={`px-2 py-0.5 rounded transition-colors ${
-                            targetDistance === dist
-                                ? 'bg-cyan-500/20 text-cyan-300 font-semibold'
-                                : 'text-slate-400 hover:text-slate-200'
-                        }`}
-                    >
-                        {dist}m
-                    </button>
-                ))}
-            </div>
-
-            {/* Right Secondary Drawer Buttons */}
+            {/* 3. Right Quick Controls with Pill-Segmented Distance & Clear Divider */}
             <div className="flex items-center gap-3 text-xs font-mono">
+                {/* Distance Selector (Pill-Segmented Control) */}
+                <div className="flex items-center bg-[#1c1c1f] p-0.5 rounded-full">
+                    {[25, 50, 100].map((dist) => (
+                        <button
+                            key={dist}
+                            onClick={() => onSetTargetDistance(dist)}
+                            className={`px-3 py-1 rounded-full transition-colors text-xs font-mono font-medium ${
+                                targetDistance === dist
+                                    ? 'bg-[#2e2e34] text-[#ffffff] shadow-sm'
+                                    : 'text-[#8e8e93] hover:text-[#f0f0f2]'
+                            }`}
+                        >
+                            {dist}m
+                        </button>
+                    ))}
+                </div>
+
+                {/* Explicit Visual Divider */}
+                <div className="w-[1px] h-4 bg-[#26262c] mx-1" />
+
+                {/* ADS Aim Toggle */}
                 <button
-                    onClick={() => onToggleDrawer('telemetry')}
-                    className={`transition-colors ${
-                        activeDrawer === 'telemetry'
-                            ? 'text-cyan-400 font-medium underline underline-offset-4'
-                            : 'text-slate-400 hover:text-slate-200'
+                    onClick={onToggleAim}
+                    className={`px-3 py-1.5 rounded-md transition-colors text-xs font-sans font-medium ${
+                        isAiming
+                            ? 'bg-[#3b82f6] text-[#ffffff]'
+                            : 'bg-[#1c1c1f] text-[#8e8e93] hover:bg-[#26262c] hover:text-[#f0f0f2]'
                     }`}
                 >
-                    Telemetry
+                    {isAiming ? '조준 해제' : '정조준 (ADS)'}
                 </button>
 
+                {/* Reset Simulation Button */}
                 <button
-                    onClick={() => onToggleDrawer('history')}
-                    className={`transition-colors ${
-                        activeDrawer === 'history'
-                            ? 'text-cyan-400 font-medium underline underline-offset-4'
-                            : 'text-slate-400 hover:text-slate-200'
-                    }`}
+                    onClick={onReset}
+                    className="px-2.5 py-1.5 rounded-md bg-[#1c1c1f] text-[#8e8e93] hover:text-[#f0f0f2] hover:bg-[#26262c] transition-colors"
+                    title="단축키: C"
                 >
-                    Shots
-                </button>
-
-                <button
-                    onClick={() => onToggleDrawer('log')}
-                    className={`transition-colors ${
-                        activeDrawer === 'log'
-                            ? 'text-cyan-400 font-medium underline underline-offset-4'
-                            : 'text-slate-400 hover:text-slate-200'
-                    }`}
-                >
-                    Log
+                    초기화 (C)
                 </button>
             </div>
         </header>

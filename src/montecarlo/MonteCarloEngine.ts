@@ -83,7 +83,8 @@ export class MonteCarloEngine {
                 rootCFrame: config.rootCFrame,
                 mainOffset: config.mainOffset,
                 barrelOffset: config.barrelOffset,
-                sightOffset: config.sightOffset
+                sightOffset: config.sightOffset,
+                initialAimProgress: config.initialAimProgress
             });
 
             engine.setStance(config.stance ?? 'stand');

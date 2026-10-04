@@ -1,4 +1,5 @@
 import { WeaponsParser, WeaponCompiler } from '../core';
+import { SelectedAttachments } from '../core/compiler/WeaponCompiler';
 import rawWeaponsData from '../../data/raw/weapons.json';
 import c25DetailData from '../../data/raw/weapon-details/c25.json';
 import ak105DetailData from '../../data/raw/weapon-details/ak105.json';
@@ -39,7 +40,33 @@ const displayNamesMap: Record<string, string> = {
     micro_uzi: 'Micro Uzi'
 };
 
-export function loadCompiledWeaponData(weaponId: string = 'c25'): CompiledWeaponData {
+export function getAvailableAttachmentsForWeapon(weaponId: string = 'c25'): Record<string, string[]> {
+    const parser = new WeaponsParser();
+    const parseResult = parser.parse(rawWeaponsData);
+    const targetId = weaponId.toLowerCase();
+    const norm = parseResult.weapons.get(targetId);
+    if (!norm) return {};
+
+    const result: Record<string, string[]> = {};
+    for (const [slot, variantIds] of Object.entries(norm.attachmentSlots)) {
+        const names: string[] = [];
+        for (const vId of variantIds) {
+            const att = parseResult.attachments.get(vId);
+            if (att && att.name && !names.includes(att.name)) {
+                names.push(att.name);
+            }
+        }
+        if (names.length > 0) {
+            result[slot] = names;
+        }
+    }
+    return result;
+}
+
+export function loadCompiledWeaponData(
+    weaponId: string = 'c25',
+    selectedAttachments: SelectedAttachments = {}
+): CompiledWeaponData {
     const parser = new WeaponsParser();
     const parseResult = parser.parse(rawWeaponsData);
 
@@ -53,7 +80,7 @@ export function loadCompiledWeaponData(weaponId: string = 'c25'): CompiledWeapon
     const compiler = new WeaponCompiler();
     const compileResult = compiler.compileWeapon(
         norm,
-        {},
+        selectedAttachments,
         parseResult.attachments,
         detailData
     );

@@ -55,10 +55,10 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         const width = containerRef.current.clientWidth;
         const height = containerRef.current.clientHeight;
 
-        // 1. Three.js Scene & Camera Setup
+        // 1. Three.js Scene & Camera Setup (Neutral Grayscale)
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x060913);
-        scene.fog = new THREE.FogExp2(0x060913, 0.005);
+        scene.background = new THREE.Color(0x1a1a1c);
+        scene.fog = new THREE.FogExp2(0x1a1a1c, 0.005);
         sceneRef.current = scene;
 
         const camera = new THREE.PerspectiveCamera(75, width / height, 0.05, 500);
@@ -75,8 +75,8 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         containerRef.current.appendChild(renderer.domElement);
         rendererRef.current = renderer;
 
-        // 3. Lighting Setup
-        const ambLight = new THREE.AmbientLight(0x94a3b8, 0.8);
+        // 3. Lighting Setup (Neutral tones)
+        const ambLight = new THREE.AmbientLight(0xd1d5db, 0.85);
         scene.add(ambLight);
 
         const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
@@ -84,12 +84,12 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
         dirLight.castShadow = true;
         scene.add(dirLight);
 
-        const fillLight = new THREE.PointLight(0x00f2fe, 0.4, 30);
+        const fillLight = new THREE.PointLight(0xffffff, 0.25, 30);
         fillLight.position.set(-10, 5, -10);
         scene.add(fillLight);
 
-        // 4. Ground Grid & Firing Range Environment (Lowered far below impact points)
-        const gridHelper = new THREE.GridHelper(500, 100, 0x1e293b, 0x090d16);
+        // 4. Ground Grid & Firing Range Environment (Neutral Grayscale)
+        const gridHelper = new THREE.GridHelper(500, 100, 0x2e2e32, 0x18181a);
         gridHelper.position.y = -10.0;
         scene.add(gridHelper);
 
@@ -472,7 +472,7 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
     return (
         <div
             ref={containerRef}
-            className="relative w-full h-full cursor-crosshair select-none bg-slate-950"
+            className="relative w-full h-full cursor-crosshair select-none bg-[#141416]"
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onContextMenu={(e) => e.preventDefault()}
@@ -485,7 +485,7 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                 }
             }}
         >
-            {/* FPS Center Crosshair: Classic Hollow-Center Cross (+) */}
+            {/* FPS Center Crosshair: Classic Clean White Cross (+) */}
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
                 <div
                     className="relative w-5 h-5 flex items-center justify-center transition-transform duration-75"
@@ -494,19 +494,19 @@ export const FPSCanvas: React.FC<FPSCanvasProps> = ({
                     }}
                 >
                     {/* Top tick */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-white/90 shadow-[0_0_2px_rgba(0,0,0,0.8)]" />
                     {/* Bottom tick */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[2px] h-[6px] bg-white/90 shadow-[0_0_2px_rgba(0,0,0,0.8)]" />
                     {/* Left tick */}
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-white/90 shadow-[0_0_2px_rgba(0,0,0,0.8)]" />
                     {/* Right tick */}
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-cyan-400 shadow-[0_0_2px_rgba(0,0,0,0.9)]" />
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[6px] h-[2px] bg-white/90 shadow-[0_0_2px_rgba(0,0,0,0.8)]" />
                 </div>
             </div>
 
             {/* Subtle Guide Hint */}
             {isCanvasFocused && (
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 pointer-events-none text-[11px] font-mono text-slate-400/80 bg-slate-950/80 px-3 py-1 rounded-full border border-slate-800 shadow-md">
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 pointer-events-none text-[11px] font-mono text-[#8e8e93] bg-[#18181c]/90 px-3 py-1 rounded-full border border-[#24242a] shadow-lg">
                     Left Click: Fire | Right Click: ADS | C: Reset
                 </div>
             )}

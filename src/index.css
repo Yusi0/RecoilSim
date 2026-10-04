@@ -1,52 +1,59 @@
-/* RecoilSim Design System */
+/* RecoilSim Design System (pf-archive minimalist theme) */
 
 :root {
-  --bg-primary: #060913;
-  --bg-card: rgba(15, 23, 42, 0.85);
-  --border-card: rgba(30, 41, 59, 0.8);
-  --accent-cyan: #00f2fe;
-  --accent-blue: #4facfe;
-  --accent-rose: #f43f5e;
-  --accent-amber: #f59e0b;
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #141416;
+  --bg-tertiary: #1c1c1f;
+  --bg-hover: #26262b;
+
+  --text-primary: #f0f0f2;
+  --text-secondary: #929298;
+  --text-muted: #585860;
+
+  --border-subtle: transparent;
+  --border-active: rgba(255, 255, 255, 0.08);
+
+  --accent-blue: #3b82f6;
+  --font-sans: 'Pretendard JP', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  color: #f8fafc;
+  color: var(--text-primary);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.font-heading {
-  font-family: 'Outfit', 'Inter', sans-serif;
+.font-sans {
+  font-family: var(--font-sans);
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
-/* Custom Scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 5px;
+/* Subtle clean transitions */
+button, input, select {
+  font-family: inherit;
+  transition: all 0.15s ease-in-out;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
-  border-radius: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(51, 65, 85, 0.8);
-  border-radius: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 242, 254, 0.6);
-}

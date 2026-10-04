@@ -69,7 +69,12 @@ export class SimulationEngine {
         );
 
         this._aimSpeed = config.aimSpeed ?? (config.weaponData.aimspeed ?? 15);
-        this._aimSpring = new Spring(0, 1, this._aimSpeed);
+        const initialAim = config.initialAimProgress ?? 0;
+        this._aimSpring = new Spring(initialAim, 1, this._aimSpeed);
+        if (initialAim > 0.5) {
+            this._firearmRecoil.setAim(true, 0);
+            this._cameraRecoil.setAim(true, 0);
+        }
 
         const spreadRecover = this._firearmRecoil.getWeaponStat<number>('hipfirespreadrecover') ?? 1.0;
         const spreadStability = this._firearmRecoil.getWeaponStat<number>('hipfirestability') ?? 0.7;

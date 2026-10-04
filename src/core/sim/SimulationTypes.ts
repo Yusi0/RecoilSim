@@ -137,4 +137,9 @@ export interface SimulationEngineConfig {
 
     aimSpeed?: number;
     firemodeDamping?: number;
+    /**
+     * Initial aim progress [0, 1].
+     * Defaults to 0 (hipfire). If set to 1.0, the engine initializes immediately in 100% ADS state.
+     */
+    initialAimProgress?: number;
 }
