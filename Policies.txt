@@ -1,0 +1,159 @@
+================================================================================
+RECOILSIM RECOMMENDATION POLICIES & CONVERSION ARCHITECTURE SPECIFICATION
+================================================================================
+Document: Policies.txt
+Date: 2026-10-05
+Scope: Policy Definitions (A, B, C), Pareto Mechanics, Practicality Guards,
+       Conversion Handling, and Baseline Anchoring Specification.
+
+================================================================================
+1. THREE RECOMMENDATION POLICIES SPECIFICATION
+================================================================================
+
+--------------------------------------------------------------------------------
+[Policy A: Balanced Hurdle (Current Benchmark)]
+--------------------------------------------------------------------------------
+1. Definition:
+   - Evaluates all candidate attachment combinations (Barrel x Underbarrel).
+   - Applies 4 absolute Practicality Guard thresholds before role selection:
+     * deltaTTK < 20.0 ms       (TTK delay < 1.2 frames @ 60Hz)
+     * deltaADS < 35.0 ms       (Aim settle latency delay < 2 frames)
+     * deltaSprint < 45.0 ms    (Sprint-to-fire response delay < 2.7 frames)
+     * deltaAimWalk < 1.10 s/s  (Aim-walk speed penalty < 1.1 studs/s)
+   - Candidates violating ANY hurdle are hard-rejected.
+   - Surviving candidates are partitioned into Pareto frontiers per role:
+     * Overall:    Minimizes [R95, |meanX|, |meanY|]
+     * Vertical:   Minimizes [|meanY|, sigmaY]
+     * Horizontal: Minimizes [|meanX|, sigmaX]
+   - Anchor selection picks the non-dominated top candidate for each role.
+
+2. Strengths:
+   - Guaranteed practical safety: complete elimination of troll builds (Muffler,
+     Oil Filter, Romanian Grip on slow weapons).
+   - Clean, predictable recommendations.
+
+3. Weaknesses:
+   - Does not preserve trade-off awareness: a candidate offering an extreme recoil
+     benefit with a borderline penalty is silently discarded.
+
+--------------------------------------------------------------------------------
+[Policy B: Pareto Only (No Hard Hurdles)]
+--------------------------------------------------------------------------------
+1. Definition:
+   - Absolutely NO hard penalty thresholds.
+   - Evaluates candidates across multi-dimensional objective vectors combining
+     recoil metrics and all 4 penalty metrics:
+     * 5D Vector: [R95, max(0, deltaTTK), max(0, deltaADS), max(0, deltaSprint), max(0, deltaAimWalk)]
+     * 7D Vector: [R95, sigmaX, sigmaY, max(0, deltaTTK), max(0, deltaADS), max(0, deltaSprint), max(0, deltaAimWalk)]
+   - Candidate A dominates Candidate B iff A <= B in all dimensions and A < B in at least one.
+   - Keeps ALL non-dominated candidates.
+   - Runs role selection directly on the non-dominated set.
+
+2. Strengths:
+   - Strictly mathematical: zero arbitrary thresholds, zero composite weights.
+   - Retains all genuine trade-off possibilities.
+
+3. Fatal Failure Case (Discovered in Audit):
+   - In M231, "Muzzle Brake + Romanian Grip" achieves deltaR95 = -1.77 (vs MB solo -1.58).
+     Because its R95 is 0.19 studs lower, NO other candidate dominates it in the R95 axis.
+   - Consequently, in Policy B, MB + Romanian BECOMES THE #1 OVERALL RECOMMENDATION,
+     inflicting a disastrous +60.2 ms (3.6 frame) sprint-to-fire penalty!
+   - Furthermore, "Oil Filter + Romanian" (inflicting +122.7 ms / 7.4 frame delay)
+     becomes the #1 Horizontal recommendation!
+   - 35 out of 36 M231 candidates (97.2%) remain in the 7D frontier.
+   - Conclusion: Pareto dominance ALONE fails to compress the candidate pool and
+     promotes unplayable extreme builds to top rank.
+
+--------------------------------------------------------------------------------
+[Policy C: Pareto + Extreme Penalty Guard (Recommended Policy)]
+--------------------------------------------------------------------------------
+1. Definition:
+   - Step 1 (Pareto Pruning):
+     Eliminate all mathematically dominated candidates across the 7D space.
+     (Eliminates candidates that have worse recoil AND worse/equal penalties).
+   - Step 2 (Extreme Practicality Guard):
+     Apply Balanced Hurdle thresholds (20ms TTK, 35ms ADS, 45ms Sprint, 1.1s/s Walk)
+     as an extreme penalty guard to determine primary recommendations.
+   - Step 3 (Trade-off Preservation & Flagging):
+     Candidates that are Pareto Non-Dominated BUT exceed a practicality guard are
+     NOT permanently erased; they are tagged with [FLAG_HURDLE].
+   - Step 4 (Role Selection):
+     Select primary recommendations (Overall, Vertical, Horizontal) exclusively from
+     the clean (Guard-passed) Pareto set.
+   - Step 5 (UI Exposure):
+     Expose [FLAG_HURDLE] candidates in secondary tabs / insight badges as
+     "Extreme Recoil Specialization (Caution: Sprint latency +X ms)".
+
+2. Strengths:
+   - Combines the mathematical rigor of Pareto optimization with the practical
+     safety of Balanced Hurdles.
+   - Restores M231 recommendations to healthy combat builds (MB solo, Compensator)
+     while transparently documenting genuine trade-off candidates.
+
+
+================================================================================
+2. EMPIRICAL RECOMMENDATION COMPARISON (C25, AK-105, M16A3, M231)
+================================================================================
+
+Weapon   | Role       | Policy A (Balanced)      | Policy B (Pareto Only)   | Policy C (Pareto+Guard)
+---------+------------+--------------------------+--------------------------+-------------------------
+C25      | Overall    | Muzzle Brake + none      | Muzzle Brake + none      | Muzzle Brake + none
+         | Vertical   | Muzzle Brake + Angled    | Muzzle Brake + Angled    | Muzzle Brake + Angled
+         | Horizontal | T-Brake + none           | T-Brake + none           | T-Brake + none
+---------+------------+--------------------------+--------------------------+-------------------------
+AK-105   | Overall    | Muzzle Brake + none      | Muzzle Brake + none      | Muzzle Brake + none
+         | Vertical   | Muzzle Brake + Angled    | Muzzle Brake + Angled    | Muzzle Brake + Angled
+         | Horizontal | Compensator + none       | Compensator + none       | Compensator + none
+---------+------------+--------------------------+--------------------------+-------------------------
+M16A3    | Overall    | Muzzle Brake + none      | Muzzle Brake + none      | Muzzle Brake + none
+         | Vertical   | Muzzle Brake + Angled    | Muzzle Brake + Angled    | Muzzle Brake + Angled
+         | Horizontal | T-Brake + none           | T-Brake + none           | T-Brake + none
+---------+------------+--------------------------+--------------------------+-------------------------
+M231     | Overall    | Muzzle Brake + none      | MB + Romanian (3.6f lag) | Muzzle Brake + none
+         | Vertical   | Muzzle Brake + Angled    | None (dominated out)     | Muzzle Brake + Angled
+         | Horizontal | Compensator + none       | OilFilter+Romanian (7.4f)| Compensator + none
+
+
+================================================================================
+3. CONVERSION ATTACHMENT ARCHITECTURE & AUDIT FINDINGS
+================================================================================
+
+1. Status in Candidate Pool:
+   - In the 69,519 candidate combinations across 292 firearms, conversion attachments
+     were 100% EXCLUDED from Layer 2 candidate generation.
+   - Reason: candidateSlots is strictly hardcoded to ['Barrel', 'Underbarrel'].
+   - Conversions exist in the 'Ammo' slot (or 'Other' slot) and therefore act as
+     Layer 1 Context attachments.
+
+2. Physical Impact of Conversions:
+   - Conversions mutate the fundamental baseline of the firearm:
+     * Caliber & Damage: e.g. Beowulf ECR (49 dmg -> 5.56 conversion)
+     * RPM: e.g. M231 Heavy Buffer (1225 RPM -> 250 RPM)
+     * Magazine Capacity: e.g. M231 M855 (30 rounds -> 100 round drum)
+     * Recoil Tables: e.g. Colt SMG Heavy Buffer modifies base recoil structures.
+
+3. The Baseline Dilemma & The Heavy Buffer Proof:
+   - If the Practicality Guard calculates deltaTTK, deltaADS, deltaSprint against
+     the Pure Stock firearm (loadCompiledWeaponData(weaponId, {})):
+     * M231 Heavy Buffer drops RPM from 1225 to 250 (TTK rises from 146.9ms to 720.0ms).
+     * The deltaTTK vs Pure Stock is +573.1 ms!
+     * Because +573.1 ms >> 20.0 ms, EVERY SINGLE BARREL AND GRIP (including stock None)
+       FAILS THE PRACTICALITY GUARD!
+     * The candidate pool becomes 100% EMPTY (0 candidates remaining).
+   - If the Practicality Guard calculates deltas against the Context Baseline
+     (loadCompiledWeaponData(weaponId, contextAttachments)):
+     * The conversion's new stat profile (250 RPM, 720ms TTK) becomes the 0-point baseline.
+     * Muzzle Brake RPM is 250 -> deltaTTK = 0.0 ms (PASS).
+     * Muzzle Brake + Romanian sprint penalty (+60.2 ms) is correctly detected (FAIL).
+     * The candidate pool functions with 100% mathematical integrity.
+
+4. Architectural Decision:
+   - Rule: The Baseline for Practicality Guards MUST ALWAYS BE the Context Baseline:
+     baseData = loadCompiledWeaponData(weaponId, contextAttachments)
+   - Conversions must NEVER be mixed into Layer 2 candidate combinations.
+   - Workflow:
+     [Step 1] User selects Weapon and Desired Conversion (Ammo/Other slot).
+     [Step 2] System locks Conversion into Layer 1 Context.
+     [Step 3] System establishes Context Baseline.
+     [Step 4] System runs Policy C (Pareto + Practicality Guard) to optimize Barrel & Underbarrel.
+================================================================================
