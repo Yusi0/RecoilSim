@@ -1,0 +1,862 @@
+{
+  "version": "1.0.0",
+  "description": "In-game Lua module definitions to resolve discrepancies where raw/API JSON files lack full attachmentModifier specifications.",
+  "modules": {
+    "6.5_grendel": {
+      "source": "in-game-module",
+      "sourceFile": "6.5Grendel.lua",
+      "attachmentName": "AR 7.62x39 Conversion",
+      "displayName": "6.5 GRENDEL",
+      "slot": "Ammo",
+      "info": "A high-precision rifle round designed to give the AR-15 platform performance somewhat comparable to 7.62x51mm, but with around half of the recoil impulse. The larger bullet is still able to load into the AR-15's magazines, but with a lower maximum capacity.",
+      "unlockKills": 1515,
+      "targetVariantIds": [
+        "ar_7_62x39_conversion_8ef8519a",
+        "ar_7_62x39_conversion_9a283a57",
+        "ar_7_62x39_conversion_3230fc1f",
+        "ar_7_62x39_conversion_18c47af9"
+      ],
+      "modifiersCount": 73,
+      "modifiers": [
+        {
+          "type": "setters",
+          "indexPath": [
+            "ammotype"
+          ],
+          "value": "6.5mm Grendel",
+          "priority": 1
+        },
+        {
+          "type": "setters",
+          "indexPath": [
+            "casetype"
+          ],
+          "value": "7.62x39mm",
+          "priority": 1
+        },
+        {
+          "type": "setters",
+          "indexPath": [
+            "magsize"
+          ],
+          "value": 20,
+          "priority": 1
+        },
+        {
+          "type": "setters",
+          "indexPath": [
+            "reserveammo"
+          ],
+          "value": 100,
+          "priority": 1
+        },
+        {
+          "type": "setters",
+          "indexPath": [
+            "node"
+          ],
+          "value": "OtherNode",
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipTranslation",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipRotation",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "x",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "y",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "z",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "x",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "y",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraBody",
+            "z",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "x",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "y",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "hipCameraHead",
+            "z",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimTranslation",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.25,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimRotation",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.3,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "x",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "y",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "z",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "x",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "y",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "z",
+            2,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "x",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "y",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraBody",
+            "z",
+            2,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "x",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "y",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "z",
+            1,
+            3
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "x",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "y",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "recoil",
+            "aimCameraHead",
+            "z",
+            1,
+            4
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "suppression"
+          ],
+          "value": 0.2,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "bulletspeed"
+          ],
+          "value": -0.275,
+          "priority": 1
+        },
+        {
+          "type": "relativeMultipliers",
+          "indexPath": [
+            "penetrationdepth"
+          ],
+          "value": 0.15,
+          "priority": 1
+        },
+        {
+          "type": "trueMultipliers",
+          "indexPath": [
+            "firerate"
+          ],
+          "value": 0.95,
+          "priority": 1
+        },
+        {
+          "type": "trueMultipliers",
+          "indexPath": [
+            "multtorso"
+          ],
+          "value": 1.05,
+          "priority": 1
+        },
+        {
+          "type": "trueMultipliers",
+          "indexPath": [
+            "firepitch"
+          ],
+          "value": 0.87,
+          "priority": 1
+        },
+        {
+          "type": "tableTrueMultipliers",
+          "indexPath": [
+            "damageGraph"
+          ],
+          "value": 1.14,
+          "priority": 1,
+          "extra": {
+            "valueIndex": "damage",
+            "indexList": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "type": "tableTrueMultipliers",
+          "indexPath": [
+            "damageGraph"
+          ],
+          "value": 0.675,
+          "priority": 1,
+          "extra": {
+            "valueIndex": "distance",
+            "indexList": [
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

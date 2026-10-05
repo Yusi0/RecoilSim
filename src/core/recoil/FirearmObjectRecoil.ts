@@ -201,4 +201,48 @@ export class FirearmObjectRecoil {
     public get weaponData(): Record<string, any> {
         return this._weaponData;
     }
+
+    public get hasSprings(): boolean {
+        return this._translationSprings.hasSprings || this._rotationSprings.hasSprings;
+    }
+
+    public get hasValidRecoil(): boolean {
+        return this._weaponData.recoil !== null &&
+            this._weaponData.recoil !== undefined &&
+            this.hasSprings;
+    }
+
+    public get recoilVerificationStatus(): {
+        status: 'VERIFIED' | 'UNVERIFIED_11_17' | 'INHERITED_FROM_11_16' | 'MISSING_RECOIL_DATA';
+        reason?: string;
+    } {
+        if (this._weaponData.recoil === null || this._weaponData.recoil === undefined) {
+            return {
+                status: 'UNVERIFIED_11_17',
+                reason: 'RECOIL_DATA_MISSING'
+            };
+        }
+        if (!this.hasSprings) {
+            return {
+                status: 'MISSING_RECOIL_DATA',
+                reason: 'RECOIL_SPRINGS_EMPTY'
+            };
+        }
+        const provRecoil = this._weaponData._provenance?.recoil_springs;
+        if (provRecoil === 'INHERITED_FROM_11_16') {
+            return {
+                status: 'INHERITED_FROM_11_16',
+                reason: 'INHERITED_FROM_11_16_BASELINE'
+            };
+        }
+        if (provRecoil === 'UNVERIFIED_11_17') {
+            return {
+                status: 'UNVERIFIED_11_17',
+                reason: 'PROVISIONAL_11_17_UNVERIFIED'
+            };
+        }
+        return {
+            status: 'VERIFIED'
+        };
+    }
 }

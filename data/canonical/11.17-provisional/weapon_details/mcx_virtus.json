@@ -1,0 +1,45 @@
+{
+  "name": "MCX VIRTUS",
+  "displayname": "VIRTUS",
+  "category": "CARBINE",
+  "damage0": 33,
+  "damage1": 18,
+  "range0": 35,
+  "range1": 110,
+  "rpm": 840,
+  "firerate": 840,
+  "multhead": 1.5,
+  "multtorso": 1.1,
+  "magsize": 35,
+  "chamber": 1,
+  "sparerounds": 140,
+  "walkspeed": 14,
+  "rank": 168,
+  "exclusiveUnlock": false,
+  "superTester": false,
+  "damageGraph": [
+    {
+      "damage": 33,
+      "distance": 0
+    },
+    {
+      "damage": 33,
+      "distance": 35
+    },
+    {
+      "damage": 18,
+      "distance": 110
+    }
+  ],
+  "recoil": null,
+  "_provenance": {
+    "version": "11.17-provisional",
+    "source_version": "11.17",
+    "applied_version": "11.17",
+    "base_stats": "VERIFIED_11_17_API",
+    "recoil_springs": "UNVERIFIED_11_17",
+    "mobility_stats": "UNVERIFIED_11_17",
+    "verification": "PROVISIONAL_11_17",
+    "classification": "HOLD_FOR_VERIFICATION"
+  }
+}

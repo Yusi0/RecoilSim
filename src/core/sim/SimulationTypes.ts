@@ -143,3 +143,25 @@ export interface SimulationEngineConfig {
      */
     initialAimProgress?: number;
 }
+
+export interface RecoilVerificationStatus {
+    isRecoilValid: boolean;
+    status: 'VERIFIED' | 'UNVERIFIED_11_17' | 'INHERITED_FROM_11_16' | 'MISSING_RECOIL_DATA';
+    reason?: string;
+    springCount: number;
+    isOutdatedPhysics?: boolean;
+    provenance?: any;
+}
+
+export interface HandlingTelemetry {
+    aimSpeed: {
+        value: number;
+        source: 'CONFIG' | 'WEAPON_DATA' | 'DEFAULTED';
+        isDefaulted: boolean;
+    };
+    sprintSpeed: {
+        value: number;
+        source: 'WEAPON_DATA' | 'DEFAULTED';
+        isDefaulted: boolean;
+    };
+}

@@ -10,6 +10,8 @@ interface HeaderProps {
     isAiming: boolean;
     onToggleAim: () => void;
     onReset: () => void;
+    isDispersionOpen?: boolean;
+    onToggleDispersion?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -20,7 +22,9 @@ export const Header: React.FC<HeaderProps> = ({
     onSetTargetDistance,
     isAiming,
     onToggleAim,
-    onReset
+    onReset,
+    isDispersionOpen,
+    onToggleDispersion
 }) => {
     return (
         <header className="h-14 px-6 bg-[#121214] border-b border-[#1c1c20] flex items-center justify-between z-30 select-none font-sans">
@@ -90,6 +94,21 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Explicit Visual Divider */}
                 <div className="w-[1px] h-4 bg-[#26262c] mx-1" />
+
+                {/* Dispersion Map Modal Toggle */}
+                {onToggleDispersion && (
+                    <button
+                        onClick={onToggleDispersion}
+                        className={`px-3 py-1.5 rounded-md transition-colors text-xs font-sans font-medium ${
+                            isDispersionOpen
+                                ? 'bg-cyan-600 text-[#ffffff]'
+                                : 'bg-[#1c1c1f] text-[#8e8e93] hover:bg-[#26262c] hover:text-[#f0f0f2]'
+                        }`}
+                        title="몬테카를로 탄착군 분석"
+                    >
+                        탄착군 맵
+                    </button>
+                )}
 
                 {/* ADS Aim Toggle */}
                 <button

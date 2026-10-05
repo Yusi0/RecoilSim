@@ -10,11 +10,22 @@ export interface ModifierTraceEntry {
     afterValue: any;
 }
 
+export interface UnappliedModifierInfo {
+    attachmentId?: string;
+    attachmentName: string;
+    stage: string;
+    indexPath: string;
+    reason: 'MISSING_RECOIL_ROOT' | 'INDEX_OUT_OF_BOUNDS' | 'CUTOFF_EARLY' | 'EMPTY_INDEX_PATH' | 'NO_TARGET_MATCHED' | string;
+    targetPath?: string;
+    value?: any;
+}
+
 export interface ModifierEngineResult {
     compiledData: any;
     trace: ModifierTraceEntry[];
     warnings: string[];
     unconfirmedSemanticsNotes: string[];
+    unappliedModifiers: UnappliedModifierInfo[];
 }
 
 interface TargetLocation {
@@ -44,6 +55,7 @@ export class ModifierEngine {
         const trace: ModifierTraceEntry[] = [];
         const warnings: string[] = [];
         const unconfirmedSemanticsNotes: string[] = [];
+        const unappliedModifiers: UnappliedModifierInfo[] = [];
 
         // Filter valid attachments and gather modifiers in sequence
         const validAttachments = attachments.filter(a => a && Array.isArray(a.modifiers));
@@ -51,27 +63,27 @@ export class ModifierEngine {
         for (const stage of ModifierEngine.MODIFIER_STAGE_ORDER) {
             switch (stage) {
                 case 'setters':
-                    this.applySetters(compiledData, validAttachments, trace, warnings);
+                    this.applySetters(compiledData, validAttachments, trace, warnings, unappliedModifiers);
                     break;
                 case 'adders':
-                    this.applyAdders(compiledData, validAttachments, trace, warnings);
+                    this.applyAdders(compiledData, validAttachments, trace, warnings, unappliedModifiers);
                     break;
                 case 'tableInserters':
-                    this.applyInserters(compiledData, validAttachments, trace, warnings);
+                    this.applyInserters(compiledData, validAttachments, trace, warnings, unappliedModifiers);
                     break;
                 case 'tableRemovers':
-                    this.applyRemovers(compiledData, validAttachments, trace, warnings);
+                    this.applyRemovers(compiledData, validAttachments, trace, warnings, unappliedModifiers);
                     break;
                 case 'relativeMultipliers':
                 case 'tableRelativeMultipliers':
-                    this.applyRelativeMultipliers(compiledData, validAttachments, stage, trace, warnings);
+                    this.applyRelativeMultipliers(compiledData, validAttachments, stage, trace, warnings, unappliedModifiers);
                     break;
                 case 'trueMultipliers':
                 case 'tableTrueMultipliers':
-                    this.applyTrueMultipliers(compiledData, validAttachments, stage, trace, warnings);
+                    this.applyTrueMultipliers(compiledData, validAttachments, stage, trace, warnings, unappliedModifiers);
                     break;
                 case 'functionMods':
-                    this.applyFunctionMods(compiledData, validAttachments, trace, warnings, unconfirmedSemanticsNotes);
+                    this.applyFunctionMods(compiledData, validAttachments, trace, warnings, unconfirmedSemanticsNotes, unappliedModifiers);
                     break;
             }
         }
@@ -80,24 +92,27 @@ export class ModifierEngine {
             compiledData,
             trace,
             warnings,
-            unconfirmedSemanticsNotes
+            unconfirmedSemanticsNotes,
+            unappliedModifiers
         };
     }
 
     private getEffectivePath(mod: NormalizedModifier): (string | number)[] {
-        const extra = mod.extra || {};
-        if (!extra.valueIndex) {
+        const extra = mod.extra || (mod as any) || {};
+        const valueIndex = extra.valueIndex ?? (mod as any).valueIndex;
+        if (!valueIndex) {
             return mod.indexPath;
         }
 
         const path = [...mod.indexPath];
-        if (extra.indexList) {
-            path.push(extra.indexList);
+        const indexList = extra.indexList ?? (mod as any).indexList;
+        if (indexList) {
+            path.push(indexList);
         } else {
             // Wildcard / default all
             path.push('*');
         }
-        path.push(extra.valueIndex);
+        path.push(valueIndex);
         return path;
     }
 
@@ -129,18 +144,66 @@ export class ModifierEngine {
             }
         }
 
+        if (typeof seg === 'string' && seg.includes(',')) {
+            const parts = seg.split(',');
+            const result: (string | number)[] = [];
+            for (const part of parts) {
+                const trimmed = part.trim();
+                const num = parseInt(trimmed, 10);
+                if (!isNaN(num) && String(num) === trimmed) {
+                    result.push(...this.resolveKey(parent, num));
+                } else {
+                    result.push(...this.resolveKey(parent, trimmed));
+                }
+            }
+            return result;
+        }
+
         return [seg];
     }
 
     private collectTargets(
         rootObj: any,
         indexPath: (string | number)[],
-        warnings: string[]
+        warnings: string[],
+        context?: {
+            att: NormalizedAttachment;
+            mod: NormalizedModifier;
+            stage: string;
+            unappliedModifiers: UnappliedModifierInfo[];
+        }
     ): TargetLocation[] {
         const targets: TargetLocation[] = [];
 
         if (!indexPath || indexPath.length === 0) {
             warnings.push('empty indexPath provided');
+            if (context) {
+                context.unappliedModifiers.push({
+                    attachmentId: context.att.id,
+                    attachmentName: context.att.name,
+                    stage: context.stage,
+                    indexPath: '',
+                    reason: 'EMPTY_INDEX_PATH',
+                    value: context.mod.value
+                });
+            }
+            return targets;
+        }
+
+        // Special check: missing recoil root on weapon (e.g. 11.17 new weapons with recoil: null)
+        if (indexPath[0] === 'recoil' && (rootObj.recoil === null || rootObj.recoil === undefined)) {
+            warnings.push(`indexPath cut off early at 'recoil' (segment index 0)`);
+            if (context) {
+                context.unappliedModifiers.push({
+                    attachmentId: context.att.id,
+                    attachmentName: context.att.name,
+                    stage: context.stage,
+                    indexPath: indexPath.join('.'),
+                    targetPath: 'recoil',
+                    reason: 'MISSING_RECOIL_ROOT',
+                    value: context.mod.value
+                });
+            }
             return targets;
         }
 
@@ -168,12 +231,42 @@ export class ModifierEngine {
                         recurse(nextObj, segmentIndex + 1, stepPathStr);
                     } else {
                         warnings.push(`indexPath cut off early at '${stepPathStr}' (segment index ${segmentIndex})`);
+                        if (context) {
+                            const isArrayOutOfBounds = Array.isArray(currentObj) || (typeof seg === 'number');
+                            const reason = isArrayOutOfBounds ? 'INDEX_OUT_OF_BOUNDS' : 'CUTOFF_EARLY';
+                            context.unappliedModifiers.push({
+                                attachmentId: context.att.id,
+                                attachmentName: context.att.name,
+                                stage: context.stage,
+                                indexPath: indexPath.join('.'),
+                                targetPath: stepPathStr,
+                                reason,
+                                value: context.mod.value
+                            });
+                        }
                     }
                 }
             }
         };
 
         recurse(rootObj, 0, '');
+
+        if (targets.length === 0 && context) {
+            const alreadyRecorded = context.unappliedModifiers.some(
+                u => u.indexPath === indexPath.join('.') && u.attachmentId === context.att.id && u.stage === context.stage
+            );
+            if (!alreadyRecorded) {
+                context.unappliedModifiers.push({
+                    attachmentId: context.att.id,
+                    attachmentName: context.att.name,
+                    stage: context.stage,
+                    indexPath: indexPath.join('.'),
+                    reason: 'NO_TARGET_MATCHED',
+                    value: context.mod.value
+                });
+            }
+        }
+
         return targets;
     }
 
@@ -181,7 +274,8 @@ export class ModifierEngine {
         rootObj: any,
         attachments: NormalizedAttachment[],
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         // Map target location key -> winning setter item
         interface SetterCandidate {
@@ -202,7 +296,12 @@ export class ModifierEngine {
                 if (mod.type !== 'setters') continue;
                 sequenceCounter++;
 
-                const targets = this.collectTargets(rootObj, mod.indexPath, warnings);
+                const targets = this.collectTargets(rootObj, mod.indexPath, warnings, {
+                    att,
+                    mod,
+                    stage: 'setters',
+                    unappliedModifiers
+                });
                 const absPriority = mod.extra?.absolutePriority ?? 0;
                 const relPriority = mod.priority ?? 0;
 
@@ -275,12 +374,18 @@ export class ModifierEngine {
         rootObj: any,
         attachments: NormalizedAttachment[],
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         for (const att of attachments) {
             for (const mod of att.modifiers) {
                 if (mod.type !== 'adders') continue;
-                const targets = this.collectTargets(rootObj, mod.indexPath, warnings);
+                const targets = this.collectTargets(rootObj, mod.indexPath, warnings, {
+                    att,
+                    mod,
+                    stage: 'adders',
+                    unappliedModifiers
+                });
 
                 for (const target of targets) {
                     const { parent, key, pathString } = target;
@@ -309,7 +414,8 @@ export class ModifierEngine {
         rootObj: any,
         attachments: NormalizedAttachment[],
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         // Inserters sorted by priority ascending
         interface InserterCandidate {
@@ -346,7 +452,12 @@ export class ModifierEngine {
 
         for (const cand of inserters) {
             const { att, mod } = cand;
-            const targets = this.collectTargets(rootObj, mod.indexPath, warnings);
+            const targets = this.collectTargets(rootObj, mod.indexPath, warnings, {
+                att,
+                mod,
+                stage: 'tableInserters',
+                unappliedModifiers
+            });
 
             for (const target of targets) {
                 const { parent, key, pathString } = target;
@@ -411,12 +522,18 @@ export class ModifierEngine {
         rootObj: any,
         attachments: NormalizedAttachment[],
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         for (const att of attachments) {
             for (const mod of att.modifiers) {
                 if (mod.type !== 'tableRemovers') continue;
-                const targets = this.collectTargets(rootObj, mod.indexPath, warnings);
+                const targets = this.collectTargets(rootObj, mod.indexPath, warnings, {
+                    att,
+                    mod,
+                    stage: 'tableRemovers',
+                    unappliedModifiers
+                });
 
                 for (const target of targets) {
                     const { parent, key, pathString } = target;
@@ -480,7 +597,8 @@ export class ModifierEngine {
         attachments: NormalizedAttachment[],
         stageType: 'relativeMultipliers' | 'tableRelativeMultipliers',
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         // Group values per target
         const groupMap = new Map<any, Map<string | number, { values: number[]; target: TargetLocation; atts: string[] }>>();
@@ -489,7 +607,12 @@ export class ModifierEngine {
             for (const mod of att.modifiers) {
                 if (mod.type !== stageType) continue;
                 const path = this.getEffectivePath(mod);
-                const targets = this.collectTargets(rootObj, path, warnings);
+                const targets = this.collectTargets(rootObj, path, warnings, {
+                    att,
+                    mod,
+                    stage: stageType,
+                    unappliedModifiers
+                });
 
                 for (const target of targets) {
                     let pMap = groupMap.get(target.parent);
@@ -552,7 +675,8 @@ export class ModifierEngine {
         attachments: NormalizedAttachment[],
         stageType: 'trueMultipliers' | 'tableTrueMultipliers',
         trace: ModifierTraceEntry[],
-        warnings: string[]
+        warnings: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         // Group values per target
         const groupMap = new Map<any, Map<string | number, { values: number[]; target: TargetLocation; atts: string[] }>>();
@@ -561,7 +685,12 @@ export class ModifierEngine {
             for (const mod of att.modifiers) {
                 if (mod.type !== stageType) continue;
                 const path = this.getEffectivePath(mod);
-                const targets = this.collectTargets(rootObj, path, warnings);
+                const targets = this.collectTargets(rootObj, path, warnings, {
+                    att,
+                    mod,
+                    stage: stageType,
+                    unappliedModifiers
+                });
 
                 for (const target of targets) {
                     let pMap = groupMap.get(target.parent);
@@ -620,14 +749,20 @@ export class ModifierEngine {
         attachments: NormalizedAttachment[],
         trace: ModifierTraceEntry[],
         warnings: string[],
-        unconfirmedSemanticsNotes: string[]
+        unconfirmedSemanticsNotes: string[],
+        unappliedModifiers: UnappliedModifierInfo[]
     ) {
         for (const att of attachments) {
             for (const mod of att.modifiers) {
                 if (mod.type !== 'functionMods') continue;
 
                 if (typeof mod.value === 'function') {
-                    const targets = this.collectTargets(rootObj, mod.indexPath, warnings);
+                    const targets = this.collectTargets(rootObj, mod.indexPath, warnings, {
+                        att,
+                        mod,
+                        stage: 'functionMods',
+                        unappliedModifiers
+                    });
                     for (const target of targets) {
                         const beforeVal = target.parent[target.key];
                         mod.value(rootObj, target.key, target.parent, target.parent[target.key]);

@@ -1,0 +1,882 @@
+[
+  {
+    "category": "CARBINE",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "KAC SRR",
+      "SA58 OSW",
+      "X95R",
+      "MTS-569",
+      "C8A2",
+      "GYROJET CARBINE",
+      "USC"
+    ],
+    "chunkId": "CARBINE_p1"
+  },
+  {
+    "category": "CARBINE",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "GROZA-1",
+      "1858 CARBINE",
+      "GROZA-4",
+      "GOLDEN DEAGLE 2",
+      "OTs-126",
+      "AK12C",
+      "SCAR SC"
+    ],
+    "chunkId": "CARBINE_p2"
+  },
+  {
+    "category": "CARBINE",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "MC51SD",
+      "C25",
+      "AK105",
+      "K1A",
+      "HK51B",
+      "L22",
+      "CAR-15"
+    ],
+    "chunkId": "CARBINE_p3"
+  },
+  {
+    "category": "CARBINE",
+    "startIndex": 22,
+    "endIndex": 28,
+    "names": [
+      "M4",
+      "JURY",
+      "SR-3M",
+      "AKU12",
+      "MINI FIX",
+      "AEK-973",
+      "M4A1"
+    ],
+    "chunkId": "CARBINE_p4"
+  },
+  {
+    "category": "CARBINE",
+    "startIndex": 29,
+    "endIndex": 35,
+    "names": [
+      "SUGAR WEASEL",
+      "AUG A3",
+      "EF88",
+      "PKP-B",
+      "HK337",
+      "G36K",
+      "C8NLD"
+    ],
+    "chunkId": "CARBINE_p5"
+  },
+  {
+    "category": "CARBINE",
+    "startIndex": 36,
+    "endIndex": 36,
+    "names": [
+      "CAN CANNON"
+    ],
+    "chunkId": "CARBINE_p6"
+  },
+  {
+    "category": "SNIPER RIFLE",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "WA2000",
+      "CS/LR-4A",
+      "REMINGTON 700",
+      "HECATE II",
+      "AWS",
+      "FT300",
+      "BFG 50"
+    ],
+    "chunkId": "SNIPER_RIFLE_p1"
+  },
+  {
+    "category": "SNIPER RIFLE",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "TRG-42",
+      "NTW-20",
+      "BALLISTA",
+      "DSR-50",
+      "RAILGUN",
+      "INTERVENTION",
+      "MOSIN NAGANT"
+    ],
+    "chunkId": "SNIPER_RIFLE_p2"
+  },
+  {
+    "category": "SNIPER RIFLE",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "K14",
+      "L115A3",
+      "TIMBERWOLF",
+      "DRAGUNOV SVDS",
+      "VKS",
+      "KEK-50",
+      "CS/LR-3"
+    ],
+    "chunkId": "SNIPER_RIFLE_p3"
+  },
+  {
+    "category": "SNIPER RIFLE",
+    "startIndex": 22,
+    "endIndex": 27,
+    "names": [
+      "M1903",
+      "STEYR SCOUT",
+      "COMP 1022",
+      "M107",
+      "M110A1",
+      "THE FIX"
+    ],
+    "chunkId": "SNIPER_RIFLE_p4"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "COLT MARS",
+      "MAX31",
+      "HONEY BADGER",
+      "LUTY",
+      "P90",
+      "TOMMY GUN",
+      "FIVE-0"
+    ],
+    "chunkId": "PDW_p1"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "UZI",
+      "PP-19 BIZON",
+      "X95 SMG",
+      "BWC9",
+      "G36C",
+      "BLOCKSON",
+      "KRINKOV"
+    ],
+    "chunkId": "PDW_p2"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "MP5K",
+      "FAL PARA SHORTY",
+      "RAMA 1130",
+      "HK416C",
+      "MP5",
+      "GOLDEN TOMMY GUN",
+      "FAMAS COMMANDO"
+    ],
+    "chunkId": "PDW_p3"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 22,
+    "endIndex": 28,
+    "names": [
+      "MP40",
+      "MP5SD",
+      "MP5/10",
+      "SCAR PDW",
+      "L2A3",
+      "I MP-9",
+      "MP10"
+    ],
+    "chunkId": "PDW_p4"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 29,
+    "endIndex": 35,
+    "names": [
+      "IA2 SMG",
+      "PPSH-41",
+      "KRISS VECTOR",
+      "UMP45",
+      "K7",
+      "M3A1",
+      "MAC10"
+    ],
+    "chunkId": "PDW_p5"
+  },
+  {
+    "category": "PDW",
+    "startIndex": 36,
+    "endIndex": 38,
+    "names": [
+      "COLT SMG 635",
+      "AUG A3 PARA",
+      "MP7"
+    ],
+    "chunkId": "PDW_p6"
+  },
+  {
+    "category": "BATTLE RIFLE",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "AG-3",
+      "G3",
+      "SHAK-12",
+      "BREN 2 BR",
+      "MCX SPEAR",
+      "AK-308",
+      "FAL 50.63 PARA"
+    ],
+    "chunkId": "BATTLE_RIFLE_p1"
+  },
+  {
+    "category": "BATTLE RIFLE",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "FAL 50.00",
+      "HENRY 45-70",
+      "BOOMBOX",
+      "IA2 BR",
+      "SCAR-H",
+      "SCAR UL",
+      "M14 BR"
+    ],
+    "chunkId": "BATTLE_RIFLE_p2"
+  },
+  {
+    "category": "BATTLE RIFLE",
+    "startIndex": 15,
+    "endIndex": 18,
+    "names": [
+      "HK417",
+      "BEOWULF ECR",
+      "RM277",
+      "HCAR"
+    ],
+    "chunkId": "BATTLE_RIFLE_p3"
+  },
+  {
+    "category": "OTHER",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "OBREZ",
+      "E GUN",
+      "M79 THUMPER",
+      "SAIGA-12U",
+      "SAWED OFF",
+      "SFG 50",
+      "THUNDER"
+    ],
+    "chunkId": "OTHER_p1"
+  },
+  {
+    "category": "OTHER",
+    "startIndex": 8,
+    "endIndex": 10,
+    "names": [
+      "STAKEOUT",
+      "SASS 308",
+      "SERBU SHOTGUN"
+    ],
+    "chunkId": "OTHER_p2"
+  },
+  {
+    "category": "IMPACT",
+    "startIndex": 1,
+    "endIndex": 3,
+    "names": [
+      "RGN UDZS",
+      "RGO UDZS",
+      "T-13 IMPACT"
+    ],
+    "chunkId": "IMPACT_p1"
+  },
+  {
+    "category": "TWO HAND BLUNT",
+    "startIndex": 1,
+    "endIndex": 20,
+    "names": [
+      "KANABO",
+      "PRESENT",
+      "BASEBALL BAT",
+      "SLEDGE HAMMER",
+      "SCL-S1: GANG",
+      "SCL-S4: MALICIOUS INTENT",
+      "ZIRCON SLAMSICKLE",
+      "CLEMENTINE",
+      "CRANE",
+      "MORNING STAR",
+      "SWEEPER",
+      "BANJO",
+      "STOPPER",
+      "HOCKEY STICK",
+      "UKULELE",
+      "STYLIS BRUSH",
+      "VOID STAFF",
+      "SCL-S3: DRASTIC",
+      "PADDLE",
+      "CURSED SHINAI"
+    ],
+    "chunkId": "TWO_HAND_BLUNT_p1"
+  },
+  {
+    "category": "TWO HAND BLUNT",
+    "startIndex": 21,
+    "endIndex": 22,
+    "names": [
+      "BAN HAMMER",
+      "WARHAMMER"
+    ],
+    "chunkId": "TWO_HAND_BLUNT_p2"
+  },
+  {
+    "category": "LMG",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "SCAR HAMR",
+      "HORNET",
+      "JUGGUN",
+      "MG42",
+      "KORD-R",
+      "STONER 96",
+      "M60"
+    ],
+    "chunkId": "LMG_p1"
+  },
+  {
+    "category": "LMG",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "M249 SAW",
+      "M1918A2",
+      "HK21",
+      "M27 IAR",
+      "L86 LSW",
+      "MG3KWS",
+      "RPK"
+    ],
+    "chunkId": "LMG_p2"
+  },
+  {
+    "category": "LMG",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "MGV-176",
+      "GOLDEN HK51B",
+      "PKP",
+      "RPK12",
+      "RPK74",
+      "AK12BR",
+      "REAPR"
+    ],
+    "chunkId": "LMG_p3"
+  },
+  {
+    "category": "LMG",
+    "startIndex": 22,
+    "endIndex": 28,
+    "names": [
+      "ChainSAW",
+      "QJB-95 LSW",
+      "COLT LMG",
+      "RPK-16",
+      "AUG HBAR",
+      "PKM",
+      "AEK-999"
+    ],
+    "chunkId": "LMG_p4"
+  },
+  {
+    "category": "LMG",
+    "startIndex": 29,
+    "endIndex": 30,
+    "names": [
+      "MG36",
+      "FALO 50.41"
+    ],
+    "chunkId": "LMG_p5"
+  },
+  {
+    "category": "TWO HAND BLADE",
+    "startIndex": 1,
+    "endIndex": 15,
+    "names": [
+      "FIRE AXE",
+      "HARVESTER",
+      "HATTORI",
+      "ICEMOURNE",
+      "LONGSWORD",
+      "NAGINATA",
+      "NORDIC WAR AXE",
+      "REAPER",
+      "WORLD BUSTER",
+      "ZWEIHANDER",
+      "ZERO CUTTER",
+      "TRAINING BAYONET",
+      "ZIRCON TRIDENT",
+      "CHOSEN ONE",
+      "NOOBSLAYER"
+    ],
+    "chunkId": "TWO_HAND_BLADE_p1"
+  },
+  {
+    "category": "ONE HAND BLADE",
+    "startIndex": 1,
+    "endIndex": 20,
+    "names": [
+      "KRAMPUS KUKRI",
+      "WAR FAN",
+      "NATA HATCHET",
+      "HRUNTING",
+      "KUNAI",
+      "TACTICAL SPATULA",
+      "MEK'LETH",
+      "LINKED SWORD",
+      "TANTO",
+      "HUNTING KNIFE",
+      "KARAMBIT R",
+      "CLASSIC KNIFE",
+      "GOSPELL BLADE",
+      "MACHETE",
+      "BRIDAL BRANDISHER",
+      "STREITER",
+      "COOKIE CUTTER",
+      "TANZANITE BLADE",
+      "TRENCH KNIFE",
+      "JKEY"
+    ],
+    "chunkId": "ONE_HAND_BLADE_p1"
+  },
+  {
+    "category": "ONE HAND BLADE",
+    "startIndex": 21,
+    "endIndex": 37,
+    "names": [
+      "ICE PICK",
+      "CLEAVER",
+      "TOON BLADE",
+      "HAVOC BLADE",
+      "DARKHEART",
+      "JASON",
+      "RITUAL SICKLE",
+      "KAMA",
+      "KOMMANDO",
+      "UTILITY KNIFE",
+      "BALISONG",
+      "CUTTER",
+      "ICICLE",
+      "TOMAHAWK",
+      "KEY",
+      "KNIFE",
+      "ENTRENCHER"
+    ],
+    "chunkId": "ONE_HAND_BLADE_p2"
+  },
+  {
+    "category": "ONE HAND BLUNT",
+    "startIndex": 1,
+    "endIndex": 20,
+    "names": [
+      "TRENCH MACE",
+      "ASP BATON",
+      "TASER",
+      "STARLIS FUNPOST",
+      "BRASS KNUCKLE",
+      "ARM CANNON",
+      "SLAY BELLS",
+      "UCHIWA",
+      "BLOXY",
+      "TOY GUN",
+      "GOLDEN PAN",
+      "TANZANITE PICK",
+      "STICK GRENADE",
+      "FIXER",
+      "CANDY CANE",
+      "SCL-S2: ID",
+      "NIGHTSTICK",
+      "BARE FISTS",
+      "THE COUNTDOWN",
+      "SPARKLER"
+    ],
+    "chunkId": "ONE_HAND_BLUNT_p1"
+  },
+  {
+    "category": "ONE HAND BLUNT",
+    "startIndex": 21,
+    "endIndex": 33,
+    "names": [
+      "BOTTLE",
+      "CRICKET BAT",
+      "FRYING PAN",
+      "MAGLITE CLUB",
+      "BRICK",
+      "SLEIGH BELLS",
+      "CROWBAR",
+      "MJOLNIR",
+      "KEYBOARD",
+      "FLAME OF OLYMPIA",
+      "PACIFIC FM",
+      "FUMELEE",
+      "CLONKER"
+    ],
+    "chunkId": "ONE_HAND_BLUNT_p2"
+  },
+  {
+    "category": "REVOLVERS",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "GOLDEN REDHAWK 45",
+      "REDHAWK 44",
+      "RSH-12",
+      "1858 NEW ARMY",
+      "JUDGE",
+      "MATEBA 6",
+      "MP412 REX"
+    ],
+    "chunkId": "REVOLVERS_p1"
+  },
+  {
+    "category": "REVOLVERS",
+    "startIndex": 8,
+    "endIndex": 8,
+    "names": [
+      "EXECUTIONER"
+    ],
+    "chunkId": "REVOLVERS_p2"
+  },
+  {
+    "category": "MACHINE PISTOLS",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "MICRO UZI",
+      "AUTO 9",
+      "SKORPION",
+      "MP1911",
+      "M93R",
+      "GLOCK 18",
+      "TEC-9"
+    ],
+    "chunkId": "MACHINE_PISTOLS_p1"
+  },
+  {
+    "category": "MACHINE PISTOLS",
+    "startIndex": 8,
+    "endIndex": 12,
+    "names": [
+      "MAC11",
+      "AEK-919K",
+      "PP-2000",
+      "ARM PISTOL",
+      "ASMI"
+    ],
+    "chunkId": "MACHINE_PISTOLS_p2"
+  },
+  {
+    "category": "DMR",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "MK11",
+      "BREN 2 PPS",
+      "SKS",
+      "MSG90",
+      "VSS VINTOREZ",
+      "SVK12E",
+      "SA58 SPR"
+    ],
+    "chunkId": "DMR_p1"
+  },
+  {
+    "category": "DMR",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "SCAR SSR",
+      "SAIGA SAR",
+      "QBU-88",
+      "AUG A3M2",
+      "M14 DMR",
+      "G28",
+      "BEOWULF TCR"
+    ],
+    "chunkId": "DMR_p2"
+  },
+  {
+    "category": "DMR",
+    "startIndex": 15,
+    "endIndex": 18,
+    "names": [
+      "MK12 SPR",
+      "SL-8",
+      "DRAGUNOV SVU",
+      "RUGER 1022"
+    ],
+    "chunkId": "DMR_p3"
+  },
+  {
+    "category": "SHOTGUN",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "ROPOD SHOTTY",
+      "E SHOTGUN",
+      "SCX-12",
+      "DBV12",
+      "DT11 PRO",
+      "GOLDEN SHORTY",
+      "KS-23M"
+    ],
+    "chunkId": "SHOTGUN_p1"
+  },
+  {
+    "category": "SHOTGUN",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "KSG 12",
+      "REMINGTON 870",
+      "SPAS-12",
+      "STEVENS DB",
+      "COBRAY TERMINATOR",
+      "ITHACA 37",
+      "SAIGA-12"
+    ],
+    "chunkId": "SHOTGUN_p2"
+  },
+  {
+    "category": "SHOTGUN",
+    "startIndex": 15,
+    "endIndex": 16,
+    "names": [
+      "USAS-12",
+      "AA-12"
+    ],
+    "chunkId": "SHOTGUN_p3"
+  },
+  {
+    "category": "PISTOLS",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "HARDBALLER",
+      "DEAGLE 44",
+      "GLOCK 1",
+      "M1911",
+      "M7644",
+      "AM III",
+      "GYROJET MARK I"
+    ],
+    "chunkId": "PISTOLS_p1"
+  },
+  {
+    "category": "PISTOLS",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "ALIEN",
+      "M45A1",
+      "MAKAROV PM",
+      "FIVE SEVEN",
+      "GLOCK 23",
+      "TOY M1911",
+      "BOXY BUSTER"
+    ],
+    "chunkId": "PISTOLS_p2"
+  },
+  {
+    "category": "PISTOLS",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "GLOCK 21",
+      "ZIP 22",
+      "GLOCK 40",
+      "M9",
+      "GB-22",
+      "GLOCK 17",
+      "IZHEVSK PB"
+    ],
+    "chunkId": "PISTOLS_p3"
+  },
+  {
+    "category": "PISTOLS",
+    "startIndex": 22,
+    "endIndex": 28,
+    "names": [
+      "GI M1",
+      "GSP",
+      "GSH-18",
+      "GOLDEN GUN",
+      "DEAGLE 50",
+      "M17",
+      "GLOCK 50"
+    ],
+    "chunkId": "PISTOLS_p4"
+  },
+  {
+    "category": "PISTOLS",
+    "startIndex": 29,
+    "endIndex": 35,
+    "names": [
+      "GOLDEN DEAGLE 50",
+      "GOLDEN ZIP 22",
+      "GRIZZLY",
+      "M3822",
+      "KG-99",
+      "U416/22",
+      "M2011"
+    ],
+    "chunkId": "PISTOLS_p5"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 1,
+    "endIndex": 7,
+    "names": [
+      "HOWA TYPE 20",
+      "AN-94",
+      "G38",
+      "TYPE 88",
+      "TAR-21",
+      "M231",
+      "AUG A2"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p1"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 8,
+    "endIndex": 14,
+    "names": [
+      "G36",
+      "M16A1",
+      "AK74",
+      "L85A2",
+      "HK416",
+      "COLT ACR",
+      "AKM"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p2"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 15,
+    "endIndex": 21,
+    "names": [
+      "M41A",
+      "AK47",
+      "M16A4",
+      "QBZ-97A",
+      "AUG UNBULLPUP",
+      "IA2 AR",
+      "FAMAS F1"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p3"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 22,
+    "endIndex": 28,
+    "names": [
+      "AS VAL",
+      "AEK-971",
+      "G11K2",
+      "M16A3",
+      "STG-44",
+      "AK12",
+      "AK-12M"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p4"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 29,
+    "endIndex": 35,
+    "names": [
+      "AK-15",
+      "AK-19",
+      "SCAR-L",
+      "BREN 3",
+      "QBZ-95",
+      "VHS-D2",
+      "AK103"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p5"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 36,
+    "endIndex": 42,
+    "names": [
+      "K2",
+      "FAMAS",
+      "BREN 2",
+      "L85A3",
+      "AUG A1",
+      "L85A2 UNBULLPUP",
+      "FAMAS UNBULLPUP"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p6"
+  },
+  {
+    "category": "ASSAULT RIFLE",
+    "startIndex": 43,
+    "endIndex": 44,
+    "names": [
+      "MAX-11/15",
+      "C7A2"
+    ],
+    "chunkId": "ASSAULT_RIFLE_p7"
+  },
+  {
+    "category": "FRAGMENTATION",
+    "startIndex": 1,
+    "endIndex": 8,
+    "names": [
+      "FRAG",
+      "ROLY HG",
+      "V40 MINI",
+      "M560 MINI",
+      "M26 FRAG",
+      "TYPE 77-1 FRAG",
+      "M24 STICK",
+      "MK 2 FRAG"
+    ],
+    "chunkId": "FRAGMENTATION_p1"
+  },
+  {
+    "category": "HIGH EXPLOSIVE",
+    "startIndex": 1,
+    "endIndex": 6,
+    "names": [
+      "RGD-5 HE",
+      "BUNDLE CHARGE",
+      "DYNAMITE",
+      "DYNAMITE-3",
+      "PB GRENADE",
+      "SEMTEX"
+    ],
+    "chunkId": "HIGH_EXPLOSIVE_p1"
+  }
+]

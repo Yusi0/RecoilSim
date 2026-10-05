@@ -17,8 +17,16 @@ import {
     FirearmState,
     SimulationEngineConfig,
     StanceMode,
-    DeviceType
+    DeviceType,
+    RecoilVerificationStatus,
+    HandlingTelemetry
 } from './SimulationTypes';
+
+export const OUTDATED_11_17_RECOIL_WEAPONS: ReadonlySet<string> = new Set([
+    'c25', 'groza_1', 'tar_21', 'mcx_spear', 'sr_3m', 'l22', 'as_val',
+    'vss_vintorez', 'fal_50_00', 'msg90', 'aws', 'svt_40',
+    'g36', 'g36k', 'mg36', 'g36c', 'sl_8', 'hk416', 'type_20', 'ak12', 'ak12c', 'rpk12', 'dbv12'
+]);
 
 export class SimulationEngine {
     private _currentTime: number = 0;
@@ -27,6 +35,9 @@ export class SimulationEngine {
 
     private _firearmRecoil: FirearmObjectRecoil;
     private _cameraRecoil: MainCameraObjectRecoil;
+
+    private _verificationStatus: RecoilVerificationStatus;
+    private _handlingTelemetry: HandlingTelemetry;
 
     private _aimSpring: Spring;
     private _spreadSpring: Vector3Spring;
@@ -103,6 +114,64 @@ export class SimulationEngine {
         this._sightOffset = config.sightOffset || CFrame.IDENTITY;
 
         this._firemodeDamping = config.firemodeDamping ?? (config.weaponData.firemodedamping ?? 0.9);
+
+        // Recoil Verification & Provenance tracking
+        const weaponId = (config.weaponData.name || config.weaponData.displayName || '').toLowerCase().replace(/[^a-z0-9]/g, '_');
+        const isOutdated23 = OUTDATED_11_17_RECOIL_WEAPONS.has(weaponId) ||
+            OUTDATED_11_17_RECOIL_WEAPONS.has(config.weaponData.name?.toLowerCase?.()) ||
+            config.weaponData._provenance?.recoil_springs === 'INHERITED_FROM_11_16';
+
+        const firearmRecoilStatus = this._firearmRecoil.recoilVerificationStatus;
+        let finalRecoilStatus: RecoilVerificationStatus['status'] = firearmRecoilStatus.status;
+        let finalReason: string | undefined = firearmRecoilStatus.reason;
+
+        if (finalRecoilStatus === 'VERIFIED' && isOutdated23) {
+            finalRecoilStatus = 'INHERITED_FROM_11_16';
+            finalReason = 'INHERITED_FROM_11_16_OUTDATED_PHYSICS';
+        }
+
+        const totalSprings = this._firearmRecoil.translationSprings.springCount +
+            this._firearmRecoil.rotationSprings.springCount +
+            this._cameraRecoil.cameraBodySprings.springCount +
+            this._cameraRecoil.cameraHeadSprings.springCount;
+
+        this._verificationStatus = {
+            isRecoilValid: this._firearmRecoil.hasValidRecoil,
+            status: finalRecoilStatus,
+            reason: finalReason,
+            springCount: totalSprings,
+            isOutdatedPhysics: isOutdated23,
+            provenance: config.weaponData._provenance
+        };
+
+        const isAimSpeedExplicit = config.aimSpeed !== undefined;
+        const isAimSpeedInWeapon = config.weaponData.aimspeed !== undefined;
+        const isSprintSpeedInWeapon = config.weaponData.sprintspeed !== undefined;
+
+        this._handlingTelemetry = {
+            aimSpeed: {
+                value: this._aimSpeed,
+                source: isAimSpeedExplicit ? 'CONFIG' : (isAimSpeedInWeapon ? 'WEAPON_DATA' : 'DEFAULTED'),
+                isDefaulted: !isAimSpeedExplicit && !isAimSpeedInWeapon
+            },
+            sprintSpeed: {
+                value: config.weaponData.sprintspeed ?? 14,
+                source: isSprintSpeedInWeapon ? 'WEAPON_DATA' : 'DEFAULTED',
+                isDefaulted: !isSprintSpeedInWeapon
+            }
+        };
+    }
+
+    public get verificationStatus(): Readonly<RecoilVerificationStatus> {
+        return this._verificationStatus;
+    }
+
+    public get handlingTelemetry(): Readonly<HandlingTelemetry> {
+        return this._handlingTelemetry;
+    }
+
+    public get isRecoilVerified(): boolean {
+        return this._verificationStatus.isRecoilValid && this._verificationStatus.status === 'VERIFIED';
     }
 
     public get currentTime(): number {

@@ -1,0 +1,1128 @@
+{
+  "223_remington_793f05cf": {
+    "recoilContext": true,
+    "reason": "53개 화기 공용: 탄창/RPM/구경을 바꾸지 않고 반동(-2.5~5%)과 사거리/데미지만 미세 교환하는 순수 ammo_option. 별도 baseline 불필요.",
+    "timestamp": "2026-10-04T17:10:52.500Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "223_remington_c39108b4": {
+    "recoilContext": true,
+    "reason": "MK12 SPR 전용: 무기 클래스(type)를 DMR->ASSAULT로 변경, 탄창 20->30발, ammotype을 5.56 M855A1로 교체. 완전히 새로운 무기 baseline 형성.",
+    "timestamp": "2026-10-04T17:10:53.586Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_20_tact_conversion_47341c5f": {
+    "recoilContext": true,
+    "reason": "C25: 구경을 .20 Tactical로 교체하고 탄창을 30->20발로 축소. 독자적 발사/탄도 configuration 형성.",
+    "timestamp": "2026-10-04T16:59:25.503Z",
+    "evaluatedBy": "System Golden Verification"
+  },
+  "ar_20_tact_conversion_bcd6f8ad": {
+    "recoilContext": true,
+    "reason": "C8A2: 구경을 .20 Tactical로 교체하고 탄창을 30->20발로 축소. 독자적 발사/탄도 configuration 형성.",
+    "timestamp": "2026-10-04T16:59:25.503Z",
+    "evaluatedBy": "System Golden Verification"
+  },
+  "ar_20_tact_conversion_6581bc07": {
+    "recoilContext": true,
+    "reason": "C7A2: 구경을 .20 Tactical로 교체하고 탄창을 30->20발로 축소. 독자적 발사/탄도 configuration 형성.",
+    "timestamp": "2026-10-04T16:59:25.503Z",
+    "evaluatedBy": "System Golden Verification"
+  },
+  "heavy_buffer_ae444f3a": {
+    "recoilContext": true,
+    "reason": "M231: Other 슬롯이지만 RPM을 1225에서 250으로 80% 폭락시킴. 이 상태를 새로운 0점 기준선으로 두지 않으면 배럴/그립 전체가 실전 가드에서 100% 탈락함.",
+    "timestamp": "2026-10-04T16:59:25.503Z",
+    "evaluatedBy": "System Golden Verification"
+  },
+  "223_remington_c210c8d2": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:10:42.224Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "223_remington_a76cf5c6": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:10:54.360Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "223_remington_dd486603": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:10:54.897Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_burst_group_40861a4a": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:47:40.254Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_bb02f566": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:05.646Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_fbb4c5e9": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:07.391Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_a0bc28ae": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:11.620Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_2de15a14": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:18.098Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_3685c8bf": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:20.180Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_f5a30376": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:20.731Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_0ace5de1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:26.942Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_00a255d0": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:29.976Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_c3e55067": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:30.725Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d3cb551c": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:31.161Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_0b00953f": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:31.473Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_a796ee56": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:32.785Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_4c42e8e1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:38.733Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_e8b0720f": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:51:58.840Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_0d603d5d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:06.000Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_9eaac71e": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:07.561Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d879e086": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:11.593Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_71ad94b5": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:13.259Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_3502b70c": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:15.082Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_5d419261": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:16.493Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_fe412504": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:17.919Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d85180a3": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:18.801Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_efb62ac5": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:22.509Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_6ce4a233": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:25.904Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_bffbe1cf": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:31.402Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_3c17d147": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:42.218Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d502e793": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:48.499Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d20b9a0a": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:50.340Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_91bcae5a": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:51.370Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_9f64bd93": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:52.556Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_1ceb5939": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:53.596Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_164444d5": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:54.075Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_full_auto_conversion_574bc13a": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:58.745Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_full_auto_conversion_062e657c": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:52:59.194Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_12mm_rockets_15eaedeb": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:04.843Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_12mm_rockets_4d7de168": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:05.708Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "g36k_300_conversion_ffccd139": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:06.986Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_flechette_d238ccf0": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:25.259Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_bore_2141b724": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:28.321Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_birdshot_4657696b": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:30.003Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_slugs_9209d505": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:30.752Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_rubber_pellets_3d15ee8a": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:33.098Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_1bb0eb5a": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:35.033Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_61d301f3": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:35.699Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_6c661849": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:36.255Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_128026f0": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:36.699Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_e59488d1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:37.092Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "x95r_300_conversion_d4915ceb": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:38.440Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "x95r_5_56_conversion_344721c2": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:53:09.086Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "groza_5_45_conversion_c052720c": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:53:09.703Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "groza_5_56_conversion_26fad4d8": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:53:09.979Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_a3_7_62x39_conversion_7476f24e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:53:10.432Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_300_conversion_2021b80b": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:53:10.902Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_7_62x39_conversion_9a283a57": {
+    "recoilContext": true,
+    "reason": "In-game module (source=in-game-module, 6.5Grendel.lua): ammotype 6.5mm Grendel, magsize 20 (reduced from 30), firerate 0.95 (-5%), recoil hip/aim translation +25%, hip/aim rotation +30%, camera body/head +15%, damageGraph.damage +14%, distance -32.5%. Independent baseline configuration required.",
+    "source": "in-game-module",
+    "timestamp": "2026-10-04T19:06:48.428Z",
+    "evaluatedBy": "In-Game Module Verification"
+  },
+  "ar_7_62x39_conversion_3230fc1f": {
+    "recoilContext": true,
+    "reason": "In-game module (source=in-game-module, 6.5Grendel.lua): ammotype 6.5mm Grendel, magsize 20 (reduced from 30), firerate 0.95 (-5%), recoil hip/aim translation +25%, hip/aim rotation +30%, camera body/head +15%, damageGraph.damage +14%, distance -32.5%. Independent baseline configuration required.",
+    "source": "in-game-module",
+    "timestamp": "2026-10-04T19:06:48.428Z",
+    "evaluatedBy": "In-Game Module Verification"
+  },
+  "ar_7_62x39_conversion_8ef8519a": {
+    "recoilContext": true,
+    "reason": "In-game module (source=in-game-module, 6.5Grendel.lua): ammotype 6.5mm Grendel, magsize 20 (reduced from 30), firerate 0.95 (-5%), recoil hip/aim translation +25%, hip/aim rotation +30%, camera body/head +15%, damageGraph.damage +14%, distance -32.5%. Independent baseline configuration required.",
+    "source": "in-game-module",
+    "timestamp": "2026-10-04T19:06:48.427Z",
+    "evaluatedBy": "In-Game Module Verification"
+  },
+  "ar_7_62x39_conversion_96a3fb4d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:48:54.996Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_7_62x39_conversion_18c47af9": {
+    "recoilContext": true,
+    "reason": "In-game module (source=in-game-module, 6.5Grendel.lua): ammotype 6.5mm Grendel, magsize 20 (reduced from 30), firerate 0.95 (-5%), recoil hip/aim translation +25%, hip/aim rotation +30%, camera body/head +15%, damageGraph.damage +14%, distance -32.5%. Independent baseline configuration required.",
+    "source": "in-game-module",
+    "timestamp": "2026-10-04T19:06:48.428Z",
+    "evaluatedBy": "In-Game Module Verification"
+  },
+  "ar_25_45_conversion_0ebb55fd": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:19.393Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_25_45_conversion_af7f390b": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:19.852Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_25_45_conversion_638ff74e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:20.242Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_25_45_conversion_2d534fe2": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:20.599Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aku_9mm_conversion_91f5e9c5": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:21.513Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_3d8989f7": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:22.622Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_5a5de9d1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:23.181Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_3d76a907": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:23.636Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_fb9192b3": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:24.068Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_a7ccb3f8": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:24.472Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_771ddb84": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:24.850Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_b340b7b6": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:25.234Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_bf83ba0a": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:25.638Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_d67a1bec": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T17:49:26.051Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m16a1_m855_97bb668b": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T19:15:07.129Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m16a1_m855_dfd9083e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-04T19:15:09.116Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "45_special_64b15307": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-04T19:15:12.344Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "hk416a5_300_conversion_edc421a5": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T11:10:52.058Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_749d7cfe": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T11:11:14.806Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "223_remington_f48ee8f0": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T11:11:17.017Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "5_56x45_shellshock_c1537c94": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T11:11:17.774Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_20_tact_conversion_8cadf7c4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T11:11:18.551Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "223_remington_f2b4af92": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T11:11:19.466Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_burst_group_85aa0106": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:11:44.478Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_06142feb": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:34:33.388Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_full_auto_conversion_ab8865cf": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:27.817Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_12mm_rockets_391bd7c8": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:34:51.190Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "g36k_300_conversion_8153dae2": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:14.972Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_flechette_edc75770": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:16.527Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_bore_ddc67275": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:17.117Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_birdshot_590a3783": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:17.850Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_slugs_875f33ce": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:21.587Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "410_rubber_pellets_5d4e4e82": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:22.978Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "super_armor_piercing_807a7d51": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:24.148Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "x95r_300_conversion_ea68b6d9": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:25.698Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "x95r_5_56_conversion_0914bef5": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:26.352Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "groza_5_45_conversion_e1bc57b6": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:26.860Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "groza_5_56_conversion_aad249c3": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T08:52:27.182Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "mts_570_conversion_086fac7b": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:39:54.449Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "rsh_12_gauge_327356a4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:39:56.294Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_a3_7_62x39_conversion_29366147": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:39:58.080Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_300_conversion_ae6a923e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:39:58.751Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_7_62x39_conversion_296bb385": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:39:59.425Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_25_45_conversion_2143bf8d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:40:00.038Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aku_9mm_conversion_b01d7102": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:40:00.614Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_7_62x39_conversion_c5833a25": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:40:01.044Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_20_tact_conversion_af46a848": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:40:01.513Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "fast_mag_41e0f157": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:03.405Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_57c9f4cd": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:04.442Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "7_62x39_blanks_8d4b099a": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:06.577Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "50_beowulf_blanks_c19f76a4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:07.953Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_1ab6b4f4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:27.165Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_a2512a82": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:41:28.336Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m16a1_m855_7cd42ef7": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:42:21.199Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_7_62x39_conversion_9c8fe1de": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:42:23.260Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ar_25_45_conversion_71210fbc": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:42:23.955Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "45_special_2135fe65": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:42:29.678Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "usc_40_conversion_127b7c6d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:42:34.721Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_7b53d392": {
+    "recoilContext": "unknown",
+    "reason": "",
+    "timestamp": "2026-10-05T09:43:45.704Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "ak12_9x39_conversion_082fa8cc": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:43:47.386Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "5_56x45mm_minifix_aa35f419": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:10.294Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "38_special_50cb40cc": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:20.604Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "105_5_56_conversion_f932d2a1": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:22.229Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "k1a_7_62x39_conversion_ccb602f3": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:23.985Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "reduced_magazine_fd9f0954": {
+    "recoilContext": "unknown",
+    "reason": "",
+    "timestamp": "2026-10-05T11:09:12.944Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "scar_sc_9mm_conversion_75043d27": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:32.026Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_dc5f45c1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T09:44:36.661Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "csmg_burst_trigger_group_67aa8b73": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:30.375Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "heavy_buffer_6081456c": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:34.489Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "30rd_mag_20481554": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:35.740Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m1919_conversion_7b2e976e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:36.402Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "50rd_drum_9c1008f9": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:36.905Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "five_0_full_auto_trigger_group_3b7ab0e6": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:40.222Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "uzi_light_bolt_94f24fc0": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:41.014Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "bwc9_fire_selector_burst_1d8f0b87": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:42.157Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "mp5k_burst_trigger_group_16042b88": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:44.239Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "trench_sweeper_662425f0": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:12:24.531Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "mp_9_remove_limiter_317c6e26": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:12:26.603Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "mp5_10_burst_trigger_group_619c9f9b": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:12:28.090Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "sl8_binary_d0115b68": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T15:12:32.320Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "tcr_duplex_binary_b8d10cf3": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:12:35.859Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_dmr_burst_group_cfb21ee1": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:31:07.822Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "svu_a_conversion_kit_bd51bcbe": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:31:08.803Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_tube_b5776311": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T15:31:12.774Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "e_shotgun_hds_a1b1c402": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:31:19.413Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "e_shotgun_ccs_b5cf75aa": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:31:21.796Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_7869ac68": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T15:35:47.045Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "heavy_buffer_fccda4ec": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T15:35:53.036Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m16a2_buffer_stock_0f020b80": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:13.386Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "m107_reduced_magazine_f94bb11c": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:15.067Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_d5dc633f": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:30.007Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_2aa91495": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:35.294Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_77987654": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:41.322Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "heavy_bolt_102f74eb": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:43.409Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aug_hbar_closed_bolt_conversion_cd136aff": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:46.572Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "light_bolt_mg42_261b9abf": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:56.371Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "heavy_bolt_mg42_940c7f4d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:57.173Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "usas_12_semi_conversion_450523f7": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:01:58.615Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_tube_4245367c": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:02.417Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_tube_a0df53ee": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:04.303Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "e_shotgun_ccs_3f91ff41": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:05.617Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "aa_12_semi_conversion_4e4a1618": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:06.939Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "boombox_semi_group_4e87250d": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:09.689Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "hcar_open_bolt_4d7c74f4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:33.181Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_78d46fc3": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:35.683Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "five_seven_full_auto_7ad709fd": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:36.742Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "glock_switch_3032b966": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:37.944Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "u416_binary_d26529e1": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:40.571Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "glock_switch_97f4ffcd": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:47.702Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "glock_switch_3770bc1e": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:48.624Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "glock_switch_f325d4f7": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:49.184Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "pro_mag_14b67f97": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:55.942Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_bde79d9e": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:02:58.861Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "12rd_mak_5eb13f40": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:00.503Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "extended_magazine_7c6fd8e4": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:02.349Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "fun_switch_3a4f5d23": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:04.201Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "gyrojet_full_auto_conversion_005ca7e4": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:09.318Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "12rd_mak_24fbdc36": {
+    "recoilContext": false,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:11.306Z",
+    "evaluatedBy": "Human Reviewer"
+  },
+  "glock_switch_1be4a4c3": {
+    "recoilContext": true,
+    "reason": "",
+    "timestamp": "2026-10-05T16:03:12.360Z",
+    "evaluatedBy": "Human Reviewer"
+  }
+}

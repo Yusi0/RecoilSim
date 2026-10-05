@@ -1,5 +1,5 @@
 import { NormalizedWeapon, NormalizedAttachment } from '../data';
-import { ModifierEngine, ModifierEngineResult } from '../modifier/ModifierEngine';
+import { ModifierEngine, ModifierEngineResult, UnappliedModifierInfo } from '../modifier/ModifierEngine';
 
 export interface SelectedAttachments {
     Optics?: string;
@@ -14,6 +14,7 @@ export interface CompiledWeaponResult {
     compiledWeaponData: any;
     modifierEngineResult: ModifierEngineResult;
     displayName: string;
+    unappliedModifiers: UnappliedModifierInfo[];
 }
 
 export class WeaponCompiler {
@@ -125,7 +126,8 @@ export class WeaponCompiler {
         return {
             compiledWeaponData: compiledData,
             modifierEngineResult: engineResult,
-            displayName
+            displayName,
+            unappliedModifiers: engineResult.unappliedModifiers
         };
     }
 }

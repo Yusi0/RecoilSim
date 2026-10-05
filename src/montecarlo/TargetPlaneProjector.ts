@@ -12,23 +12,36 @@ export interface PlaneIntersectionResult {
  * Pure projection utility: does NOT alter shot origin or direction.
  */
 export class TargetPlaneProjector {
+    public static readonly EPSILON = 1e-6;
+
     public static project(
         origin: Vector3,
         direction: Vector3,
         targetDistance: number = 50
-    ): PlaneIntersectionResult {
+    ): PlaneIntersectionResult | null {
         const targetZ = -Math.abs(targetDistance);
-        const dz = direction.z === 0 ? -1e-9 : direction.z;
-        const dist = Math.abs((targetZ - origin.z) / dz);
+        const dz = direction.z;
 
-        const x = origin.x + direction.x * dist;
-        const y = origin.y + direction.y * dist;
+        // Parallel or near-parallel check: ray does not reach target plane within stable precision
+        if (Math.abs(dz) < TargetPlaneProjector.EPSILON) {
+            return null;
+        }
+
+        const t = (targetZ - origin.z) / dz;
+
+        // t <= 0: target plane is behind or at ray origin in ray forward direction
+        if (t <= 0) {
+            return null;
+        }
+
+        const x = origin.x + direction.x * t;
+        const y = origin.y + direction.y * t;
 
         return {
             x,
             y,
             z: targetZ,
-            distToTarget: dist
+            distToTarget: t
         };
     }
 }

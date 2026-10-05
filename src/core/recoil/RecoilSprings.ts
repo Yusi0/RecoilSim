@@ -134,6 +134,14 @@ export class RecoilSprings {
         return sum;
     }
 
+    public get springCount(): number {
+        return this._vector3Springs.length;
+    }
+
+    public get hasSprings(): boolean {
+        return this._vector3Springs.length > 0;
+    }
+
     public getUniformDist(mean: number, variance: number): number {
         return this._rng(mean, variance);
     }

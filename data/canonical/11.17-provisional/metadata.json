@@ -1,0 +1,32 @@
+{
+  "version": "11.17-provisional",
+  "status": "PROVISIONAL_RECONSTRUCTION",
+  "generatedAt": "2026-10-05T07:49:18.055Z",
+  "stats": {
+    "totalWeapons": 424,
+    "newWeapons": 8,
+    "rebalancedWeapons": 28,
+    "firearmsWithRecoil": 292,
+    "recoilFallbackCount": 292,
+    "recoilUnverifiedCount": 8,
+    "totalAttachmentVariants": 4710
+  },
+  "classifications": {
+    "SAFE_TO_MIGRATE": {
+      "description": "Confirmed changes supported by both 11.17 API and Patch Notes",
+      "newWeaponsCount": 8,
+      "rebalancedWeaponsCount": 28,
+      "confirmedAttachmentsCount": 14
+    },
+    "HOLD_FOR_VERIFICATION": {
+      "description": "Physical recoil springs and mobility stats pending 11.17 in-game dump",
+      "recoilSpringsStatus": "INHERITED_FROM_11_16_FALLBACK (0 estimated)",
+      "newWeaponsRecoilStatus": "UNVERIFIED_11_17 (marked null)"
+    },
+    "API_ONLY_RESTORATION": {
+      "description": "Data missing from 11.16 API restored from 11.16 In-game ground truth",
+      "restoredAttachmentsCount": 37,
+      "consolidatedInfoCount": 212
+    }
+  }
+}

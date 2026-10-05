@@ -3,6 +3,8 @@ import { SimulatorController } from './SimulatorController';
 import { Header } from './components/Header';
 import { WeaponAttachmentSelector } from './components/WeaponAttachmentSelector';
 import { AttachmentRecommendationPanel } from './components/AttachmentRecommendationPanel';
+import { MonteCarloDispersionMap } from './components/MonteCarloDispersionMap';
+import { MonteCarloEngine, MonteCarloResult } from '../montecarlo';
 import { FPSCanvas } from './FPSCanvas';
 import { SelectedAttachments } from '../core/compiler/WeaponCompiler';
 import { StanceMode } from '../core';
@@ -15,6 +17,38 @@ export const App: React.FC = () => {
     const [selectedShotIndex, setSelectedShotIndex] = useState<number | null>(null);
     const [showDebugVectors, setShowDebugVectors] = useState(false);
     const [showTracers, setShowTracers] = useState(true);
+    const [isDispersionOpen, setIsDispersionOpen] = useState(false);
+
+    const [mcResult, setMcResult] = useState<MonteCarloResult | null>(null);
+    const [isMcRunning, setIsMcRunning] = useState(false);
+
+    const runMonteCarlo = () => {
+        setIsMcRunning(true);
+        setTimeout(() => {
+            const magsize = Math.round(controller.compiledWeaponData.magsize || 30);
+            const mc = new MonteCarloEngine({
+                weaponData: controller.compiledWeaponData,
+                aiming: controller.state.aiming,
+                stance: controller.state.stance,
+                device: controller.state.device,
+                targetDistance: controller.state.targetDistance,
+                trialCount: 50,
+                burstSize: magsize,
+                masterSeed: controller.state.seed,
+                maxStoredImpacts: 1000
+            });
+            const res = mc.run();
+            setMcResult(res);
+            setIsMcRunning(false);
+        }, 10);
+    };
+
+    // Auto-run Monte Carlo when dispersion modal opens if not already generated
+    useEffect(() => {
+        if (isDispersionOpen && !mcResult) {
+            runMonteCarlo();
+        }
+    }, [isDispersionOpen]);
 
     // Re-render subscription
     useEffect(() => {
@@ -26,6 +60,7 @@ export const App: React.FC = () => {
 
         const unsubscribe = controller.subscribe(() => {
             setTick((t) => (t + 1) % 1000);
+            setMcResult(null); // Invalidate cached MC result when weapon or controller state updates
         });
 
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -35,6 +70,7 @@ export const App: React.FC = () => {
             if (e.key === 'c' || e.key === 'C') {
                 controller.resetSimulation();
                 setSelectedShotIndex(null);
+                setMcResult(null);
             } else if (e.key === ' ') {
                 e.preventDefault();
                 controller.fireSingleShot();
@@ -54,6 +90,7 @@ export const App: React.FC = () => {
     const handleSelectWeapon = (weaponId: string) => {
         controller.selectWeapon(weaponId);
         setSelectedShotIndex(null);
+        setMcResult(null);
     };
 
     // Handle Attachment change from left panel
@@ -66,18 +103,21 @@ export const App: React.FC = () => {
         }
         controller.setAttachments(current);
         setSelectedShotIndex(null);
+        setMcResult(null);
     };
 
     // Reset attachments
     const handleResetAttachments = () => {
         controller.setAttachments({});
         setSelectedShotIndex(null);
+        setMcResult(null);
     };
 
     // Apply preset from 2x2 recommendation panel
     const handleApplyPreset = (presetAttachments: SelectedAttachments) => {
         controller.setAttachments(presetAttachments);
         setSelectedShotIndex(null);
+        setMcResult(null);
     };
 
     const shots = controller.getPhysicalShots();
@@ -85,7 +125,7 @@ export const App: React.FC = () => {
     const currentFirerate = controller.compiledWeaponData.firerate || 800;
 
     return (
-        <div className="w-screen h-screen flex flex-col bg-[#0a0a0c] text-[#e0e0e0] overflow-hidden font-sans select-none">
+        <div className="w-screen h-screen flex flex-col bg-[#0a0a0c] text-[#e0e0e0] overflow-hidden font-sans select-none relative">
             {/* 1. Minimal Top Header */}
             <Header
                 weaponData={controller.compiledWeaponData}
@@ -98,8 +138,23 @@ export const App: React.FC = () => {
                 onReset={() => {
                     controller.resetSimulation();
                     setSelectedShotIndex(null);
+                    setMcResult(null);
                 }}
+                isDispersionOpen={isDispersionOpen}
+                onToggleDispersion={() => setIsDispersionOpen((prev) => !prev)}
             />
+
+            {/* Center Floating Modal: Monte Carlo 2D Dispersion Map */}
+            {isDispersionOpen && mcResult && (
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                    <MonteCarloDispersionMap
+                        result={mcResult}
+                        onClose={() => setIsDispersionOpen(false)}
+                        onRerun={runMonteCarlo}
+                        isRunning={isMcRunning}
+                    />
+                </div>
+            )}
 
             {/* 2. Main Exact 40% : 60% Split Layout */}
             <div className="flex-1 flex w-full h-[calc(100vh-56px)] overflow-hidden">
@@ -172,6 +227,7 @@ export const App: React.FC = () => {
                                         onClick={() => {
                                              controller.resetSimulation();
                                              setSelectedShotIndex(null);
+                                             setMcResult(null);
                                         }}
                                         className="px-3 py-1.5 text-xs text-[#8e8e93] hover:text-[#f0f0f2] transition-colors"
                                     >

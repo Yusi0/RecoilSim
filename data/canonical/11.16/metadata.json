@@ -1,0 +1,10 @@
+{
+  "version": "11.16",
+  "status": "VERIFIED_GROUND_TRUTH",
+  "generatedAt": "2026-10-05T07:49:16.522Z",
+  "stats": {
+    "totalWeapons": 416,
+    "firearmsWithRecoil": 292,
+    "totalAttachmentVariants": 3971
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "ORIGIN 12",
+  "displayname": "ORIGIN 12",
+  "category": "SHOTGUN",
+  "damage0": 14,
+  "damage1": 6,
+  "range0": 50,
+  "range1": 170,
+  "rpm": 620,
+  "firerate": 620,
+  "multhead": 1.2,
+  "multtorso": 0.7,
+  "magsize": 20,
+  "chamber": 1,
+  "sparerounds": 80,
+  "walkspeed": 12.5,
+  "pelletcount": 8,
+  "rank": null,
+  "exclusiveUnlock": true,
+  "superTester": true,
+  "damageGraph": [
+    {
+      "damage": 14,
+      "distance": 0
+    },
+    {
+      "damage": 14,
+      "distance": 50
+    },
+    {
+      "damage": 6,
+      "distance": 170
+    }
+  ],
+  "recoil": null,
+  "_provenance": {
+    "version": "11.17-provisional",
+    "source_version": "11.17",
+    "applied_version": "11.17",
+    "base_stats": "VERIFIED_11_17_API",
+    "recoil_springs": "UNVERIFIED_11_17",
+    "mobility_stats": "UNVERIFIED_11_17",
+    "verification": "PROVISIONAL_11_17",
+    "classification": "HOLD_FOR_VERIFICATION"
+  }
+}

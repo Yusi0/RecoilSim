@@ -1,0 +1,29 @@
+{
+  "name": "CUTLASS",
+  "displayname": "CUTLASS",
+  "category": "ONE HAND BLADE",
+  "damage0": 85,
+  "damage1": 150,
+  "range0": 1,
+  "range1": 5,
+  "rpm": 0,
+  "firerate": 0,
+  "multhead": 3.5,
+  "multtorso": 1.1,
+  "sparerounds": null,
+  "walkspeed": 15,
+  "rank": 0,
+  "exclusiveUnlock": true,
+  "superTester": false,
+  "recoil": null,
+  "_provenance": {
+    "version": "11.17-provisional",
+    "source_version": "11.17",
+    "applied_version": "11.17",
+    "base_stats": "VERIFIED_11_17_API",
+    "recoil_springs": "UNVERIFIED_11_17",
+    "mobility_stats": "UNVERIFIED_11_17",
+    "verification": "PROVISIONAL_11_17",
+    "classification": "HOLD_FOR_VERIFICATION"
+  }
+}

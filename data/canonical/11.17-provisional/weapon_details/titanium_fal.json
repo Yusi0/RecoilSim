@@ -1,0 +1,45 @@
+{
+  "name": "TITANIUM FAL",
+  "displayname": "FAL 50.00 (T)",
+  "category": "BATTLE RIFLE",
+  "damage0": 40,
+  "damage1": 32,
+  "range0": 80,
+  "range1": 150,
+  "rpm": 700,
+  "firerate": 700,
+  "multhead": 1.5,
+  "multtorso": 1.1,
+  "magsize": 20,
+  "chamber": 1,
+  "sparerounds": 120,
+  "walkspeed": 14,
+  "rank": 999,
+  "exclusiveUnlock": true,
+  "superTester": true,
+  "damageGraph": [
+    {
+      "damage": 40,
+      "distance": 0
+    },
+    {
+      "damage": 40,
+      "distance": 80
+    },
+    {
+      "damage": 32,
+      "distance": 150
+    }
+  ],
+  "recoil": null,
+  "_provenance": {
+    "version": "11.17-provisional",
+    "source_version": "11.17",
+    "applied_version": "11.17",
+    "base_stats": "VERIFIED_11_17_API",
+    "recoil_springs": "UNVERIFIED_11_17",
+    "mobility_stats": "UNVERIFIED_11_17",
+    "verification": "PROVISIONAL_11_17",
+    "classification": "HOLD_FOR_VERIFICATION"
+  }
+}

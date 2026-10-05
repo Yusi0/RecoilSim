@@ -130,4 +130,8 @@ export class MainCameraObjectRecoil {
     public get cameraHeadSprings(): RecoilSprings {
         return this._cameraHeadSprings;
     }
+
+    public get hasSprings(): boolean {
+        return this._cameraBodySprings.hasSprings || this._cameraHeadSprings.hasSprings;
+    }
 }

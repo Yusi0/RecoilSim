@@ -34,7 +34,6 @@ export class MonteCarloEngine {
 
     constructor(config: MonteCarloConfig) {
         this._config = {
-            aimProgress: 1.0,
             aiming: true,
             stance: 'stand',
             device: 'mouse',
@@ -59,11 +58,67 @@ export class MonteCarloEngine {
         const config = this._config;
         const trialCount = Math.max(1, config.trialCount);
         const burstSize = Math.max(1, config.burstSize ?? 30);
-        const firerate = config.firerate ?? (config.weaponData.firerate ?? 800);
-        const interval = 60 / firerate;
         const targetDistance = config.targetDistance ?? 50;
-        const isAiming = config.aiming ?? ((config.aimProgress ?? 1.0) > 0.5);
+
+        // Binary aiming state: true for ADS, false for HIPFIRE
+        const isAiming = config.aiming !== undefined
+            ? config.aiming
+            : (config.aimProgress !== undefined ? config.aimProgress > 0.5 : true);
         const settleTime = isAiming ? (config.settleTime ?? 0.3) : 0.0;
+
+        // Guard against non-firearm / melee / zero firerate weapons (e.g. CUTLASS)
+        const categoryUpper = String(config.weaponData.category || '').toUpperCase();
+        const isMelee = config.weaponData.fireType === 'Melee' ||
+            categoryUpper.includes('MELEE') ||
+            categoryUpper.includes('BLADE') ||
+            categoryUpper.includes('BLUNT') ||
+            config.weaponData.type === 'Melee';
+        const rawFirerate = (isAiming ? config.weaponData.aimedfirerate : undefined) ?? config.weaponData.firerate;
+
+        if (isMelee || rawFirerate === undefined || rawFirerate === null || rawFirerate <= 0 || !Number.isFinite(rawFirerate)) {
+            const reason = isMelee ? 'MELEE_WEAPON_UNSUPPORTED' : 'MISSING_FIRE_RATE';
+            const unsupportedReason = isMelee
+                ? 'Melee weapon does not support ballistic simulation'
+                : 'Weapon missing firerate/rpm; cannot calculate shot interval';
+            return {
+                weaponName: config.weaponData.name || config.weaponData.displayName,
+                trialCount: 0,
+                shotsPerTrial: 0,
+                totalShots: 0,
+                masterSeed: config.masterSeed,
+                targetDistance,
+                conditions: {
+                    isAiming,
+                    aimProgress: isAiming ? 1.0 : 0.0,
+                    stance: config.stance ?? 'stand',
+                    device: config.device ?? 'mouse',
+                    firerate: 0
+                },
+                impacts: [],
+                statistics: StatisticsCalculator.compute([]),
+                executionTimeMs: performance.now() - startTimeMs,
+                simulationStatus: 'UNSUPPORTED_WEAPON_TYPE',
+                verificationStatus: {
+                    recoil: 'MISSING_RECOIL_DATA',
+                    reason,
+                    isRecoilSimulated: false,
+                    unsupportedWeapon: true,
+                    unsupportedReason
+                }
+            };
+        }
+
+        // Authoritative weapon firerate as single source of truth
+        const effectiveFirerate = rawFirerate;
+
+        if (config.firerate !== undefined && Math.abs(config.firerate - effectiveFirerate) > 1e-4) {
+            throw new Error(
+                `[MonteCarloEngine] Specified firerate (${config.firerate}) does not match weapon effective firerate (${effectiveFirerate}). ` +
+                `Monte Carlo strictly adheres to authoritative weaponData firerate to avoid firing cooldown desync.`
+            );
+        }
+        const firerate = effectiveFirerate;
+        const interval = 60 / firerate;
         const maxStored = config.maxStoredImpacts ?? 1000;
 
         const allPoints: Point2D[] = [];
@@ -84,7 +139,8 @@ export class MonteCarloEngine {
                 mainOffset: config.mainOffset,
                 barrelOffset: config.barrelOffset,
                 sightOffset: config.sightOffset,
-                initialAimProgress: config.initialAimProgress
+                initialAimProgress: config.initialAimProgress,
+                aimSpeed: config.aimSpeed
             });
 
             engine.setStance(config.stance ?? 'stand');
@@ -99,7 +155,13 @@ export class MonteCarloEngine {
             // Fire burst using genuine SimulationEngine event pipeline
             for (let shotIdx = 0; shotIdx < burstSize; shotIdx++) {
                 const fireT = settleTime + shotIdx * interval;
-                engine.pushFireInput(fireT);
+                const accepted = engine.pushFireInput(fireT);
+                if (!accepted) {
+                    throw new Error(
+                        `[MonteCarloEngine] pushFireInput rejected at virtual time t=${fireT}s (shot ${shotIdx + 1}/${burstSize}). ` +
+                        `SimulationEngine cooldown active. Ensure firing interval (${interval}s) matches weapon firerate.`
+                    );
+                }
                 engine.advanceTo(fireT + interval);
             }
 
@@ -108,6 +170,10 @@ export class MonteCarloEngine {
             for (let shotIdx = 0; shotIdx < shots.length; shotIdx++) {
                 const shot = shots[shotIdx];
                 const proj = TargetPlaneProjector.project(shot.origin, shot.direction, targetDistance);
+
+                if (!proj) {
+                    continue; // Skip invalid projection (do not add to stats or impacts)
+                }
 
                 allPoints.push({ x: proj.x, y: proj.y });
 
@@ -129,6 +195,26 @@ export class MonteCarloEngine {
         const stats = StatisticsCalculator.compute(allPoints);
         const executionTimeMs = performance.now() - startTimeMs;
 
+        // Recoil Verification & Provenance tracking
+        const isRecoilMissing = config.weaponData.recoil === null || config.weaponData.recoil === undefined;
+        let simStatus: 'SUCCESS' | 'UNVERIFIED_RECOIL' | 'UNSUPPORTED_WEAPON_TYPE' = 'SUCCESS';
+        let recoilStatus: 'VERIFIED' | 'UNVERIFIED_11_17' | 'INHERITED_FROM_11_16' | 'MISSING_RECOIL_DATA' = 'VERIFIED';
+        let recoilReason: string | undefined = undefined;
+        let isRecoilSimulated = true;
+
+        if (isRecoilMissing) {
+            simStatus = 'UNVERIFIED_RECOIL';
+            recoilStatus = 'UNVERIFIED_11_17';
+            recoilReason = 'RECOIL_DATA_MISSING';
+            isRecoilSimulated = false;
+        } else if (config.weaponData._provenance?.recoil_springs === 'INHERITED_FROM_11_16') {
+            recoilStatus = 'INHERITED_FROM_11_16';
+            recoilReason = 'INHERITED_FROM_11_16_OUTDATED_PHYSICS';
+        }
+
+        const isAimSpeedDefaulted = config.weaponData.aimspeed === undefined && config.aimSpeed === undefined;
+        const isSprintSpeedDefaulted = config.weaponData.sprintspeed === undefined;
+
         return {
             weaponName: config.weaponData.name || config.weaponData.displayName,
             trialCount,
@@ -137,15 +223,28 @@ export class MonteCarloEngine {
             masterSeed: config.masterSeed,
             targetDistance,
             conditions: {
-                aimProgress: config.aimProgress ?? (isAiming ? 1.0 : 0.0),
                 isAiming,
+                aimProgress: isAiming ? 1.0 : 0.0,
                 stance: config.stance ?? 'stand',
                 device: config.device ?? 'mouse',
                 firerate
             },
             impacts: storedImpacts,
             statistics: stats,
-            executionTimeMs
+            executionTimeMs,
+            simulationStatus: simStatus,
+            verificationStatus: {
+                recoil: recoilStatus,
+                reason: recoilReason,
+                isRecoilSimulated,
+                isOutdatedPhysics: recoilStatus === 'INHERITED_FROM_11_16'
+            },
+            telemetry: {
+                handlingFallback: {
+                    aimSpeedDefaulted: isAimSpeedDefaulted,
+                    sprintSpeedDefaulted: isSprintSpeedDefaulted
+                }
+            }
         };
     }
 
@@ -161,11 +260,67 @@ export class MonteCarloEngine {
         const config = this._config;
         const trialCount = Math.max(1, config.trialCount);
         const burstSize = Math.max(1, config.burstSize ?? 30);
-        const firerate = config.firerate ?? (config.weaponData.firerate ?? 800);
-        const interval = 60 / firerate;
         const targetDistance = config.targetDistance ?? 50;
-        const isAiming = config.aiming ?? ((config.aimProgress ?? 1.0) > 0.5);
+
+        // Binary aiming state: true for ADS, false for HIPFIRE
+        const isAiming = config.aiming !== undefined
+            ? config.aiming
+            : (config.aimProgress !== undefined ? config.aimProgress > 0.5 : true);
         const settleTime = isAiming ? (config.settleTime ?? 0.3) : 0.0;
+
+        // Guard against non-firearm / melee / zero firerate weapons (e.g. CUTLASS)
+        const categoryUpper = String(config.weaponData.category || '').toUpperCase();
+        const isMelee = config.weaponData.fireType === 'Melee' ||
+            categoryUpper.includes('MELEE') ||
+            categoryUpper.includes('BLADE') ||
+            categoryUpper.includes('BLUNT') ||
+            config.weaponData.type === 'Melee';
+        const rawFirerate = (isAiming ? config.weaponData.aimedfirerate : undefined) ?? config.weaponData.firerate;
+
+        if (isMelee || rawFirerate === undefined || rawFirerate === null || rawFirerate <= 0 || !Number.isFinite(rawFirerate)) {
+            const reason = isMelee ? 'MELEE_WEAPON_UNSUPPORTED' : 'MISSING_FIRE_RATE';
+            const unsupportedReason = isMelee
+                ? 'Melee weapon does not support ballistic simulation'
+                : 'Weapon missing firerate/rpm; cannot calculate shot interval';
+            return {
+                weaponName: config.weaponData.name || config.weaponData.displayName,
+                trialCount: 0,
+                shotsPerTrial: 0,
+                totalShots: 0,
+                masterSeed: config.masterSeed,
+                targetDistance,
+                conditions: {
+                    isAiming,
+                    aimProgress: isAiming ? 1.0 : 0.0,
+                    stance: config.stance ?? 'stand',
+                    device: config.device ?? 'mouse',
+                    firerate: 0
+                },
+                impacts: [],
+                statistics: StatisticsCalculator.compute([]),
+                executionTimeMs: performance.now() - startTimeMs,
+                simulationStatus: 'UNSUPPORTED_WEAPON_TYPE',
+                verificationStatus: {
+                    recoil: 'MISSING_RECOIL_DATA',
+                    reason,
+                    isRecoilSimulated: false,
+                    unsupportedWeapon: true,
+                    unsupportedReason
+                }
+            };
+        }
+
+        // Authoritative weapon firerate as single source of truth
+        const effectiveFirerate = rawFirerate;
+
+        if (config.firerate !== undefined && Math.abs(config.firerate - effectiveFirerate) > 1e-4) {
+            throw new Error(
+                `[MonteCarloEngine] Specified firerate (${config.firerate}) does not match weapon effective firerate (${effectiveFirerate}). ` +
+                `Monte Carlo strictly adheres to authoritative weaponData firerate to avoid firing cooldown desync.`
+            );
+        }
+        const firerate = effectiveFirerate;
+        const interval = 60 / firerate;
         const maxStored = config.maxStoredImpacts ?? 1000;
 
         const allPoints: Point2D[] = [];
@@ -184,7 +339,9 @@ export class MonteCarloEngine {
                 rootCFrame: config.rootCFrame,
                 mainOffset: config.mainOffset,
                 barrelOffset: config.barrelOffset,
-                sightOffset: config.sightOffset
+                sightOffset: config.sightOffset,
+                initialAimProgress: config.initialAimProgress,
+                aimSpeed: config.aimSpeed
             });
 
             engine.setStance(config.stance ?? 'stand');
@@ -197,7 +354,13 @@ export class MonteCarloEngine {
 
             for (let shotIdx = 0; shotIdx < burstSize; shotIdx++) {
                 const fireT = settleTime + shotIdx * interval;
-                engine.pushFireInput(fireT);
+                const accepted = engine.pushFireInput(fireT);
+                if (!accepted) {
+                    throw new Error(
+                        `[MonteCarloEngine] pushFireInput rejected at virtual time t=${fireT}s (shot ${shotIdx + 1}/${burstSize}). ` +
+                        `SimulationEngine cooldown active. Ensure firing interval (${interval}s) matches weapon firerate.`
+                    );
+                }
                 engine.advanceTo(fireT + interval);
             }
 
@@ -205,6 +368,10 @@ export class MonteCarloEngine {
             for (let shotIdx = 0; shotIdx < shots.length; shotIdx++) {
                 const shot = shots[shotIdx];
                 const proj = TargetPlaneProjector.project(shot.origin, shot.direction, targetDistance);
+
+                if (!proj) {
+                    continue; // Skip invalid projection (do not add to stats or impacts)
+                }
 
                 allPoints.push({ x: proj.x, y: proj.y });
 
@@ -238,6 +405,26 @@ export class MonteCarloEngine {
         const stats = StatisticsCalculator.compute(allPoints);
         const executionTimeMs = performance.now() - startTimeMs;
 
+        // Recoil Verification & Provenance tracking
+        const isRecoilMissing = config.weaponData.recoil === null || config.weaponData.recoil === undefined;
+        let simStatus: 'SUCCESS' | 'UNVERIFIED_RECOIL' | 'UNSUPPORTED_WEAPON_TYPE' = 'SUCCESS';
+        let recoilStatus: 'VERIFIED' | 'UNVERIFIED_11_17' | 'INHERITED_FROM_11_16' | 'MISSING_RECOIL_DATA' = 'VERIFIED';
+        let recoilReason: string | undefined = undefined;
+        let isRecoilSimulated = true;
+
+        if (isRecoilMissing) {
+            simStatus = 'UNVERIFIED_RECOIL';
+            recoilStatus = 'UNVERIFIED_11_17';
+            recoilReason = 'RECOIL_DATA_MISSING';
+            isRecoilSimulated = false;
+        } else if (config.weaponData._provenance?.recoil_springs === 'INHERITED_FROM_11_16') {
+            recoilStatus = 'INHERITED_FROM_11_16';
+            recoilReason = 'INHERITED_FROM_11_16_OUTDATED_PHYSICS';
+        }
+
+        const isAimSpeedDefaulted = config.weaponData.aimspeed === undefined && config.aimSpeed === undefined;
+        const isSprintSpeedDefaulted = config.weaponData.sprintspeed === undefined;
+
         return {
             weaponName: config.weaponData.name || config.weaponData.displayName,
             trialCount,
@@ -246,15 +433,28 @@ export class MonteCarloEngine {
             masterSeed: config.masterSeed,
             targetDistance,
             conditions: {
-                aimProgress: config.aimProgress ?? (isAiming ? 1.0 : 0.0),
                 isAiming,
+                aimProgress: isAiming ? 1.0 : 0.0,
                 stance: config.stance ?? 'stand',
                 device: config.device ?? 'mouse',
                 firerate
             },
             impacts: storedImpacts,
             statistics: stats,
-            executionTimeMs
+            executionTimeMs,
+            simulationStatus: simStatus,
+            verificationStatus: {
+                recoil: recoilStatus,
+                reason: recoilReason,
+                isRecoilSimulated,
+                isOutdatedPhysics: recoilStatus === 'INHERITED_FROM_11_16'
+            },
+            telemetry: {
+                handlingFallback: {
+                    aimSpeedDefaulted: isAimSpeedDefaulted,
+                    sprintSpeedDefaulted: isSprintSpeedDefaulted
+                }
+            }
         };
     }
 }

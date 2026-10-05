@@ -1,0 +1,49 @@
+{
+  "name": "REGULATOR",
+  "displayname": "REGULATOR",
+  "category": "DMR",
+  "damage0": 44,
+  "damage1": 24,
+  "range0": 50,
+  "range1": 200,
+  "rpm": 650,
+  "firerate": 650,
+  "multhead": 2.1,
+  "multtorso": 1.1,
+  "magsize": 20,
+  "chamber": 1,
+  "sparerounds": 100,
+  "walkspeed": 14,
+  "rank": 166,
+  "exclusiveUnlock": false,
+  "superTester": false,
+  "damageGraph": [
+    {
+      "damage": 44,
+      "distance": 0
+    },
+    {
+      "damage": 44,
+      "distance": 50
+    },
+    {
+      "damage": 40,
+      "distance": 110
+    },
+    {
+      "damage": 24,
+      "distance": 200
+    }
+  ],
+  "recoil": null,
+  "_provenance": {
+    "version": "11.17-provisional",
+    "source_version": "11.17",
+    "applied_version": "11.17",
+    "base_stats": "VERIFIED_11_17_API",
+    "recoil_springs": "UNVERIFIED_11_17",
+    "mobility_stats": "UNVERIFIED_11_17",
+    "verification": "PROVISIONAL_11_17",
+    "classification": "HOLD_FOR_VERIFICATION"
+  }
+}

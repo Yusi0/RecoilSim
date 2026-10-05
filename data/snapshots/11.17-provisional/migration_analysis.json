@@ -1,0 +1,2672 @@
+{
+  "dataAvailability": {
+    "v11_16_API": {
+      "weaponsCount": 416,
+      "status": "AVAILABLE_INCOMPLETE_API",
+      "hasRecoilSprings": false,
+      "hasHandlingStats": false,
+      "source": "data/raw/weapons.json"
+    },
+    "v11_16_InGame": {
+      "weaponsCount": 416,
+      "attachmentsCount": 730,
+      "status": "VERIFIED_AUTHORITATIVE",
+      "hasRecoilSprings": true,
+      "hasHandlingStats": true,
+      "source": "data/in-game-modules/weapon_database.json & attachment_database.json"
+    },
+    "v11_17_API": {
+      "weaponsCount": 424,
+      "status": "AVAILABLE_PROVISIONAL_API",
+      "hasRecoilSprings": false,
+      "hasHandlingStats": false,
+      "source": "data/raw/11.17weapons.json"
+    },
+    "v11_17_InGame": {
+      "status": "UNAVAILABLE_PLACE_FILE_PENDING",
+      "verifiable": false
+    }
+  },
+  "confirmedWeaponChanges": [
+    {
+      "name": "G36K",
+      "category": "CARBINE",
+      "diffs": {
+        "damage0": {
+          "v16": 33,
+          "v17": 32
+        },
+        "damage1": {
+          "v16": 20,
+          "v17": 23
+        },
+        "range0": {
+          "v16": 60,
+          "v17": 70
+        },
+        "displayName": {
+          "v16": "STG-91K",
+          "v17": "AR36K"
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 33,
+              "distance": 0
+            },
+            {
+              "damage": 33,
+              "distance": 60
+            },
+            {
+              "damage": 20,
+              "distance": 130
+            }
+          ],
+          "v17": [
+            {
+              "damage": 32,
+              "distance": 0
+            },
+            {
+              "damage": 32,
+              "distance": 70
+            },
+            {
+              "damage": 23,
+              "distance": 130
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "JURY",
+      "category": "CARBINE",
+      "diffs": {
+        "range0": {
+          "v16": 35,
+          "v17": 45
+        },
+        "range1": {
+          "v16": 200,
+          "v17": 180
+        },
+        "multhead": {
+          "v16": 1.8,
+          "v17": 2
+        },
+        "rpm": {
+          "v16": 300,
+          "v17": 360
+        },
+        "sparerounds": {
+          "v16": 75,
+          "v17": 90
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 80,
+              "distance": 0
+            },
+            {
+              "damage": 80,
+              "distance": 35
+            },
+            {
+              "damage": 50,
+              "distance": 200
+            }
+          ],
+          "v17": [
+            {
+              "damage": 80,
+              "distance": 0
+            },
+            {
+              "damage": 80,
+              "distance": 45
+            },
+            {
+              "damage": 50,
+              "distance": 180
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "GROZA-1",
+      "category": "CARBINE",
+      "diffs": {
+        "range1": {
+          "v16": 160,
+          "v17": 140
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 37,
+              "distance": 0
+            },
+            {
+              "damage": 37,
+              "distance": 60
+            },
+            {
+              "damage": 24,
+              "distance": 160
+            }
+          ],
+          "v17": [
+            {
+              "damage": 37,
+              "distance": 0
+            },
+            {
+              "damage": 37,
+              "distance": 60
+            },
+            {
+              "damage": 24,
+              "distance": 140
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "KAC SRR",
+      "category": "CARBINE",
+      "diffs": {
+        "damage0": {
+          "v16": 59,
+          "v17": 42
+        },
+        "damage1": {
+          "v16": 42,
+          "v17": 72
+        },
+        "range1": {
+          "v16": 160,
+          "v17": 200
+        },
+        "rpm": {
+          "v16": 440,
+          "v17": 450
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 59,
+              "distance": 0
+            },
+            {
+              "damage": 59,
+              "distance": 60
+            },
+            {
+              "damage": 42,
+              "distance": 160
+            }
+          ],
+          "v17": [
+            {
+              "damage": 42,
+              "distance": 0
+            },
+            {
+              "damage": 42,
+              "distance": 60
+            },
+            {
+              "damage": 72,
+              "distance": 200
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "SA58 OSW",
+      "category": "CARBINE",
+      "diffs": {
+        "damage0": {
+          "v16": 37,
+          "v17": 38
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 37,
+              "distance": 0
+            },
+            {
+              "damage": 37,
+              "distance": 40
+            },
+            {
+              "damage": 28,
+              "distance": 125
+            }
+          ],
+          "v17": [
+            {
+              "damage": 38,
+              "distance": 0
+            },
+            {
+              "damage": 38,
+              "distance": 40
+            },
+            {
+              "damage": 28,
+              "distance": 125
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "SPARKLER",
+      "category": "ONE HAND BLUNT",
+      "diffs": {
+        "walkspeed": {
+          "v16": 17.5,
+          "v17": 17
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "G36C",
+      "category": "PDW",
+      "diffs": {
+        "damage0": {
+          "v16": 34,
+          "v17": 33
+        },
+        "damage1": {
+          "v16": 19,
+          "v17": 21
+        },
+        "range0": {
+          "v16": 55,
+          "v17": 60
+        },
+        "multhead": {
+          "v16": 1.4,
+          "v17": 1.55
+        },
+        "displayName": {
+          "v16": "STG-91C",
+          "v17": "AR36C"
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 34,
+              "distance": 0
+            },
+            {
+              "damage": 34,
+              "distance": 55
+            },
+            {
+              "damage": 19,
+              "distance": 110
+            }
+          ],
+          "v17": [
+            {
+              "damage": 33,
+              "distance": 0
+            },
+            {
+              "damage": 33,
+              "distance": 60
+            },
+            {
+              "damage": 21,
+              "distance": 110
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "FAL PARA SHORTY",
+      "category": "PDW",
+      "diffs": {
+        "range0": {
+          "v16": 20,
+          "v17": 30
+        },
+        "range1": {
+          "v16": 140,
+          "v17": 130
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 44,
+              "distance": 0
+            },
+            {
+              "damage": 44,
+              "distance": 20
+            },
+            {
+              "damage": 23,
+              "distance": 140
+            }
+          ],
+          "v17": [
+            {
+              "damage": 44,
+              "distance": 0
+            },
+            {
+              "damage": 44,
+              "distance": 30
+            },
+            {
+              "damage": 23,
+              "distance": 130
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "KRISS VECTOR",
+      "category": "PDW",
+      "diffs": {
+        "damage1": {
+          "v16": 18,
+          "v17": 20
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 40,
+              "distance": 0
+            },
+            {
+              "damage": 40,
+              "distance": 30
+            },
+            {
+              "damage": 18,
+              "distance": 100
+            }
+          ],
+          "v17": [
+            {
+              "damage": 40,
+              "distance": 0
+            },
+            {
+              "damage": 40,
+              "distance": 30
+            },
+            {
+              "damage": 20,
+              "distance": 100
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "VSS VINTOREZ",
+      "category": "DMR",
+      "diffs": {
+        "damage1": {
+          "v16": 40,
+          "v17": 44
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 55,
+              "distance": 0
+            },
+            {
+              "damage": 55,
+              "distance": 40
+            },
+            {
+              "damage": 40,
+              "distance": 130
+            }
+          ],
+          "v17": [
+            {
+              "damage": 55,
+              "distance": 0
+            },
+            {
+              "damage": 55,
+              "distance": 40
+            },
+            {
+              "damage": 44,
+              "distance": 130
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "SL-8",
+      "category": "DMR",
+      "diffs": {
+        "rpm": {
+          "v16": 650,
+          "v17": 670
+        },
+        "displayName": {
+          "v16": "VG-98",
+          "v17": "PL8"
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "SA58 SPR",
+      "category": "DMR",
+      "diffs": {
+        "range0": {
+          "v16": 50,
+          "v17": 70
+        },
+        "rpm": {
+          "v16": 540,
+          "v17": 560
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 48,
+              "distance": 0
+            },
+            {
+              "damage": 48,
+              "distance": 50
+            },
+            {
+              "damage": 31,
+              "distance": 200
+            }
+          ],
+          "v17": [
+            {
+              "damage": 48,
+              "distance": 0
+            },
+            {
+              "damage": 48,
+              "distance": 70
+            },
+            {
+              "damage": 31,
+              "distance": 200
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "BREN 2 PPS",
+      "category": "DMR",
+      "diffs": {
+        "displayName": {
+          "v16": "VZ.806 PPS",
+          "v17": "VZ. 806 PPS"
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "K2",
+      "category": "ASSAULT RIFLE",
+      "diffs": {
+        "damage0": {
+          "v16": 32,
+          "v17": 34
+        },
+        "damage1": {
+          "v16": 20,
+          "v17": 23
+        },
+        "range0": {
+          "v16": 90,
+          "v17": 50
+        },
+        "range1": {
+          "v16": 150,
+          "v17": 140
+        },
+        "rpm": {
+          "v16": 820,
+          "v17": 750
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 32,
+              "distance": 0
+            },
+            {
+              "damage": 32,
+              "distance": 90
+            },
+            {
+              "damage": 20,
+              "distance": 150
+            }
+          ],
+          "v17": [
+            {
+              "damage": 34,
+              "distance": 0
+            },
+            {
+              "damage": 34,
+              "distance": 50
+            },
+            {
+              "damage": 23,
+              "distance": 140
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "G38",
+      "category": "ASSAULT RIFLE",
+      "diffs": {
+        "displayName": {
+          "v16": "M38A5",
+          "v17": "M38A7"
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "G36",
+      "category": "ASSAULT RIFLE",
+      "diffs": {
+        "damage0": {
+          "v16": 31,
+          "v17": 30
+        },
+        "damage1": {
+          "v16": 23,
+          "v17": 24
+        },
+        "range1": {
+          "v16": 160,
+          "v17": 150
+        },
+        "displayName": {
+          "v16": "STG-91",
+          "v17": "AR36"
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 31,
+              "distance": 0
+            },
+            {
+              "damage": 31,
+              "distance": 80
+            },
+            {
+              "damage": 23,
+              "distance": 160
+            }
+          ],
+          "v17": [
+            {
+              "damage": 30,
+              "distance": 0
+            },
+            {
+              "damage": 30,
+              "distance": 80
+            },
+            {
+              "damage": 24,
+              "distance": 150
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "MG3KWS",
+      "category": "LMG",
+      "diffs": {
+        "damage0": {
+          "v16": 38,
+          "v17": 39
+        },
+        "range1": {
+          "v16": 110,
+          "v17": 150
+        },
+        "multhead": {
+          "v16": 1.4,
+          "v17": 1.3
+        },
+        "sparerounds": {
+          "v16": 200,
+          "v17": 250
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 38,
+              "distance": 0
+            },
+            {
+              "damage": 38,
+              "distance": 25
+            },
+            {
+              "damage": 23,
+              "distance": 110
+            }
+          ],
+          "v17": [
+            {
+              "damage": 39,
+              "distance": 0
+            },
+            {
+              "damage": 39,
+              "distance": 25
+            },
+            {
+              "damage": 34,
+              "distance": 42
+            },
+            {
+              "damage": 23,
+              "distance": 150
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "FALO 50.41",
+      "category": "LMG",
+      "diffs": {
+        "damage1": {
+          "v16": 31,
+          "v17": 30
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 39,
+              "distance": 0
+            },
+            {
+              "damage": 39,
+              "distance": 50
+            },
+            {
+              "damage": 31,
+              "distance": 150
+            }
+          ],
+          "v17": [
+            {
+              "damage": 39,
+              "distance": 0
+            },
+            {
+              "damage": 39,
+              "distance": 50
+            },
+            {
+              "damage": 30,
+              "distance": 150
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "MG36",
+      "category": "LMG",
+      "diffs": {
+        "damage0": {
+          "v16": 32,
+          "v17": 31
+        },
+        "damage1": {
+          "v16": 21,
+          "v17": 22
+        },
+        "range0": {
+          "v16": 80,
+          "v17": 70
+        },
+        "range1": {
+          "v16": 135,
+          "v17": 180
+        },
+        "walkspeed": {
+          "v16": 12,
+          "v17": 14
+        },
+        "displayName": {
+          "v16": "MG91",
+          "v17": "IAR36"
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 32,
+              "distance": 0
+            },
+            {
+              "damage": 32,
+              "distance": 80
+            },
+            {
+              "damage": 21,
+              "distance": 135
+            }
+          ],
+          "v17": [
+            {
+              "damage": 31,
+              "distance": 0
+            },
+            {
+              "damage": 31,
+              "distance": 70
+            },
+            {
+              "damage": 22,
+              "distance": 180
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "KORD-R",
+      "category": "LMG",
+      "diffs": {
+        "range0": {
+          "v16": 35,
+          "v17": 70
+        },
+        "multtorso": {
+          "v16": 1.25,
+          "v17": 1.1
+        },
+        "walkspeed": {
+          "v16": 10,
+          "v17": 11
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 95,
+              "distance": 0
+            },
+            {
+              "damage": 95,
+              "distance": 35
+            },
+            {
+              "damage": 90,
+              "distance": 70
+            },
+            {
+              "damage": 80,
+              "distance": 110
+            },
+            {
+              "damage": 75,
+              "distance": 150
+            }
+          ],
+          "v17": [
+            {
+              "damage": 95,
+              "distance": 0
+            },
+            {
+              "damage": 95,
+              "distance": 70
+            },
+            {
+              "damage": 80,
+              "distance": 110
+            },
+            {
+              "damage": 75,
+              "distance": 150
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "SPAS-12",
+      "category": "SHOTGUN",
+      "diffs": {
+        "magsize": {
+          "v16": 8,
+          "v17": 7
+        },
+        "sparerounds": {
+          "v16": 50,
+          "v17": 42
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "MCX SPEAR",
+      "category": "BATTLE RIFLE",
+      "diffs": {
+        "damage0": {
+          "v16": 39,
+          "v17": 38
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 39,
+              "distance": 0
+            },
+            {
+              "damage": 39,
+              "distance": 60
+            },
+            {
+              "damage": 24,
+              "distance": 140
+            }
+          ],
+          "v17": [
+            {
+              "damage": 38,
+              "distance": 0
+            },
+            {
+              "damage": 38,
+              "distance": 60
+            },
+            {
+              "damage": 24,
+              "distance": 140
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "FAL 50.63 PARA",
+      "category": "BATTLE RIFLE",
+      "diffs": {
+        "range0": {
+          "v16": 60,
+          "v17": 70
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 43,
+              "distance": 0
+            },
+            {
+              "damage": 43,
+              "distance": 60
+            },
+            {
+              "damage": 28,
+              "distance": 160
+            }
+          ],
+          "v17": [
+            {
+              "damage": 43,
+              "distance": 0
+            },
+            {
+              "damage": 43,
+              "distance": 70
+            },
+            {
+              "damage": 28,
+              "distance": 160
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "BREN 2 BR",
+      "category": "BATTLE RIFLE",
+      "diffs": {
+        "damage0": {
+          "v16": 37,
+          "v17": 40
+        },
+        "range0": {
+          "v16": 85,
+          "v17": 60
+        },
+        "range1": {
+          "v16": 135,
+          "v17": 150
+        },
+        "displayName": {
+          "v16": "VZ.806 BR",
+          "v17": "VZ. 806 BR"
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 37,
+              "distance": 0
+            },
+            {
+              "damage": 37,
+              "distance": 85
+            },
+            {
+              "damage": 25,
+              "distance": 135
+            }
+          ],
+          "v17": [
+            {
+              "damage": 40,
+              "distance": 0
+            },
+            {
+              "damage": 40,
+              "distance": 60
+            },
+            {
+              "damage": 25,
+              "distance": 150
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "BEOWULF ECR",
+      "category": "BATTLE RIFLE",
+      "diffs": {
+        "multtorso": {
+          "v16": 1.1,
+          "v17": 1.2
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "1858 NEW ARMY",
+      "category": "REVOLVERS",
+      "diffs": {
+        "damage1": {
+          "v16": 35,
+          "v17": 36
+        },
+        "sparerounds": {
+          "v16": 42,
+          "v17": 48
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 60,
+              "distance": 0
+            },
+            {
+              "damage": 60,
+              "distance": 75
+            },
+            {
+              "damage": 35,
+              "distance": 140
+            }
+          ],
+          "v17": [
+            {
+              "damage": 60,
+              "distance": 0
+            },
+            {
+              "damage": 60,
+              "distance": 75
+            },
+            {
+              "damage": 36,
+              "distance": 140
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "M1911",
+      "category": "PISTOLS",
+      "diffs": {
+        "damage1": {
+          "v16": 21,
+          "v17": 23
+        },
+        "damageGraph": {
+          "v16": [
+            {
+              "damage": 48,
+              "distance": 0
+            },
+            {
+              "damage": 48,
+              "distance": 60
+            },
+            {
+              "damage": 21,
+              "distance": 140
+            }
+          ],
+          "v17": [
+            {
+              "damage": 48,
+              "distance": 0
+            },
+            {
+              "damage": 48,
+              "distance": 60
+            },
+            {
+              "damage": 23,
+              "distance": 140
+            }
+          ]
+        }
+      },
+      "inPatch": true
+    },
+    {
+      "name": "HARDBALLER",
+      "category": "PISTOLS",
+      "diffs": {
+        "rpm": {
+          "v16": 500,
+          "v17": 560
+        }
+      },
+      "inPatch": true
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "HK416A5",
+      "displayName": "M416A5",
+      "category": "CARBINE",
+      "rank": 999,
+      "exclusiveUnlock": true,
+      "superTester": true
+    },
+    {
+      "name": "MCX VIRTUS",
+      "displayName": "VIRTUS",
+      "category": "CARBINE",
+      "rank": 168,
+      "exclusiveUnlock": false,
+      "superTester": false
+    },
+    {
+      "name": "MCX RATTLER",
+      "displayName": "RATTLER",
+      "category": "PDW",
+      "rank": 169,
+      "exclusiveUnlock": false,
+      "superTester": false
+    },
+    {
+      "name": "REGULATOR",
+      "displayName": "REGULATOR",
+      "category": "DMR",
+      "rank": 166,
+      "exclusiveUnlock": false,
+      "superTester": false
+    },
+    {
+      "name": "CUTLASS",
+      "displayName": null,
+      "category": "ONE HAND BLADE",
+      "rank": 0,
+      "exclusiveUnlock": true,
+      "superTester": false
+    },
+    {
+      "name": "SPEAR LT",
+      "displayName": "SPEAR LT",
+      "category": "ASSAULT RIFLE",
+      "rank": 167,
+      "exclusiveUnlock": false,
+      "superTester": false
+    },
+    {
+      "name": "ORIGIN 12",
+      "displayName": null,
+      "category": "SHOTGUN",
+      "rank": null,
+      "exclusiveUnlock": true,
+      "superTester": true
+    },
+    {
+      "name": "TITANIUM FAL",
+      "displayName": "FAL 50.00 (T)",
+      "category": "BATTLE RIFLE",
+      "rank": 999,
+      "exclusiveUnlock": true,
+      "superTester": true
+    }
+  ],
+  "confirmedAttChanges": [
+    {
+      "name": "Green Laser",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 423,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Angled Grip",
+      "slots": [
+        "Underbarrel",
+        "Other"
+      ],
+      "weaponsAffected": 95,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Stubby Grip",
+      "slots": [
+        "Underbarrel",
+        "Other"
+      ],
+      "weaponsAffected": 91,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Tango MSR 1-8x",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 155,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Super Slim Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 141,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Kel-Tec Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 141,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "PK-A",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 177,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Retract Stock",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 5,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Reflex Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Dual Aperture Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Furro Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Comp Aimpoint",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Backup Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "DDHB Reflex",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "MBUS Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "BUIS Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Barska Electro",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Coyote Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Hensoldt 3x Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 13,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "MARS",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": ".410 Flechette",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": ".410 Bore",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": ".410 Birdshot",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Silent",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 33,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Canted Furro Sight",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    },
+    {
+      "name": "Sako Backup Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Confirmed by 11.17.0 patch notes & verified in API data"
+    }
+  ],
+  "likelyAttChanges": [
+    {
+      "name": "Long Barrel (DMR)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "AR 20 Tact Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "H&K Export Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 140,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "EOTech 552",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 146,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Troy Flip Up Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 142,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "EOTech XPS2",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 145,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "IWI Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 141,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Long Barrel (AR)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 5,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Chainsaw Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 7,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "G36K .300 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": ".223 Remington",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "TA01 Acog",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Diopter Sight Open",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Anti Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PU-1 Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Animu Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Tac C Note",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Quick-Release Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "FF 3x NV",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Herstal Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Half Ring Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "TA44 Acog",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Plague Insight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "DeltaPoint Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Microdot Mini",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Kousaku OLED Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Z-Point",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "MACRO P-1",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hensoldt Dual Optic",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 4,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "TA33 Acog",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Acog Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Kobra EKP Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Kobra Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "TA11 Acog",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Global Offensive Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "M145",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Vcog 8x Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "1200M Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Handmade Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Maglite",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PSO-1 Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Reflector Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "UH Gen1",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Double Open Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Diopter Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "DCL 120",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PSO-1M2 Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Electra 5x",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Kalashnikov Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "SUSAT Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Kousaku Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PKA-S",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "C79",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hand Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "AAC Flip Up Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Mini Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "EOTech Vudu 1-10",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "OKP-7",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "KAC Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "OEG",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Carry Handle Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "AMT-Terminator",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "EOTech M40",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "H&K Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Swarovski Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hensoldt Z24",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Izhmash Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Delta Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Full Ring Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Steyr Sight",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 11,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PRO 3-9x Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Pilad 3",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Vcog 6x Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Microdot SRS",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 10,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": ".410 Slugs",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": ".410 Rubber Pellets",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Ballistics Tracker",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Speedloader",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Folding Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 4,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Armor Piercing",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hollow Point",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "FN 4x Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 5,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "G36C .300 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Full Stock",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Extended Stock",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Malcolm 3x Scope",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "VSS 762 Conv",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Tri Laser",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Flashlight",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Blue Laser",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Laser",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Yellow Laser",
+      "slots": [
+        "Other",
+        "Underbarrel"
+      ],
+      "weaponsAffected": 9,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Short Barrel (DMR)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Potato Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Romanian Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 6,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Vertical Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Skeleton Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Handstop",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 6,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Sideways Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Pistol Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "SL8 Binary",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "SL-8 .300 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Canted Animu Sight",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Canted Acog Scope",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Canted Iron Sight",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Canted Delta Sight",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 3,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Short Barrel (PISTOL)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hera CQR Grip",
+      "slots": [
+        "Underbarrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Klassik LM",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PM II Ultrashort",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Leupold M8-6x",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Sagittarius 40x",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "NXS 5.5-22",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PSO-12.7",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "NXS 8-32",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Leupold M8-2x",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "KOM 10x42",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "CS/OS15",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Hi-Power 8-32",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "SIDEWINDER ED",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Leupold Mark 4",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "HD-N 4-16x44",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PM II",
+      "slots": [
+        "Optics"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "T-Brake",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Compensator",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Loudener",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Flash Hider",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Muzzle Brake",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Halbek Device",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "X-Ring",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 2,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "NTW 14.5 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Remove Stock",
+      "slots": [
+        "Other"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "MG36 .300 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "1858 Snake Shot",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": ".36 Caliber NA",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Redhawk 45 Colt",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Taurus Barrel (Judge)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Minislugs",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Minishell",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "R2 Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Muzzle Booster",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PBS-4 Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "SLX Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Oil Filter",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Muffler",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "ARS Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "PBS-1 Suppressor",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "MCX Spear 7.62x51",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "MCX Spear 6.5 Creedmoor",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "Short Barrel (AR)",
+      "slots": [
+        "Barrel"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "G36 .300 Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "M1911 .22LR Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    },
+    {
+      "name": "M1911 Dart Conversion",
+      "slots": [
+        "Ammo"
+      ],
+      "weaponsAffected": 1,
+      "reason": "Attachment modifier updated in 11.17 API matching engine patterns; not explicitly titled in summary patch notes"
+    }
+  ],
+  "addedAttsCount": 3459,
+  "removedAttsCount": 33,
+  "stats": {
+    "totalCommonWeapons": 416,
+    "weaponsWithDiffs": 28,
+    "newWeaponsCount": 8,
+    "commonAttachmentInstances": 39484,
+    "attachmentInstancesWithModDiffs": 2934,
+    "uniqueAttachmentsWithModDiffs": 180,
+    "confirmedUniqueAttachments": 26,
+    "likelyUniqueAttachments": 154
+  }
+}
