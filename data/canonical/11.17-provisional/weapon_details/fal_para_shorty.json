@@ -15,11 +15,11 @@
     },
     {
       "damage": 44,
-      "distance": 20
+      "distance": 30
     },
     {
       "damage": 23,
-      "distance": 140
+      "distance": 130
     }
   ],
   "multhead": 1.5,

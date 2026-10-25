@@ -5156,14 +5156,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -6755,7 +6764,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.035
+        "value": 1.035,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -11127,14 +11145,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -13372,7 +13399,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.085
+        "value": 1.085,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -14271,7 +14307,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.025
+        "value": 1.025,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -21933,14 +21978,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.93
+        "value": 0.93,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -22213,21 +22267,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -22502,14 +22570,24 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.175
+        "value": 1.175,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -44722,7 +44800,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -45093,14 +45175,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.35
+        "value": 1.35,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -47816,14 +47907,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0526315789473684
+        "value": 1.0526315789473684,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.65
+        "value": 0.65,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -48872,14 +48972,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.93
+        "value": 0.93,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -62873,28 +62982,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -63310,7 +63437,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -63411,7 +63542,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -63954,28 +64090,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9705882352941176
+        "value": 0.9705882352941176,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1578947368421053
+        "value": 1.1578947368421053,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6363636363636364
+        "value": 0.6363636363636364,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1153846153846154
+        "value": 1.1153846153846154,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -64737,14 +64891,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -64832,14 +64995,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -64939,7 +65111,12 @@
           "damageGraph"
         ],
         "value": 0.9986130374479889,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -65039,7 +65216,12 @@
           "damageGraph"
         ],
         "value": 1.0044642857142858,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
@@ -65047,7 +65229,11 @@
           "damageGraph"
         ],
         "value": 1,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
@@ -65055,7 +65241,12 @@
           "damageGraph"
         ],
         "value": 0.9966777408637874,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -65239,7 +65430,12 @@
           "damageGraph"
         ],
         "value": 0.6,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
@@ -65247,7 +65443,11 @@
           "damageGraph"
         ],
         "value": 0.7,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
@@ -65255,7 +65455,12 @@
           "damageGraph"
         ],
         "value": 1.25,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -65355,7 +65560,12 @@
           "damageGraph"
         ],
         "value": 1.0017123287671232,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
@@ -65363,7 +65573,12 @@
           "damageGraph"
         ],
         "value": 1.0018552875695732,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -68704,21 +68919,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -69039,28 +69268,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8461538461538461
+        "value": 0.8461538461538461,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -70757,14 +71004,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -71422,14 +71678,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.088235294117647
+        "value": 1.088235294117647,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1428571428571428
+        "value": 1.1428571428571428,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -72017,28 +72282,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0588235294117647
+        "value": 1.0588235294117647,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9047619047619048
+        "value": 0.9047619047619048,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -73604,7 +73887,15 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -80367,14 +80658,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1034
+        "value": 1.1034,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1034285714285714
+        "value": 1.1034285714285714,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -80735,14 +81035,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.45
+        "value": 1.45,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -80970,14 +81279,24 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.175
+        "value": 1.175,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -81164,21 +81483,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -81262,21 +81595,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.55
+        "value": 0.55,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.65
+        "value": 0.65,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -84004,28 +84350,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.04
+        "value": 1.04,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.92
+        "value": 0.92,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -84357,7 +84721,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -84667,28 +85035,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9230769230769231
+        "value": 0.9230769230769231,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8387096774193549
+        "value": 0.8387096774193549,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -86914,7 +87300,15 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -87412,7 +87806,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -87581,21 +87984,33 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -87742,14 +88157,22 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -87862,63 +88285,99 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8181818181818182
+        "value": 0.8181818181818182,
+        "valueIndex": "damage",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          5
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1111111111111112
+        "value": 1.1111111111111112,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3
+        "value": 1.3,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -90379,14 +90838,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -91585,14 +92053,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.05
+        "value": 1.05,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -98398,14 +98875,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -99179,21 +99665,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0909090909090908
+        "value": 1.0909090909090908,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7857142857142857
+        "value": 0.7857142857142857,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -99722,21 +100221,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9210526315789473
+        "value": 0.9210526315789473,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0909090909090908
+        "value": 1.0909090909090908,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -102216,14 +102729,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5833333333333334
+        "value": 0.5833333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -102350,14 +102872,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9714285714285714
+        "value": 0.9714285714285714,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2857142857142858
+        "value": 1.2857142857142858,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       }
     ],
     "provenance": {
@@ -103113,14 +103644,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -103299,21 +103839,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.121212121212121
+        "value": 1.121212121212121,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8636363636363636
+        "value": 0.8636363636363636,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7692307692307693
+        "value": 0.7692307692307693,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -104259,14 +104813,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9444444444444444
+        "value": 0.9444444444444444,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -106453,14 +107016,24 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0476190476190477
+        "value": 1.0476190476190477,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -107438,7 +108011,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.035
+        "value": 1.035,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -108029,14 +108611,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -108785,7 +109376,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.085
+        "value": 1.085,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -109439,7 +110039,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.025
+        "value": 1.025,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -109924,14 +110533,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -110479,28 +111097,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0606060606060606
+        "value": 1.0606060606060606,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2222222222222223
+        "value": 1.2222222222222223,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -111454,14 +112090,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -111802,14 +112447,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -113320,14 +113974,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7
+        "value": 0.7,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.22
+        "value": 1.22,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -114327,28 +114990,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.04
+        "value": 1.04,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.92
+        "value": 0.92,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -122257,14 +122938,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -122441,28 +123131,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2571428571428571
+        "value": 1.2571428571428571,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8181818181818182
+        "value": 0.8181818181818182,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8275862068965517
+        "value": 0.8275862068965517,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -122596,21 +123304,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4285714285714286
+        "value": 1.4285714285714286,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2222222222222223
+        "value": 1.2222222222222223,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7272727272727273
+        "value": 0.7272727272727273,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -122956,28 +123678,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7142857142857143
+        "value": 0.7142857142857143,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9090909090909091
+        "value": 0.9090909090909091,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6896551724137931
+        "value": 0.6896551724137931,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -123272,28 +124012,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1875
+        "value": 1.1875,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9047619047619048
+        "value": 0.9047619047619048,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7777777777777778
+        "value": 0.7777777777777778,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1818181818181819
+        "value": 1.1818181818181819,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -124950,7 +125708,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -125070,14 +125833,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.64
+        "value": 0.64,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.4117647058823529
+        "value": 0.4117647058823529,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -125215,14 +125987,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.92
+        "value": 0.92,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9411764705882353
+        "value": 0.9411764705882353,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -125721,14 +126502,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0588235294117647
+        "value": 1.0588235294117647,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -125882,21 +126672,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -128843,7 +129647,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8888888888888888
+        "value": 0.8888888888888888,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -130593,14 +131401,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7272727272727273
+        "value": 0.7272727272727273,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8461538461538461
+        "value": 0.8461538461538461,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -131648,21 +132465,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.6666666666666667
+        "value": 1.6666666666666667,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -137652,14 +138483,22 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.925
+        "value": 0.925,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.925
+        "value": 0.925,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -138954,7 +139793,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7777777777777778
+        "value": 0.7777777777777778,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -139610,14 +140454,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9090909090909091
+        "value": 0.9090909090909091,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9411764705882353
+        "value": 0.9411764705882353,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -140036,14 +140889,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.35
+        "value": 1.35,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -141728,14 +142590,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.2857142857142857
+        "value": 0.2857142857142857,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.11764705882352941
+        "value": 0.11764705882352941,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -142209,14 +143080,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8727272727272727
+        "value": 0.8727272727272727,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -142664,14 +143544,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -142910,14 +143799,22 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       }
     ],
     "provenance": {
@@ -143127,21 +144024,33 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1363636363636365
+        "value": 1.1363636363636365,
+        "valueIndex": "damage",
+        "indexList": [
+          -3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1363636363636365
+        "value": 1.1363636363636365,
+        "valueIndex": "damage",
+        "indexList": [
+          -2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -144867,21 +145776,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.25
+        "value": 0.25,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -151083,21 +152005,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8958333333333334
+        "value": 0.8958333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.032258064516129
+        "value": 1.032258064516129,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4285714285714286
+        "value": 1.4285714285714286,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -151291,21 +152227,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.55
+        "value": 0.55,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6333333333333333
+        "value": 0.6333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -151542,21 +152491,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0
+        "value": 0,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -151901,28 +152864,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.6
+        "value": 1.6,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.105263157894737
+        "value": 1.105263157894737,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.36363636363636365
+        "value": 0.36363636363636365,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -152027,7 +153008,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -152098,14 +153084,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -152169,7 +153164,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -152297,21 +153297,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2.75
+        "value": 2.75,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 6
+        "value": 6,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -152498,14 +153512,24 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -152605,28 +153629,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.4
+        "value": 0.4,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -152912,28 +153954,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.4
+        "value": 0.4,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -155713,7 +156773,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -156661,14 +157726,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -156809,14 +157883,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.05
+        "value": 1.05,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -157448,21 +158531,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.8
+        "value": 1.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 4
+        "value": 4,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6
+        "value": 0.6,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -158073,21 +159170,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.65
+        "value": 0.65,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -158598,28 +159709,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.42857142857142855
+        "value": 0.42857142857142855,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7894736842105263
+        "value": 0.7894736842105263,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -158716,28 +159845,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 5
+        "value": 5,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 8.333333333333334
+        "value": 8.333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8571428571428571
+        "value": 0.8571428571428571,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8421052631578947
+        "value": 0.8421052631578947,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -158820,28 +159967,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7142857142857143
+        "value": 0.7142857142857143,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.631578947368421
+        "value": 0.631578947368421,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -158959,28 +160124,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 6
+        "value": 6,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 16.666666666666668
+        "value": 16.666666666666668,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7142857142857143
+        "value": 0.7142857142857143,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5263157894736842
+        "value": 0.5263157894736842,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -159105,21 +160288,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0714285714285714
+        "value": 1.0714285714285714,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8947368421052632
+        "value": 0.8947368421052632,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -162823,14 +164020,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.07
+        "value": 1.07,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -164800,21 +166006,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.65
+        "value": 0.65,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4
+        "value": 1.4,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -164953,14 +166172,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5523809523809524
+        "value": 0.5523809523809524,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.35714285714285715
+        "value": 0.35714285714285715,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -172575,14 +173803,24 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.14
+        "value": 1.14,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.675
+        "value": 0.675,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -174410,14 +175648,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6333333333333333
+        "value": 0.6333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.625
+        "value": 0.625,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -186357,28 +187604,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.088235294117647
+        "value": 1.088235294117647,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.875
+        "value": 0.875,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -191264,28 +192529,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2352941176470589
+        "value": 1.2352941176470589,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1578947368421053
+        "value": 1.1578947368421053,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.2777777777777778
+        "value": 0.2777777777777778,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.103448275862069
+        "value": 1.103448275862069,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -191852,28 +193135,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9333333333333333
+        "value": 0.9333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0526315789473684
+        "value": 1.0526315789473684,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1818181818181819
+        "value": 1.1818181818181819,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9354838709677419
+        "value": 0.9354838709677419,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -194038,7 +195339,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -194198,28 +195503,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.088235294117647
+        "value": 1.088235294117647,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9583333333333334
+        "value": 0.9583333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8571428571428571
+        "value": 0.8571428571428571,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -203467,28 +204790,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1290322580645162
+        "value": 1.1290322580645162,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9090909090909091
+        "value": 0.9090909090909091,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -203646,21 +204987,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.096774193548387
+        "value": 1.096774193548387,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8752173913043478
+        "value": 0.8752173913043478,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5625
+        "value": 0.5625,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -210259,28 +211614,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9142857142857143
+        "value": 0.9142857142857143,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7777777777777778
+        "value": 0.7777777777777778,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1538461538461537
+        "value": 1.1538461538461537,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -218337,21 +219710,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0625
+        "value": 1.0625,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8637
+        "value": 0.8637,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -218522,21 +219909,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0625
+        "value": 1.0625,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5882352941176471
+        "value": 0.5882352941176471,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -218889,28 +220290,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -219432,28 +220851,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.6428571428571428
+        "value": 1.6428571428571428,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0833333333333333
+        "value": 1.0833333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0666666666666667
+        "value": 1.0666666666666667,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -220196,14 +221633,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -221423,7 +222869,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.875
+        "value": 0.875,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -222112,14 +223563,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          5
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -228290,35 +229750,55 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5333333333333333
+        "value": 0.5333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.42857142857142855
+        "value": 0.42857142857142855,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1111111111111112
+        "value": 1.1111111111111112,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 3.3333333333333335
+        "value": 3.3333333333333335,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -228838,35 +230318,55 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0666666666666667
+        "value": 1.0666666666666667,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8571428571428571
+        "value": 0.8571428571428571,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.7777777777777777
+        "value": 1.7777777777777777,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -236118,7 +237618,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0714285714285714
+        "value": 1.0714285714285714,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -239743,7 +241247,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -239985,28 +241498,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.125
+        "value": 1.125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -243860,7 +245391,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1875
+        "value": 1.1875,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -244553,21 +246089,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7368421052631579
+        "value": 0.7368421052631579,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8823529411764706
+        "value": 0.8823529411764706,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4516129032258065
+        "value": 1.4516129032258065,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -245195,28 +246744,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0526315789473684
+        "value": 1.0526315789473684,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9558823529411765
+        "value": 0.9558823529411765,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.375
+        "value": 0.375,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2258064516129032
+        "value": 1.2258064516129032,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -249707,7 +251274,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -256245,28 +257817,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0666666666666667
+        "value": 1.0666666666666667,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0377358490566038
+        "value": 1.0377358490566038,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7391304347826086
+        "value": 0.7391304347826086,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2444444444444445
+        "value": 1.2444444444444445,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -257023,21 +258613,35 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0266666666666666
+        "value": 1.0266666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9433962264150944
+        "value": 0.9433962264150944,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0869565217391304
+        "value": 1.0869565217391304,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -264372,28 +265976,44 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1333333333333333
+        "value": 1.1333333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -264676,35 +266296,55 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3076923076923077
+        "value": 1.3076923076923077,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2142857142857142
+        "value": 1.2142857142857142,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5882352941176471
+        "value": 0.5882352941176471,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2.8333333333333335
+        "value": 2.8333333333333335,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 3.1666666666666665
+        "value": 3.1666666666666665,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -264822,63 +266462,99 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6153846153846154
+        "value": 0.6153846153846154,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6428571428571429
+        "value": 0.6428571428571429,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7058823529411765
+        "value": 0.7058823529411765,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7058823529411765
+        "value": 0.7058823529411765,
+        "valueIndex": "damage",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.625
+        "value": 0.625,
+        "valueIndex": "damage",
+        "indexList": [
+          5
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.7333333333333334
+        "value": 1.7333333333333334,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.7
+        "value": 1.7,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.48
+        "value": 1.48,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -274084,14 +275760,26 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7
+        "value": 0.7,
+        "valueIndex": "distance",
+        "indexList": [
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -274622,14 +276310,26 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -274705,28 +276405,44 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8908045977011494
+        "value": 0.8908045977011494,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9333333333333333
+        "value": 0.9333333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          5
+        ]
       }
     ],
     "provenance": {
@@ -276693,7 +278409,11 @@
           "damageGraph"
         ],
         "value": 0.9960384833050367,
-        "priority": 1
+        "priority": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -278173,35 +279893,56 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.3333333333333333
+        "value": 0.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.3125
+        "value": 0.3125,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.10526315789473684
+        "value": 0.10526315789473684,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "adders",
@@ -278387,35 +280128,56 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.625
+        "value": 0.625,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.42105263157894735
+        "value": 0.42105263157894735,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.3125
+        "value": 0.3125,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2.5
+        "value": 2.5,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -278491,28 +280253,45 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.12
+        "value": 1.12,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -279637,63 +281416,100 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9333333333333333
+        "value": 0.9333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1
+        "value": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8947368421052632
+        "value": 0.8947368421052632,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1
+        "value": 1,
+        "valueIndex": "damage",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9285714285714286
+        "value": 0.9285714285714286,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1
+        "value": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          4
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1
+        "value": 1,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -281963,14 +283779,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -291654,21 +293479,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -291892,14 +293730,32 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -298259,28 +300115,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1764705882352942
+        "value": 1.1764705882352942,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.368421052631579
+        "value": 1.368421052631579,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5238095238095237
+        "value": 1.5238095238095237,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1538461538461537
+        "value": 1.1538461538461537,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -299302,28 +301176,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6428571428571429
+        "value": 0.6428571428571429,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8181818181818182
+        "value": 0.8181818181818182,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3
+        "value": 1.3,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3
+        "value": 1.3,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -305416,21 +307308,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8571428571428571
+        "value": 0.8571428571428571,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9375
+        "value": 0.9375,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -306954,28 +308859,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -313207,28 +315130,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0625
+        "value": 1.0625,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8571428571428571
+        "value": 0.8571428571428571,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5625
+        "value": 0.5625,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9259259259259259
+        "value": 0.9259259259259259,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -316205,14 +318146,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -318448,28 +320398,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.0294117647058822
+        "value": 1.0294117647058822,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 6.25
+        "value": 6.25,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -318698,21 +320666,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.95
+        "value": 0.95,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -319506,14 +321487,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1
+        "value": 1.1,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -320085,14 +322075,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -323307,28 +325306,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2.242424242424242
+        "value": 2.242424242424242,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 7.5
+        "value": 7.5,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.55
+        "value": 0.55,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -323736,35 +325753,55 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 3.6363636363636362
+        "value": 3.6363636363636362,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 3.0303030303030303
+        "value": 3.0303030303030303,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 6
+        "value": 6,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.5
+        "value": 0.5,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -323883,28 +325920,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9090909090909091
+        "value": 0.9090909090909091,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.875
+        "value": 0.875,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.4
+        "value": 0.4,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -324396,14 +326451,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6666666666666666
+        "value": 0.6666666666666666,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -324754,28 +326818,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4193548387096775
+        "value": 1.4193548387096775,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.25
+        "value": 1.25,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8421052631578947
+        "value": 0.8421052631578947,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -324893,28 +326975,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8064516129032258
+        "value": 0.8064516129032258,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 5.75
+        "value": 5.75,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.2
+        "value": 0.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9473684210526315
+        "value": 0.9473684210526315,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -325532,28 +327632,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9032258064516129
+        "value": 0.9032258064516129,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.375
+        "value": 1.375,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7
+        "value": 0.7,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1578947368421053
+        "value": 1.1578947368421053,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -326746,7 +328864,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -326829,7 +328951,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -326963,21 +329090,34 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8333333333333334
+        "value": 0.8333333333333334,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.55
+        "value": 0.55,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.625
+        "value": 0.625,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -327046,7 +329186,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.6
+        "value": 0.6,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -330237,7 +332382,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -330510,14 +332660,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7142857142857143
+        "value": 0.7142857142857143,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8666666666666667
+        "value": 0.8666666666666667,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -330700,77 +332859,121 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8928571428571429
+        "value": 0.8928571428571429,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9333333333333333
+        "value": 0.9333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.05
+        "value": 1.05,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.05
+        "value": 1.05,
+        "valueIndex": "damage",
+        "indexList": [
+          -3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1666666666666667
+        "value": 1.1666666666666667,
+        "valueIndex": "damage",
+        "indexList": [
+          -2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3636363636363635
+        "value": 1.3636363636363635,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1428571428571428
+        "value": 1.1428571428571428,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3571428571428572
+        "value": 1.3571428571428572,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2857142857142858
+        "value": 1.2857142857142858,
+        "valueIndex": "distance",
+        "indexList": [
+          -3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1538461538461537
+        "value": 1.1538461538461537,
+        "valueIndex": "distance",
+        "indexList": [
+          -2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.1111111111111112
+        "value": 1.1111111111111112,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -330924,35 +333127,55 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.5
+        "value": 1.5,
+        "valueIndex": "damage",
+        "indexList": [
+          1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.4
+        "value": 1.4,
+        "valueIndex": "damage",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8
+        "value": 0.8,
+        "valueIndex": "damage",
+        "indexList": [
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2
+        "value": 2,
+        "valueIndex": "distance",
+        "indexList": [
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 2.142857142857143
+        "value": 2.142857142857143,
+        "valueIndex": "distance",
+        "indexList": [
+          3
+        ]
       }
     ],
     "provenance": {
@@ -332427,28 +334650,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8636363636363636
+        "value": 0.8636363636363636,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.7419354838709677
+        "value": 0.7419354838709677,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.875
+        "value": 0.875,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8484848484848485
+        "value": 0.8484848484848485,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -333343,28 +335584,46 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8409090909090909
+        "value": 0.8409090909090909,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8709677419354839
+        "value": 0.8709677419354839,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.875
+        "value": 0.875,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.8484848484848485
+        "value": 0.8484848484848485,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -337620,7 +339879,12 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.75
+        "value": 0.75,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       }
     ],
     "provenance": {
@@ -339224,21 +341488,40 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.22
+        "value": 0.22,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2,
+          3
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.22
+        "value": 0.22,
+        "valueIndex": "damage",
+        "indexList": [
+          4,
+          5
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.85
+        "value": 0.85,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       }
     ],
     "provenance": {
@@ -340551,14 +342834,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 0.9
+        "value": 0.9,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -343284,7 +345576,16 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "distance",
+        "indexList": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
       }
     ],
     "provenance": {
@@ -344745,7 +347046,11 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.15
+        "value": 1.15,
+        "valueIndex": "distance",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {
@@ -349836,14 +352141,23 @@
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.2
+        "value": 1.2,
+        "valueIndex": "damage",
+        "indexList": [
+          1,
+          2
+        ]
       },
       {
         "type": "tableTrueMultipliers",
         "indexPath": [
           "damageGraph"
         ],
-        "value": 1.3333333333333333
+        "value": 1.3333333333333333,
+        "valueIndex": "damage",
+        "indexList": [
+          -1
+        ]
       }
     ],
     "provenance": {

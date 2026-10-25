@@ -162,6 +162,19 @@ export class ModifierEngine {
         return [seg];
     }
 
+    /**
+     * Picks the half of a `{ a, d, t: 'mixed' }` node a path segment refers to: numbers address the array
+     * part `a`, names address the field part `d`. Any other node (and explicit 'a' / 'd' / 't' keys) is
+     * returned unchanged.
+     */
+    private unwrapMixed(node: any, seg: string | number | (string | number)[]): any {
+        if (node === null || typeof node !== 'object' || node.t !== 'mixed' || !Array.isArray(node.a)) return node;
+        const isIndex = typeof seg === 'number' || (Array.isArray(seg) && seg.length > 0 && seg.every((s) => typeof s === 'number'));
+        if (isIndex) return node.a;
+        if (typeof seg === 'string' && !(seg in node) && node.d && typeof node.d === 'object') return node.d;
+        return node;
+    }
+
     private collectTargets(
         rootObj: any,
         indexPath: (string | number)[],
@@ -207,12 +220,15 @@ export class ModifierEngine {
             return targets;
         }
 
-        const recurse = (currentObj: any, segmentIndex: number, currentPathStr: string) => {
-            if (currentObj === undefined || currentObj === null) {
+        const recurse = (visited: any, segmentIndex: number, currentPathStr: string) => {
+            if (visited === undefined || visited === null) {
                 return;
             }
 
             const seg = indexPath[segmentIndex];
+            // A Lua table with an array part AND named fields (animations.reload: steps + timescale/resettime)
+            // is stored as { a: [...], d: {...}, t: 'mixed' }: indices live in `a`, names in `d`
+            const currentObj = this.unwrapMixed(visited, seg);
             const resolvedKeys = this.resolveKey(currentObj, seg);
             const isLast = segmentIndex === indexPath.length - 1;
 

@@ -88,7 +88,11 @@ for (const cat in w16Raw) {
                       indexPath: item.indexPath,
                       value: item.value,
                       priority: item.priority,
-                      insertIndex: item.insertIndex
+                      insertIndex: item.insertIndex,
+                      // table modifiers (damageGraph, altaimdata, ...) say WHICH rows/field they hit here;
+                      // without these the engine cannot apply them
+                      valueIndex: item.valueIndex,
+                      indexList: item.indexList
                     });
                   }
                 }
@@ -288,7 +292,11 @@ for (const cat in w17Raw) {
                       indexPath: item.indexPath,
                       value: item.value,
                       priority: item.priority,
-                      insertIndex: item.insertIndex
+                      insertIndex: item.insertIndex,
+                      // table modifiers (damageGraph, altaimdata, ...) say WHICH rows/field they hit here;
+                      // without these the engine cannot apply them
+                      valueIndex: item.valueIndex,
+                      indexList: item.indexList
                     });
                   }
                 }
@@ -375,6 +383,9 @@ for (const cat in w17Raw) {
         if (w.magsize !== undefined) detailData.magsize = w.magsize;
         if (w.sparerounds !== undefined) detailData.sparerounds = w.sparerounds;
         if (w.displayName !== undefined) detailData.displayname = w.displayName;
+        // The curve is what the game actually uses; damage0/range0 are read off it. Leaving the 11.16 curve in
+        // place made it disagree with the 11.17 numbers just above (K2: 32@0 32@90 20@150 vs 34@0 34@50 23@140).
+        if (Array.isArray(w.damageGraph) && w.damageGraph.length) detailData.damageGraph = w.damageGraph;
       }
       if (detailData.recoil) {
         firearm17Count++;
@@ -390,6 +401,9 @@ for (const cat in w17Raw) {
         verification: 'PROVISIONAL_11_17',
         classification: isRebalanced ? 'SAFE_TO_MIGRATE' : 'SAFE_TO_MIGRATE'
       };
+      // A raw detail file carrying `recoil_source` (e.g. spear_lt.json, original table from Weapon Labs)
+      // is not an inherited 11.16 table, whatever the weapon's age
+      if (detailData.recoil_source) detailData._provenance.recoil_springs = 'WEAPON_LABS_ORIGINAL';
     } else {
       // Brand new 11.17 weapon (e.g. REGULATOR, SPEAR LT, MCX VIRTUS, MCX RATTLER, CUTLASS)
       detailData = {

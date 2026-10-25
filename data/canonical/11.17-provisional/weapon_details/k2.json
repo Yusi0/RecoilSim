@@ -10,16 +10,16 @@
   "range1": 140,
   "damageGraph": [
     {
-      "damage": 32,
+      "damage": 34,
       "distance": 0
     },
     {
-      "damage": 32,
-      "distance": 90
+      "damage": 34,
+      "distance": 50
     },
     {
-      "damage": 20,
-      "distance": 150
+      "damage": 23,
+      "distance": 140
     }
   ],
   "multhead": 1.4,
