@@ -30,7 +30,9 @@ describe('PF 11.17 Simulation Verification & Safety Guard Tests', () => {
     // Test A: 신규 8종 무기 (recoil = null) Zero-Recoil Silent Failure 방지
     // -------------------------------------------------------------
     describe('Test A: New weapons with recoil=null must NOT produce normal verified results', () => {
-        const newWeapons = ['mcx_rattler', 'mcx_virtus', 'spear_lt', 'regulator', 'hk416a5', 'origin_12', 'titanium_fal'];
+        // spear_lt, mcx_rattler, mcx_virtus and regulator are no longer here: they have Weapon Labs original
+        // recoil data (see SpearLtRecoil.test.ts and WeaponLabsRecoilOverrides.test.ts)
+        const newWeapons = ['hk416a5', 'origin_12', 'titanium_fal'];
 
         for (const wId of newWeapons) {
             it(`flags ${wId} as UNVERIFIED_11_17 instead of silent zero-recoil`, () => {
@@ -65,9 +67,10 @@ describe('PF 11.17 Simulation Verification & Safety Guard Tests', () => {
     // Test B: 신규 무기에 부착물 모디파이어 장착 시 Silent Drop 차단
     // -------------------------------------------------------------
     describe('Test B: Attachment modifiers on weapons without recoil root are tracked in unappliedModifiers', () => {
-        it('tracks missing recoil root when equipping recoil modifiers on MCX Rattler', () => {
-            const w = weaponsMap1117['mcx_rattler'];
-            const detailPath = path.join(provDir, 'weapon_details', 'mcx_rattler.json');
+        // HK416A5 still has no recoil data (MCX Rattler used to be the example here, until its original recoil was imported)
+        it('tracks missing recoil root when equipping recoil modifiers on HK416A5', () => {
+            const w = weaponsMap1117['hk416a5'];
+            const detailPath = path.join(provDir, 'weapon_details', 'hk416a5.json');
             if (!w || !fs.existsSync(detailPath)) return;
 
             const detail = JSON.parse(fs.readFileSync(detailPath, 'utf8'));

@@ -1,0 +1,89 @@
+-- Argument order:	Damping, Speed, Mean, Variance
+gunData.recoil = {}
+gunData.recoil["hipTranslation"] = {
+	["x"] = {{0.90, 25, 1.40, 0.40}};
+	["y"] = {{0.90, 25, -0.80, 0.32}};
+	["z"] = {{1.00, 23, 7.20, 0.70}};
+}
+gunData.recoil["hipTranslationRecovery"] = {
+	["x"] = {{0.60, 15}; delay = 0.10};
+	["y"] = {{0.75, 22}; delay = 0.10};
+	["z"] = {{1.15, 10}; delay = 0.10};
+}
+
+gunData.recoil["aimTranslation"] = {
+	["x"] = {{0.90, 25, 0.00, 0.10}};
+	["y"] = {{0.90, 25, -0.50, 0.20}};
+	["z"] = {{1.10, 24, 8.15, 0.60}};
+}
+gunData.recoil["aimTranslationRecovery"] = {
+	["x"] = {{0.60, 15}; delay = 0.10};
+	["y"] = {{0.75, 22}; delay = 0.10};
+	["z"] = {{0.95, 12}; delay = 0.10};
+}
+
+gunData.recoil["hipRotation"] = {
+	["x"] = {{0.50, 48, -1.90, 0.60}};
+	["y"] = {{0.30, 23, -0.20, 0.40}};
+	["z"] = {{0.70, 22, 0.10, 0.40}};
+}
+gunData.recoil["hipRotationRecovery"] = {
+	["x"] = {{0.50, 25}; delay = 0.10};
+	["y"] = {{0.80, 17}; delay = 0.10};
+	["z"] = {{0.50, 17}; delay = 0.10};
+}
+
+gunData.recoil["aimRotation"] = {
+	["x"] = {{0.40, 30, -0.68, 0.20}};
+	["y"] = {{0.35, 40, -0.33, 0.42}};
+	["z"] = {{0.40, 42, 0.10, 0.50}};
+}
+gunData.recoil["aimRotationRecovery"] = {
+	["x"] = {{0.90, 25}; delay = 0.10};
+	["y"] = {{0.80, 17}; delay = 0.10};
+	["z"] = {{0.50, 17}; delay = 0.10};
+}
+
+gunData.recoil["hipCameraBody"] = {
+	["x"] = {{0.80, 30, 1.20, 0.20}, {2.75, 5, 0.35, 0.04}};
+	["y"] = {{0.75, 15, -0.20, 0.40}};
+	["z"] = {{0.45, 50, 1.80, 0.40}};
+}
+gunData.recoil["hipCameraBodyRecovery"] = {
+	["x"] = {{0.85, 25}, {0.90, 12}; delay = 0.10};
+	["y"] = {{0.65, 15}; delay = 0.10};
+	["z"] = {{0.45, 40}; delay = 0.10};
+}
+
+gunData.recoil["aimCameraBody"] = {
+	["x"] = {{1.05, 25, 2.50, 0.65}, {3.45, 5, 0.24, 0.02}};
+	["y"] = {{0.75, 15, -0.20, 0.35}};
+	["z"] = {{0.45, 50, 1.50, 0.30}};
+}
+gunData.recoil["aimCameraBodyRecovery"] = {
+	["x"] = {{0.90, 18}, {1.40, 10}; delay = 0.10};
+	["y"] = {{0.65, 14}; delay = 0.10};
+	["z"] = {{0.45, 40}; delay = 0.10};
+}
+
+gunData.recoil["hipCameraHead"] = {
+	["x"] = {{0.35, 50, 0.00, 0.00}};
+	["y"] = {{0.35, 60, 0.00, 0.00}};
+	["z"] = {{0.35, 80, 0.00, 0.00}};
+}
+gunData.recoil["hipCameraHeadRecovery"] = {
+	["x"] = {{0.85, 40}; delay = 0.10};
+	["y"] = {{0.55, 50}; delay = 0.10};
+	["z"] = {{0.45, 80}; delay = 0.10};
+}
+
+gunData.recoil["aimCameraHead"] = {
+	["x"] = {{0.35, 50, 0.00, 0.06}};
+	["y"] = {{0.35, 60, 0.00, 0.08}};
+	["z"] = {{0.35, 80, 0.00, 0.00}};
+}
+gunData.recoil["aimCameraHeadRecovery"] = {
+	["x"] = {{0.85, 40}; delay = 0.10};
+	["y"] = {{0.55, 50}; delay = 0.10};
+	["z"] = {{0.45, 80}; delay = 0.10};
+}

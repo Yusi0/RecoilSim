@@ -13,6 +13,13 @@ const patchText = fs.readFileSync('c:/Users/choez/OneDrive/바탕 화면/11.17.0
 
 const detailsDir = path.resolve('data/raw/weapon-details');
 
+// Original in-game recoil tables (see scripts/import_weapon_labs_recoil.js). Applied after a weapon's
+// detail is assembled, so a rebuild keeps them instead of resetting new weapons to recoil: null.
+const { applyOverride } = require('./import_weapon_labs_recoil.js');
+const overridesPath = path.resolve('data/overrides/weapon_recoil_overrides.json');
+const recoilOverrides = fs.existsSync(overridesPath) ? JSON.parse(fs.readFileSync(overridesPath, 'utf8')) : {};
+let recoilOverrideCount = 0;
+
 // Helper to sanitize weapon / attachment IDs
 function sanitizeId(str) {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
@@ -421,6 +428,14 @@ for (const cat in w17Raw) {
       unverifiedRecoilCount++;
     }
 
+    if (recoilOverrides[wId]) {
+      // It was counted above as unverified (new weapon) or inherited from 11.16; it is neither now
+      if (detailData.recoil) fallbackRecoilCount--;
+      else unverifiedRecoilCount--;
+      applyOverride(detailData, recoilOverrides[wId]);
+      recoilOverrideCount++;
+    }
+
     fs.writeFileSync(path.join(dir17Details, `${wId}.json`), JSON.stringify(detailData, null, 2), 'utf8');
   }
 }
@@ -439,6 +454,7 @@ const metadata17 = {
     firearmsWithRecoil: firearm17Count,
     recoilFallbackCount: fallbackRecoilCount,
     recoilUnverifiedCount: unverifiedRecoilCount,
+    recoilOriginalCount: recoilOverrideCount,
     totalAttachmentVariants: Object.keys(attachments17).length
   },
   classifications: {
@@ -463,4 +479,4 @@ const metadata17 = {
 
 fs.writeFileSync(path.join(dir17, 'metadata.json'), JSON.stringify(metadata17, null, 2), 'utf8');
 console.log(`11.17 Provisional Canonical Complete: ${metadata17.stats.totalWeapons} weapons, ${metadata17.stats.totalAttachmentVariants} attachments.`);
-console.log(`Recoil Springs: ${fallbackRecoilCount} inherited from 11.16, ${unverifiedRecoilCount} marked unverified null (0 guessed).`);
+console.log(`Recoil Springs: ${fallbackRecoilCount} inherited from 11.16, ${recoilOverrideCount} original in-game tables, ${unverifiedRecoilCount} marked unverified null (0 guessed).`);
